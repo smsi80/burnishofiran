@@ -1,0 +1,8 @@
+supply_area={
+	id=300
+	name="Center Iran"
+	value=10
+	states={
+		411 266 
+	}
+}

@@ -1,0 +1,9 @@
+
+supply_area={
+	id=361
+	name="Marv"
+	value=6
+	states={
+		418 584 
+	}
+}

@@ -1,0 +1,65 @@
+﻿l_english:
+
+ #####################
+ ### burnishofiran ###
+ #####################
+ 
+ UNIT_GENERIC_NAME_PER:0 "$NR$. $NAME$"
+ 
+ PER_EQUIPMENT_VERSION_1:0 "Mk. I"
+ PER_EQUIPMENT_VERSION_3:0 "Mk. III"
+ PER_EQUIPMENT_VERSION_2:0 "Mk. II"
+ PER_EQUIPMENT_VERSION_4:0 "Mk. IV"
+ PER_EQUIPMENT_VERSION_5:0 "Mk. V"
+ PER_EQUIPMENT_VERSION_6:0 "Mk. VI"
+ PER_EQUIPMENT_VERSION_7:0 "Mk. VII"
+ PER_EQUIPMENT_VERSION_8:0 "Mk. VIII"
+ PER_EQUIPMENT_VERSION_9:0 "Mk. IX"
+ PER_EQUIPMENT_VERSION_10:0 "Mk. X"
+ PER_EQUIPMENT_VERSION_11:0 "Mk. XI"
+ PER_EQUIPMENT_VERSION_12:0 "Mk. XII"
+ PER_EQUIPMENT_VERSION_13:0 "Mk. XIII"
+ 
+ PER_infantry_equipment_0:0 "Mauser 98"
+ PER_infantry_equipment_0_short:0 "Mauser 98"
+ PER_infantry_equipment_1:0 "Zbrojovka Brno vz.24"
+ PER_infantry_equipment_1_short:0 "ZB vz.24"
+ PER_infantry_equipment_2:0 "M1 Garand"
+ PER_infantry_equipment_2_short:0 "M1 Garand"
+ PER_infantry_equipment_3:0 "pistolet-pulemyot Shpagina"
+ PER_infantry_equipment_3_short:0 "PPSh-41"
+ 
+ PER_motorized_equipment_1:0 "Willys overland crossley"
+ PER_motorized_equipment_1_short:0 "WOC"
+ 
+ PER_anti_tank_equipment_1:0 "37mm Anti Tank"
+ PER_anti_tank_equipment_1_short:0 "37mm Anti Tank"
+ PER_anti_tank_equipment_2:0 "75mm Anti Tank"
+ PER_anti_tank_equipment_3:0 "130mm Anti Tank"
+ 
+ PER_anti_air_equipment_1:0 "23mm AA"
+ PER_anti_air_equipment_1_short:0 "23mm AA"
+ PER_anti_air_equipment_2:0 "35mm AA"
+ PER_anti_air_equipment_3:0 "100mm KS-19"
+ 
+ PER_artillery_equipment_1:0 "Skoda houfnice vz. 14"
+ PER_artillery_equipment_1_short:0 "105mm vz. 14"
+ PER_artillery_equipment_2:0 "122mm vz. 35"
+ PER_artillery_equipment_3:0 "155 mm M114"
+
+ 
+ PER_gw_tank_equipment:0 "Renault FT-17"
+ PER_gw_tank_equipment_short:0 "FT-17"
+ 
+ PER_light_tank_equipment_1:0 "Skoda-CKD-AH"
+ PER_light_tank_equipment_1_short:0 "AH-IV"
+ PER_light_tank_equipment_1_desc:0 "The 3.468 litres (211.6 cu in), water-cooled, six-cylinder Praga engine produced 55 horsepower (41 kW) at 2500 rpm. It sat in the rear of the fighting compartment and drove the transmission via a drive shaft that ran forward between the driver and commander to the gearbox."
+  
+ PER_light_tank_equipment_2:0 "Skoda-CKD"
+ PER_light_tank_equipment_2_short:0 "CKD-TNHP"
+ #PER_light_tank_equipment_2_desc:0 "CKD-TNHP"
+  
+ PER_light_tank_equipment_3:0 "Panzerkampfwagen 38"
+ PER_light_tank_equipment_3_short:0 "Panzer 38"
+ #PER_light_tank_equipment_3_desc:0 "Panzer 38"
+ 

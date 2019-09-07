@@ -1,0 +1,24 @@
+state = {
+	id = 791
+	name = "STATE_791"		#Shiravan
+	manpower = 512515
+	state_category = rural
+	
+	provinces = {
+		1467 1610 4477 9715 11704 13305 
+	}
+
+	resources = {	}
+
+	history = {
+		owner = SOV
+		victory_points = {
+			13305 10
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = AZR
+	}
+	
+}

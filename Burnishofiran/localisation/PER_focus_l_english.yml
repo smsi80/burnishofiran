@@ -1,0 +1,392 @@
+﻿l_english:
+
+ #######################
+ #### BurnishOfIran ####
+ #######################
+
+ flexible_order_tech:0 "Rider operations doctrines bonus\n"
+ nav_air_bonus:0 "Naval air models bonus\n"
+ ant_tank_bonus:0 "Anty Tank technologies bonus\n"
+ light_armor_bonus:0 "light Armor models bonus\n"
+ marines_forces_bonus:0 "Marines forces bonus\n"
+ paratroopers_forces_bonus:0 "Paratroopers forces bonus\n"
+ mountaineers_forces_bonus:0 "Mountaineers forces bonus\n"
+ production_bonus:0 "Production bonus\n"
+ 
+ resource_prospecting_bonus:0 "Focus on geological activities\n"
+ PER_froshtial_german_activities:0 "Negotiating with a consortium of German companies for infrastructure construction.\n"
+ PER_family_population_abilities:0 "Townscapes are the best option to use citizens' abilities.\n"
+ PER_national_oil_industry_title:0 "With the nationalization of the oil industry we use all the capabilities.\n"
+ PER_angolo_iranian:0 "Angolo-iranian\n%80 oil for England"
+ 
+ 
+ #for decisions
+ PER_integration_afghanistan:0 "Focus on the attachment of states in Afghanistan.\n"
+ PER_integration_iraq:0 "Focus on the attachment of states in Iraq.\n"
+ PER_integration_baluchistan:0 "Focus on the attachment of states in Baluchistan.\n"
+ PER_integration_kurdistan:0 "Focus on the attachment of states in Kurdistan.\n"
+ PER_integration_soviet:0 "Focus on the attachment of states in Kharazm & Caucasus.\n"
+ 
+ ########## Focus ##########
+ 
+ ####################################################################### 1
+ 
+ PER_ministry_of_war_1:0 "Ministry of War 1"
+ PER_ministry_of_war_1_desc:0 "Basic Ministry of War\nThe army is the basis of the security and stability of any country,\nThe weakness in the army will lead to the destruction of the country.\nTo update the army, assign all available resources to the army."
+ 
+ PER_naval_effort_1:0 "II Naval Force 1"
+ PER_naval_effort_1_tt:0 "Not enough building slots for §YNaval Dockyards§!"
+ PER_naval_effort_1_desc:0 "§YBasic Naval Force§!\nThe expansion of our navy should be our first priority.\nAssign all available resources to new Dockyards."
+ 
+ PER_aviation_effort_1:0 "II Air Force 1"
+ PER_aviation_effort_1_tt:0 "Not enough building slots for §YAir Base§!"
+ PER_aviation_effort_1_desc:0 "§YBasic Air Force§!\nNowhere is technological advances more rapid than in aerial warfare. Aviation is a field any modern nation must master."
+ 
+ PER_army_effort_1:0 "II Gruond Force 1"
+ PER_army_effort_1_desc:0 "§YBasic Gruond Force§!\nDespite the increasing possibilities of aerial and naval warfare,\nground combat is still key in tomorrow's wars.\nWith preparation, we can avoid reliving the hell of the trenches."
+ 
+ PER_large_navy:0 "Order Italian Fleet"
+ PER_large_navy_desc:0 "Providing facilities for Dockyards is difficult,\nSo the best way is to provide equipment from other countries.\nEquip your navy with Italian ships"
+
+ PER_flexible_navy:0 "Flexible Navy"
+ PER_flexible_navy_desc:0 "To support the Navy, it is best to have the knowledge in this field.\nTo gain knowledge of shipbuilding, employ all the specialist personnel."
+
+ PER_fighter_focus:0 "Fighter Focus"
+ PER_fighter_focus_desc:0 "The strength of this force has been proven by the use of the air force in rebel suppression, the superiority of this force is a great step to victory."
+
+ PER_equipment_effort_1:0 "Equipment Effort I"
+ PER_equipment_effort_1_desc:0 "The limits for what equipment can be carried by infantry are constantly being pushed. We will focus on giving our troops the best tools available."
+ 
+ PER_order_fleet_1:0 "Order Fleet I"
+ PER_order_fleet_1_desc:0 "Order a fleet to protect the water borders"
+
+ PER_light_fleet:0 "Light Fleet"
+ PER_light_fleet_desc:0 "In order to obtain the knowledge of the construction of destroyers,\nAll sources should be used"
+
+ PER_tac_effort:0 "Tactical Focus"
+ PER_tac_effort_desc:0 "When people of the future speak of the horror to today's wars,\nfire raining from the skies will prominently feature.\nWe will do our best to ensure those stories are told by our enemies."
+ 
+ PER_cas_effort:0 "Air Support Focus"
+ PER_cas_effort_desc:0 "A modern army needs support from vehicles not only on the ground,\nbut also in the air."
+ 
+ PER_production_effort_ab_1:0 "Armament Effort I"
+ PER_production_effort_ab_1_tt:0 "Not enough building slots for §YMilitary Factory§!"
+ PER_production_effort_ab_1_desc:0 "If you can build sword, you can build tanks! We must not allow our military production capacity to lag behind."
+ 
+ PER_order_fleet_2:0 "Order Fleet II"
+ PER_order_fleet_2_desc:0 "To secure the maritime borders,\nWe will buy a powerful fleet"
+
+ PER_medium_fleet:0 "Medium Fleet"
+ PER_medium_fleet_desc:0 "In order to obtain the knowledge of the construction of cruisers,\nAll sources should be used"
+
+ PER_doc_effort_b:0 "Doctrine Plan-B"
+ PER_doc_effort_b_desc:0 "Applying the appropriate Doctrine to raise the air force efficiency"
+
+ PER_doc_effort_a:0 "Doctrine Plan-A"
+ PER_doc_effort_a_desc:0 "Applying the appropriate Doctrine to raise the air force efficiency"
+
+ PER_cavalry_focus:0 "Cavalry Focus"
+ PER_cavalry_focus_desc:0 "The cavalry in this country is a traditional part of the army,\nDue to the lack of infrastructure, the transport of this unit is easy."
+
+ PER_motorization_focus:0 "Motorization Focus"
+ PER_motorization_focus_desc:0 "The use of modern equipment speeds the transport of troops and reduces the erosion of the army"
+ 
+ ####################################################################### 2
+ 
+ PER_ministry_of_war_2:0 "Ministry of War 2"
+ PER_ministry_of_war_2_desc:0 "Improved Ministry of War\nThe army is the basis of the security and stability of any country,\nThe weakness in the army will lead to the destruction of the country.\nTo update the army, assign all available resources to the army."
+ 
+ PER_naval_effort_2:0 "II Naval Force 2"
+ PER_naval_effort_2_tt:0 "Not enough building slots for §YNaval Dockyards§!"
+ PER_naval_effort_2_desc:0 "§YImproved Naval Force§!\nThe expansion of our navy should be our first priority.\nAssign all available resources to new Dockyards."
+ 
+ PER_nav_effort_2:0 "Bomber Plan"
+ PER_nav_effort_2_desc:0 "The use of airborne forces to support navy operations is essential, and will also be beneficial to the navy as it has proved its ability to support ground forces."
+ 
+ PER_nav_effort_1:0 "Air Carrier Plan"
+ PER_nav_effort_1_desc:0 "Use of Special Air Force for the Navy"
+ 
+ PER_equipment_effort_2:0 "Equipment Effort II"
+ PER_equipment_effort_2_desc:0 "We will continue our efforts to ensure our infantry and support troops are armed with the best possible equipment of our time."
+ 
+ PER_mechanization_effort:0 "Mechanization Effort"
+ PER_mechanization_effort_desc:0 "Rethinking the possibilities of motorized infantry,\nwe can push the limits of what vehicles can be constructed today."
+ 
+ PER_aviation_effort_2:0 "II Air Force 2"
+ PER_aviation_effort_2_desc:0 "§YImproved Air Force§!\nFurther advances in aviation will be necessary to integrate our air force well with other branches of the military."
+ 
+ PER_army_effort_2:0 "II Gruond Force 2"
+ PER_army_effort_2_desc:0 "§YImproved Gruond Force§!\nGiven what we learned from land wars, by improving this part of the army, we can have more quality ground forces."
+ 
+ PER_equipment_effort_3:0 "Artillery Effort"
+ PER_equipment_effort_3_desc:0 "Instead of imitating or buying foreign equipment, we should aim to become world-leading in infantry weapons."
+ 
+ PER_armor_effort:0 "Armor Effort"
+ PER_armor_effort_desc:0 "Applying what we have learned from mechanizing our infantry, we can improve our armored vehicles as well."
+ 
+ PER_anti_tank_effort:0 "Anti-Tank Effort"
+ PER_anti_tank_effort_desc:0 "Using what we've learned from our infantry mechanization,\nBecause of the low cost of making, we can also improve our anti-tank weapons."
+ 
+ PER_production_effort_ab_2:0 "Armament Effort II"
+ PER_production_effort_ab_2_tt:0 "Not enough building slots for §YMilitary Factory§!"
+ PER_production_effort_ab_2_desc:0 "Trying to adapt civilian factories to produce military equipment is inefficient. We should focus on preparing military production now."
+ 
+ PER_army_effort_3:0 "II Gruond Force 3"
+ PER_army_effort_3_desc:0 "§YAdvanced Gruond Force§!\nGiven what we learned from land wars,\nimproving this part of the army can be achieved with more quality ground forces.\nMore coordination, more success"
+ 
+ PER_special_forces_1:0 "Special Marine Forces"
+ PER_special_forces_1_desc:0 "We have need of elite forces, Given the breadth of the sea's borders in our beloved land, marines should be a military priority."
+ 
+ PER_special_forces_2:0 "Special paratrooper Forces"
+ PER_special_forces_2_desc:0 "We have need of elite forces, With regard to the strength of the air force, the displacement of the Marine Corps with the help of this force could be a unique ability for the army, so the paratrooper's rearing should be a priority of the army."
+ 
+ PER_special_forces_3:0 "Special mountain Forces"
+ PER_special_forces_3_desc:0 "We have need of elite forces, Considering the breadth of the mountain in our beloved land, mountain troops should be the armies top priority"
+ 
+ PER_ministry_of_war_3:0 "Ministry of War 3"
+ PER_ministry_of_war_3_desc:0 "Advanced Ministry of War\nThe army is the basis of the security and stability of any country,\nThe weakness in the army will lead to the destruction of the country.\nTo update the army, assign all available resources to the army."
+
+ ####################################################################### economy
+ 
+ PER_economic_effort:0 "Economic Effort"
+ PER_economic_effort_desc:0 "\nEstablishing foreign trade policies in the monopoly of the government,\nimplementing the tax policy on imports of sugar and tea and ..."
+ 
+ PER_military_plan_a:0 "Military Plan A"
+ PER_military_plan_a_desc:0 "§YArmaments Development Plan§!\nOur country ahead of any industry,\nWe need armaments and weapons, so we will concentrate our full potential on weapons production"
+ 
+ PER_industrial_plan_b:0 "Industrial Plan B"
+ PER_industrial_plan_b_desc:0 "§YIndustrial development plan§!\nIndustrialization of various industries has played a key role in the promotion and development of the country,\nso we will try to direct all industries towards industrialization."
+ 
+ ###
+ 
+ PER_construction_effort_a1:0 "Ultra Basic"
+ PER_construction_effort_a1_desc:0 "§Ystep 1§!\nBefore the establishment of armaments factories,\nCitizens needs needs to be met,\n So, we are doing a good job of meeting these needs"
+ 
+ PER_production_effort_a1:0 "Basic"
+ PER_production_effort_a1_desc:0 "§Ystep 2§!\nA basic program for the development of military factories,\nEstablish small factories to meet the country's military needs"
+ 
+ PER_production_effort_a2:0 "Improved"
+ PER_production_effort_a2_desc:0 "§Ystep 3§!\nAn improved program for the development of military factories,\nEstablishing medium-sized factories to meet the military's transportation needs"
+ 
+ PER_production_effort_a3:0 "Advanced"
+ PER_production_effort_a3_desc:0 "§Ystep 4§!\nAn advanced program for the development of military factories,\nCreating big factories To meet the military's armored needs"
+ 
+ PER_production_effort_a4:0 "Ultra Advanced"
+ PER_production_effort_a4_desc:0 "§Ystep 5§!\nThe advanced program for the development of military factories,\nEstablishing large-scale factories in the country to eliminate all deficiencies of the army!!"
+ 
+ ###
+ 
+ PER_infrastructure_effort_1:0 "Infrastructures 1"
+ PER_infrastructure_effort_1_desc:0 "§Ystep 1§!\nDue to the weakness of previous governments in addressing infrastructure and communications, infrastructure and communication paths require editing and repair or the need to build new ones."
+ 
+ PER_infrastructure_effort_2:0 "Infrastructures 2"
+ PER_infrastructure_effort_2_desc:0 "§Ystep 2§!\nDue to the weakness of previous governments in addressing infrastructure and communications, infrastructure and communication paths require editing and repair or the need to build new ones."
+ 
+ PER_infrastructure_effort_3:0 "Infrastructures 3"
+ PER_infrastructure_effort_3_desc:0 "§Ystep 3§!\nDue to the weakness of previous governments in addressing infrastructure and communications, infrastructure and communication paths require editing and repair or the need to build new ones."
+ 
+ PER_infrastructure_effort_4:0 "Infrastructures 4"
+ PER_infrastructure_effort_4_desc:0 "§Ystep 4§!\nDue to the weakness of previous governments in addressing infrastructure and communications, infrastructure and communication paths require editing and repair or the need to build new ones."
+ 
+ PER_infrastructure_effort_5:0 "Infrastructures 5"
+ PER_infrastructure_effort_5_desc:0 "§Ystep 5§!\nDue to the weakness of previous governments in addressing infrastructure and communications, infrastructure and communication paths require editing and repair or the need to build new ones."
+ 
+ ###
+ 
+ PER_construction_effort_b1:0 "Ultra Basic"
+ PER_construction_effort_b1_desc:0 "§Ystep 1§!\nIndustry development has played a key role in the development of the country, so all the facilities for industrialization of the country should be employed."
+ 
+ PER_construction_effort_b2:0 "Basic"
+ PER_construction_effort_b2_desc:0 "§Ystep 2§!\nthe Basic industry shows that the country has more potential,\nSo use all the resources to industrialize the country."
+ 
+ PER_construction_effort_b3:0 "Improved"
+ PER_construction_effort_b3_desc:0 "§Ystep 3§!\nImprove the industry shows that the country has more potential,\nSo use all the resources to industrialize the country."
+ 
+ PER_construction_effort_b4:0 "Advanced"
+ PER_construction_effort_b4_desc:0 "§Ystep 4§!\nThe Advance of the industry shows that the country has more abilities,\nUse all the resources to industrialize the country."
+ 
+ PER_construction_effort_b5:0 "Ultra Advanced"
+ PER_construction_effort_b5_desc:0 "§Ystep 5§!\nIndustrial progress has priority over all of the country's affairs,\nUse all the resources to industrialize the country."
+ 
+ ###
+ 
+ PER_industrial_effort_2:0 "Industrial Effort 2"
+ PER_industrial_effort_2_desc:0 "\nRaising the level of technology helps the industry to progress,\nwe need to achieve the desired situation in this regard"
+ 
+ PER_extra_tech_slot_1:0 "Extra Research Slot 1"
+ PER_extra_tech_slot_1_desc:0 "\nOur industrial expansion and other recent advances might allow us to conduct more R&D in parallel."
+ 
+ PER_extra_tech_slot_2:0 "Extra Research Slot 2"
+ PER_extra_tech_slot_2_desc:0 "\nThe rapid industrialization of our nation has opened up new opportunities in R&D that we should pursue."
+
+ PER_construction_effort_ab1:0 "Infrastructure for import I"
+ PER_construction_effort_ab1_tt:0 "Not enough building slots for §YCivilian Factories§!"
+ PER_construction_effort_ab1_desc:0 "\nCivilian industrial capacity must not be underestimated even when war looms over the world."
+ 
+ PER_construction_effort_ab2:0 "Infrastructure for import II"
+ PER_construction_effort_ab2:0 "Not enough building slots for §YCivilian Factories§!"
+ PER_construction_effort_ab2_desc:0 "\nContinuing to expand our factories will allow us to speed up production of goods for trade and further construction efforts."
+ 
+ PER_secret_weapons:0 "Secret Weapons"
+ PER_secret_weapons_desc:0 "\nIt is tempting to expend all extra resources into developing tanks and planes, but the secret to winning wars lies in whole new fields of science; electronics, rocketry and nuclear research."
+ 
+ PER_cancel_the_contract:0 "Contract expired"
+ PER_cancel_the_contract_desc:0 "\nThe country's industries have shown that they have the ability to supply domestic needs, So then it's time to cancel the consumption contracts that we have with the Soviet Union"
+ 
+ PER_resource_prospecting_1:0 "Resource prospecting"
+ PER_resource_prospecting_1_desc:0 "\nGiven that we have the capacity to produce resources in the country, we no longer need to import resources from other countries" 
+ 
+ PER_resource_prospecting_2:0 "Resource prospecting 2"
+ PER_resource_prospecting_2_desc:0 "The country's resources have shown that we can generate more resources, which needs more attention"
+
+ ####################################################################### Nationalism
+ 
+ PER_properties_internal:0 "Properties internal"
+ PER_properties_internal_desc:0 "\nThe youth have shown their abilities in various matters that allow them to trust them"
+ 
+ PER_conscription_youth:0 "Conscription youth"
+ PER_conscription_youth_desc:0 "\nOrganizations to promote discipline and political education of young people in our nation will foster loyalty and self-sacrifice early."
+ 
+ PER_training_elits:0 "Training Elits"
+ PER_training_elits_desc:0 "\nTo educate high school students it is necessary to send them to Europe to complete graduate courses there."
+ 
+ PER_military_academy:0 "Military Academy"
+ PER_military_academy_desc:0 "\nIt is necessary to establish a military academy for the training of forces recruited by the army.\nThe military academy is a great step for the establishment of a modern army"
+ 
+ PER_militarism:0 "Militarism"
+ PER_militarism_desc:0 "\nThose who view the military as a necessary evil are doomed to hesitate in the face of war. We will ingrain militarism into our culture to become a people of soldiers."
+ 
+ PER_paramilitarism:0 "Paramilitarism"
+ PER_paramilitarism_desc:0 "\nMilitary principles have applications outside of the military. With the development of semi-militarized units to complement our armed forces, more people will have military training."
+ 
+ PER_nationalism:0 "Nationalism"
+ PER_nationalism_desc:0 "Our nation is unique,\nDespite their many differences,\nthey have the same characteristics,\nDespite their borders, their fraternity is still stable\n§YThis is an advantage that you will not see elsewhere§!"
+ 
+ PER_burn_angolo-iranian_oil_1:0 "Burn Anglo-Persian oil"
+ PER_burn_angolo-iranian_oil_1_desc:0 "§YThe End for the Anglo-Persian Oil Company (APOC)§!\nWe want a larger share of the extracted oil in the south\nThe contract does not respect fairness"
+
+ PER_burn_angolo-iranian_oil_2:0 "Close the faucet"
+ PER_burn_angolo-iranian_oil_2_desc:0 "§YClose the faucet of the oil industry§!\nThis agreement does not cover our interests,\nIt's better not to use these resources,\nBecause the alien is trying to steal these resources"
+ 
+ PER_end_of_looting:0 "End of looting"
+ PER_end_of_looting_desc:0 "The end of colonial politics\nWe will never be colonized !!!"
+ 
+ PER_employment_elits:0 "Employment Elits"
+ PER_employment_elits_desc:0 "\nThe use of domestic specialists eliminates our need for the foreigner,\nthis dependence must end." 
+
+ PER_national_oil_industry:0 "National Oil Industry"
+ PER_national_oil_industry_desc:0 "\nDespite the domestic experts, the oil industry does not stay silent.\nOil profits are for the development of the country"
+ 
+ PER_family_population:0 "Family population"
+ PER_family_population_desc:0 "\nImproving urban conditions is one of the most important bases for industrialization in the country"
+ 
+ ####################################################################### Ally
+ 
+ PER_unification_of_iranshahr:0 "Unification of Iranshahr"
+ PER_unification_of_iranshahr_desc:0 "\nBy uniting again\nwe will be stronger against the attacks of older enemies"
+ 
+ PER_ally_with_muscat:0 "Ally with Muscat"
+ PER_ally_with_muscat_desc:0 "\nBy uniting again\nwe will be stronger against the attacks of older enemies"
+ 
+ PER_ally_with_baghdad:0 "Ally with Baghdad"
+ PER_ally_with_baghdad_desc:0 "\nBy uniting again\nwe will be stronger against the attacks of older enemies"
+ 
+ PER_ally_with_sana:0 "Ally with Yeman"
+ PER_ally_with_sana_desc:0 "\nBy uniting again\nwe will be stronger against the attacks of older enemies"
+ 
+ PER_ally_with_turkey:0 "Ally with Turkey"
+ PER_ally_with_turkey_desc:0 "\nBy uniting again\nwe will be stronger against the attacks of older enemies"
+ 
+ PER_ally_with_qattar:0 "Ally with Qattar"
+ PER_ally_with_qattar_desc:0 "\nBy uniting again\nwe will be stronger against the attacks of older enemies"
+ 
+ PER_ally_with_kuweit:0 "Ally with Kuweit"
+ PER_ally_with_kuweit_desc:0 "\nBy uniting again\nwe will be stronger against the attacks of older enemies"
+ 
+ PER_ally_with_emirates:0 "Ally with Emirates"
+ PER_ally_with_emirates_desc:0 "\nBy uniting again\nwe will be stronger against the attacks of older enemies"
+ 
+ PER_ally_with_pakistan:0 "Ally with Pakistan"
+ PER_ally_with_pakistan_desc:0 "\nBy uniting again\nwe will be stronger against the attacks of older enemies"
+ 
+ ####################################################################### Retake
+ 
+ PER_retake_iranshahr:0 "Retake Iranshahr"
+ PER_retake_iranshahr_desc:0 "\nWe are all brothers who are separated from each other and detained in a room called a nation and a country\nSomeone should destroy these walls"
+ 
+ PER_retake_kabol:0 "Retake Kabol"
+ PER_retake_kabol_desc:0 "\nWe are all brothers who are separated from each other and detained in a room called a nation and a country\nSomeone should destroy these walls"
+ 
+ PER_retake_baluchistan:0 "Retake Baluchistan"
+ PER_retake_baluchistan_desc:0 "\nWe are all brothers who are separated from each other and detained in a room called a nation and a country\nSomeone should destroy these walls"
+ 
+ PER_retake_kharazm_georgia:0 "Retake Kharazm & georgia"
+ PER_retake_kharazm_georgia_desc:0 "\nWe are all brothers who are separated from each other and detained in a room called a nation and a country\nSomeone should destroy these walls"
+ 
+ PER_retake_turkey:0 "Retake Kurdistan"
+ PER_retake_turkey_desc:0 "\nWe are all brothers who are separated from each other and detained in a room called a nation and a country\nSomeone should destroy these walls"
+ 
+ PER_retake_baghdad:0 "Retake Baghdad"
+ PER_retake_baghdad_desc:0 "\nWe are all brothers who are separated from each other and detained in a room called a nation and a country\nSomeone should destroy these walls"
+ 
+ ####################################################################### Third Power
+ 
+ PER_third_power:0 "Third Power"
+ PER_third_power_desc:0 "\nBecause of the political interference of the Soviet Union and Britain, each of which considers Iran as its colony, The existence of a third power in Iranian politics will diminish their interference"
+ 
+ PER_anti_liberty:0 "Anti Liberty"
+ PER_anti_liberty_desc:0 "\nAnti-colonial policy for British interference"
+ 
+ PER_anti_communism:0 "Anti Communism"
+ PER_anti_communism_desc:0 "\nAnti-colonial policy for Soviet Union interference"
+ 
+ PER_british_power:0 "British Power"
+ PER_british_power_desc:0 "\nIncreasing diplomatic relations with Britain to increase oil share"
+ 
+ PER_re-contract_angolo_iranian_oil:0 "Re-contract oil company"
+ PER_re-contract_angolo_iranian_oil_desc:0 "Re-contract Angolo-Iranian oil company"
+ 
+ PER_military_access_eng:0 "Military Access(ENG)"
+ PER_military_access_eng_desc:0 "\nThe privilege of using the infrastructure to British troops,\nFor easier movement of their forces to the front line"
+ 
+ PER_german_power:0 "German Power"
+ PER_german_power_desc:0 "\nIncreasing Diplomatic Relations with Germany for Infrastructure Development"
+ 
+ PER_commercial_contract:0 "Commercial contract"
+ PER_commercial_contract_desc:0 "\nWe provide and support the German consumer needs."
+ 
+ PER_economic_consortium:0 "Industrial Consortium"
+ PER_economic_consortium_desc:0 "§YFroshtial German§!\nCooperation of various companies with the title of Consortium of Froshtial\nGerman specialists can be helpful in improving our industrial conditions"
+ 
+ PER_usa_power:0 "USA Power"
+ PER_usa_power_desc:0 "Increasing diplomatic relations with the United States"
+ 
+ PER_america_first:0 "American politics"
+ PER_america_first_desc:0 "\nAgainst the development of Soviet communist thinking in Iran, it is necessary to help the United States to prevent these thinking"
+ 
+ PER_targeted_policies:0 "Targeted policies"
+ PER_targeted_policies_desc:0 "\nTo prevent the development of communist thinking, a committee should be set up to combat this thinking"
+ 
+ PER_oil_consortium:0 "Oil Consortium"
+ PER_oil_consortium_desc:0 "\nIranian Oil Consortium\nUnder the contract, extraction of oil will be carried out by foreign companies, and Iran's right to extract oil will be 50%"
+ 
+ PER_economic_contract:0 "Economic contract"
+ PER_economic_contract_desc:0 "\nTake US economic loans for the development of the country" 
+ 
+ PER_military_access_usa:0 "Military Access(USA)"
+ PER_military_access_usa_desc:0 "\nThe privilege of using the infrastructure to USA troops,\nFor easier movement of their forces to the front line"
+
+ PER_soviet_union_power:0 "Soviet Union Power"
+ PER_soviet_union_power_desc:0 "\nCooperation and expansion of relations with the Soviet Union"
+
+ PER_non_aggression_pact:0 "Non aggression pact"
+ PER_non_aggression_pact_desc:0 "\nChoosing a neutral stance on future conflicts"
+ 
+ PER_contract_with_soviet:0 "Contract with Soviet"
+ PER_contract_with_soviet_desc:0 "\nThe country's industries have shown that they are unable to meet domestic needs, As a result, there is a shortage of supplies for citizens.\n\nWe need a new deal with the Soviet Union"
+
+
+
+ #######################
+ #### BurnishOfIran ####
+ #######################

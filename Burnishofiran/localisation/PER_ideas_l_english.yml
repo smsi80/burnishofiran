@@ -1,0 +1,139 @@
+﻿l_english:
+
+ #######################
+ #### burnishofiran ####
+ #######################
+ 
+ PER_Abbas-Ali_Khalatbari:0 "A.Ali Khal'atbari"
+ PER_Abdollah_Hedayat:0 "Abdollah Hedayat"
+ PER_Ahmad_Amir.Ahmadi:0 "Ahmad Amir.Ahmadi"
+ PER_Ahmad_Qavam:0 "Ahmad Qavam.Ashtiani"
+ PER_AIR_Ahmad.Khan_Nakhjavan:0 "Ahmad Nakhjavan"
+ PER_AIR_Eesaa_Eshtodakh:0 "Eesaa Eshtodakh"
+ PER_AIR_Hedayat_Gilanshah:0 "Hedayat Gilanshah"
+ PER_AIR_Sharafedin_Ghahremani:0 "Sharafedin Ghahremani"
+ PER_Ali.Akbar_Davar:0 "Ali.Akbar Davar"
+ PER_Ali.Akbar_Derakhshan:0 "Ali.Akbar Derakhshan"
+ PER_Ali.Akbar_Siassi:0 "Ali.Akbar Siassi"
+ PER_Ali_Baiandar:0 "Ali Baiandar"
+ PER_Ali_Razmara:0 "Ali Razmara"
+ PER_Ali_Soheili:0 "Ali Soheili"
+ PER_Am_Janhanbani:0 "Amin Janhanbani"
+ PER_Baqer_Kazemi:0 "Baqer Kazemi"
+ PER_Eskandar_Azmudeh:0 "Eskandar Azmudeh"
+ PER_Faraj_Rasaei:0 "Faraj Rasaei"
+ PER_Hadi_Atabay:0 "Hadi Atabay"
+ PER_Hadi_Shaghaghi:0 "Hadi Shaghaghi"
+ PER_Hassan_Taghizadeh:0 "Hassan Taghizadeh"
+ PER_Hossein_Nakhai:0 "Hossein Nakhai"
+ PER_Hossein_Samiei:0 "Hossein Samiei"
+ PER_Jafar_Sharif-Emami:0 "Jafar Sharif.Emami"
+ PER_Jahanshah_Saleh:0 "Jahanshah Saleh"
+ PER_Jalal_Abdo:0 "Jalal Abdo"
+ PER_Karim_BozarJomehri:0 "Karim BozarJomehri"
+ PER_Mahmod_Hesabi:0 "Mahmod Hesabi"
+ PER_Mahmoud_Jam:0 "Mahmoud Jam"
+ PER_Manuchehr_Eghbal:0 "Manuchehr Eghbal"
+ PER_Mehdiqoli_Hedayat:0 "Mehdiqoli Hedayat"
+ PER_Mohamad_Airom:0 "Mohamad Airom"
+ PER_Mohamad_Sajjadi:0 "Mohamad Sajjadi"
+ PER_Mohammad_Ali_Foroughi:0 "M.Ali Foroughi"
+ PER_Mohammad_Ali_Varasteh:0 "M.Ali Varasteh"
+ PER_Mohammad_Copal:0 "Mohammad Copal"
+ PER_Mohammad_Dargaahi:0 "Mohammad Dargaahi"
+ PER_Mohammad_Maraghehi:0 "Mohammad Maraghehi"
+ PER_Mohammad_Shahbakhti:0 "Mohammad Shahbakhti"
+ PER_Mohammad_Tadayyon:0 "Mohammad Tadayyon"
+ PER_Mohsen_Sadr:0 "Mohsen Sadr"
+ PER_Mostafa_Qoliram:0 "Mostafa Qoliram"
+ PER_Musa_Nuri_Esfandiari:0 "Musa Nuri.Esfandiari"
+ PER_Rajab-Ali_Mansor:0 "Rajab.Ali Mansor"
+ PER_Reza_Hekmat:0 "Reza Hekmat"
+ PER_Rostam_Giv:0 "Rostam Giv"
+ 
+ PERG_MAN_Company:0 "MAN Company"
+ PER_ARJ:0 "ARJ"
+ PER_ARJ_desc:0 "Blacksmith-Foundry-Welder"
+ PER_AEG:0 "AEG"
+ PERG_Krupp_Company:0 "Krupp Company"
+ PERG_Siemens_Company:0 "Siemens Company"
+ PER_shahbaz:0 "Shahbaz"
+ PER_shahbaz_desc:0 "Major overhauls and assembly of aircraft parts"
+ PER_qoorkhaneh:0 "QoorKhaneh"
+ PER_qoorkhaneh_desc:0 "A large building in tehran, that a state space for production weapons, ammunition, military equipment and warfare."
+  
+ PER_generic_tank_manufacturer_1:0 "Armory Company"
+ PER_generic_naval_manufacturer_2:0 "Naval Company"
+
+ PER_generic_medium_aircraft_manufacturer_3:0 "Medium Air Company"
+ PER_generic_heavy_aircraft_manufacturer_2:0 "Heavy Air Company"
+ PER_generic_naval_aircraft_manufacturer_1:0 "Naval Air Company"
+ PER_generic_motorized_equipment_manufacturer_3:0 "Motorization Company"
+ 
+ PER_touprizie_factory:0 "Touprizie Factory"
+ PER_touprizie_factory_desc:0 "The artillery production plant that is located in Isfahan"
+ 
+ ###COUNTRY IDEAS
+ 
+ PER_idea_economy_with_sov_1:0 "Economic contract with the Soviet Union I"
+ PER_idea_economy_with_sov_1_desc:0 "Due to the dependence of the northern cities on Soviet goods, An economic contract was concluded with that country.\nThe Soviet merchants, with their stock of goods and their supply at a time of shortages, cause market instability And the bankruptcy of Iranian businessmen and citizens.\nBut this is the only way to provide the goods needed by these cities."
+ PER_idea_economy_with_sov_2:0 "Economic contract with the Soviet Union II"
+ PER_idea_economy_with_sov_2_desc:0 "Due to the dependence of the northern cities on Soviet goods, An economic contract was concluded with that country.\nThe Soviet merchants, with their stock of goods and their supply at a time of shortages, cause market instability And the bankruptcy of Iranian businessmen and citizens.\nBut this is the only way to provide the goods needed by these cities."
+ 
+ PER_idea_army_ministry_of_war_0:0 "Old Army"
+ PER_idea_army_ministry_of_war_1:0 "Imperial Iranian Ministry of War I"
+ PER_idea_army_ministry_of_war_2:0 "Imperial Iranian Ministry of War II"
+ PER_idea_army_ministry_of_war_3:0 "Imperial Iranian Ministry of War III"
+
+ PER_idea_cavalry:0 "Cavalry Guards"
+# PER_idea_cavalry_desc:0 "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+ PER_idea_economy:0 "Economic program"
+ PER_idea_old_training:0 "Outdated knowledge"
+# PER_idea_old_training_desc:0 "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+ PER_idea_training_elits:0 "Training Elits"
+# PER_idea_training_elits_desc:0 "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+ PER_idea_military_youth_focus:0 "Military Youth"
+ PER_idea_military_academy:0 "Military Academy"
+# PER_idea_military_academy_desc:0 "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+ PER_idea_militarism_focus:0 "Militarism"
+
+
+ PER_idea_nationalism_1:0 "Nationalism"
+# PER_idea_nationalism_1_desc:0 ""
+ PER_idea_nationalism_2:0 "Nationalism"
+# PER_idea_nationalism_2_desc:0 ""
+ PER_idea_family_population:0 "Our Features"
+# PER_idea_family_population_desc:0 ""
+ 
+ PER_idea_iran_united:0 "United nations"
+ 
+ PER_idea_commercial_contract:0 "Commercial contract"
+# PER_idea_commercial_contract_desc:0 ""
+ 
+ 
+ 
+
+ PER_idea_oil_consortium_USA-ENG:0 "Oil Consortium Contract"
+# PER_idea_oil_consortium_USA-ENG_desc:0 "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+ PER_idea_economic_contract_with_USA:0 "Economic contract with USA"
+# PER_idea_economic_contract_with_USA_desc:0 "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+ 
+ PER_idea_angolo-persian_oil_company:0 "APOC"
+ PER_idea_angolo-persian_oil_company_desc:0 "Anglo-Persian Oil Company\nThe right to explore, Extraction, transportation across Iran, with the exception of the five northern provinces, was given to Darcy for 60 years.\nIran's share of this contract is 16%."
+ 
+ PER_idea_angolo-iranian_oil_company:0 "AIOC"
+ PER_idea_angolo-iranian_oil_company_desc:0 "Anglo-Iranian Oil Company\nIn order to exploit oil in Iran, foreign companies have signed concession contracts ensuring that they can freely extract oil on defined territories for a prolonged period of time in exchange for payments. However the sum paid by the companies was far below the value of the oil extracted and enabled them to get a profit margin much higher than in countries such as the UK, while putting the oil reserves of Iran indirectly under foreign control."
+ 
+ PER_idea_Burn-Angolo_persian_oil:0 "Towards nationalization"
+# PER_idea_Burn-Angolo_persian_oil_desc:0 "Unsightly"
+ 
+ PER_america_defense_ideologies:0 "Defending the ideology"
+ 
+ 
+
+ 
+ #######################
+ #### burnishofiran ####
+ #######################
+ 
+

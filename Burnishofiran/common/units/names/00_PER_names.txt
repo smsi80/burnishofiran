@@ -1,0 +1,166 @@
+﻿
+PER = {
+	fleet_names_template = FLEET_NAME_PER
+	submarine = {
+		prefix = "IIS"
+		generic = { "Submarine" }
+		unique = {
+			"Nooh" "Yunes" "Nahang"
+		}
+	}
+	destroyer = {
+		prefix = "IIS"
+		generic = { "Destroyer" }
+		unique = {
+			"Palang" "Babr" "Alvand"
+			"Afshin" "Ardashir" "Aria" "Arshad" "Arman" "Armand" "Aban" "Abtin" "Azar" "Aram" "Aran" "Artin"
+			"Arash" "Arvin" "Atash" "Bahram" "Babak" "Bardia" "Zobin" "Bamdad" "Bamshad" "Bavand" "Bayram"
+			"Bakhtiar" "Behrad" "Behbod" "Behroz" "Bedad" "Bahman" "Bijan" "Dalir" "Dariush" "Derafsh" "Ervin" 
+			   
+		}
+	}
+	light_cruiser = {
+		prefix = "IIS"
+		generic = { "Light Cruiser" }
+		unique = {
+			"Shir" "Paykan" 
+			"Farbod" "Farrokh" "Farshid" "Hormuzd" "Kamran" "Khashayar"
+			"Khosrow" "Sassan" "Sepehr" "Shahin" "Shapour" "Shahryar" "Shams" "Shervin" "Sohrab" "Vahid"
+		}
+	}
+	heavy_cruiser = {
+		prefix = "IIS"
+		generic = { "Heavy Cruiser" }
+		unique = {
+			"Omid" "Papak" "Parsa" "Parviz" "Payam" "Pedram" "Soroush" "Izad" "Farhad"
+		}
+	}
+	battle_cruiser = {
+		prefix = "IIS"
+		generic = { "Battlecruiser" }
+		unique = {
+			"Alborz" "Sabalan"
+			"Mazdak" "Mazdan" "Maziar" "Mehran" "Manuchehr" "Mehrdad" "Marzban"
+		}
+	}
+	battleship = {
+		prefix = "IIS"
+		generic = { "Artemiz" "Battleship" }
+		unique = { 
+			"Artemiz" "Damavand" "Sahand"
+			"Jamshid" "Jam" "Jobin" "Kourosh" "Pouria" "Piruz" "Ramin" "Rostam" "Robin" "Zartosh" "Zurvan"
+		}
+	}
+	carrier = {
+		prefix = "IIS"
+		generic = { "Aircraft Carrier" }
+		unique = {
+			"Saam" "Zaal" "Rostam" "Faramarz" "Turan" "Vandad" "Zand" "Simorgh" "Ashianeh"
+		}
+	}
+	air_wing_names_template = AIR_WING_NAME_PER_FALLBACK
+
+	#Air wings can only be named through archetype
+	fighter_equipment = {
+		prefix = ""
+		generic = { "Gurohane Razmi" }
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+
+	jet_fighter_equipment = {
+		prefix = ""
+		generic = { "Gurohane Razmi" }
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+
+	heavy_fighter_equipment = {
+		prefix = ""
+		generic = { "Gurohane Razmi Sangin" }
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+
+	CAS_equipment = {
+		prefix = ""
+		generic = { "Gurohane Poshtiban Sabok" }
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+
+	cv_fighter_equipment = {
+		prefix = ""
+		generic = { "Gurohane Razmi Havadaria" }
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+
+	cv_CAS_equipment = {
+		prefix = ""
+		generic = { "Gurohane Poshtiban Havadaria" }
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+	cv_nav_bomber_equipment = {
+		prefix = ""
+		generic = { "Gurohane Bombafkan Havadaria" }
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+
+	tac_bomber_equipment = {
+		prefix = ""
+		generic = { "Gurohane Poshtiban Sangin" }
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+
+	jet_tac_bomber_equipment = {
+		prefix = ""
+		generic = { "GPS JET" }
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+
+	nav_bomber_equipment = {
+		prefix = ""
+		generic = { "Gurohane Bombafkan Havadaria"}
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+
+	strat_bomber_equipment = {
+		prefix = ""
+		generic = { "Gurohane Bombafkan" }
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+
+	jet_strat_bomber_equipment = {
+		prefix = ""
+		generic = { "GB JET" }
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+
+	transport_plane_equipment = {
+		prefix = ""
+		generic = { "Barbari Havaei Kol Qushun" }
+		generic_pattern = AIR_WING_NAME_PER_GENERIC
+		unique = {
+		}	
+	}
+}

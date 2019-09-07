@@ -1,0 +1,50 @@
+
+state = {
+	id = 413
+	name = "STATE_413"		#Ahvaz
+	manpower = 997356
+	resources = {
+#		oil = 50 # was: 100
+		oil = 370 # was: lagre oil refinery - Texas has 320
+	}
+	
+	state_category = town
+	
+
+	history = {
+		owner = PER
+		buildings = {
+			infrastructure = 4
+			dockyard = 1
+			air_base = 2
+			synthetic_refinery = 1
+			5005 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			1922 18 
+		}
+		victory_points = {
+			13356 12 
+		}
+		victory_points = {
+			7953 20 
+		}
+		
+		add_core_of = PER
+		
+		1939.1.1 = {
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 1
+			}
+		}
+	}
+
+	provinces = {
+		1922 5005 7953 
+		13349 13350 13351 13352 13353 13354 13355 13356 13357 13358 13359 
+		2065
+	}
+}

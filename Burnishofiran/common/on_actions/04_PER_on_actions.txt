@@ -1,0 +1,67 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			#Angolo-Iranian oil concessions
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				PER = {
+					set_rule = { can_generate_female_aces = yes }
+					give_resource_rights = { receiver = ENG state = 412 }
+					give_resource_rights = { receiver = ENG state = 413 }
+					give_resource_rights = { receiver = ENG state = 421 }
+				}
+			}
+			#non_aggression_pact in middle east
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				TUR = {
+					diplomatic_relation = {
+						country = SOV
+						relation = non_aggression_pact
+						active = yes
+					}
+				}
+				AFG = {
+					diplomatic_relation = {
+						country = SOV
+						relation = non_aggression_pact
+						active = yes
+					}
+				}
+				SOV = {
+					diplomatic_relation = {
+						country = TUR
+						relation = non_aggression_pact
+						active = yes
+					}
+				}
+				SOV = {
+					diplomatic_relation = {
+						country = AFG
+						relation = non_aggression_pact
+						active = yes
+					}
+				}
+			}
+		
+			#Angolo-Iraqi
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				IRQ = {
+					give_military_access = ENG
+					give_resource_rights = { receiver = ENG state = 291 }
+				}
+				ENG = {
+					give_guarantee = IRQ
+				
+				}
+			}
+		}
+	}
+}

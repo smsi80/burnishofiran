@@ -1,0 +1,115 @@
+	#####################
+	### BurnishOfIran ###
+	#####################
+	
+spriteTypes = {	
+	
+	### aircraft ###
+	
+	SpriteType = {
+		name = "GFX_PER_CAS1_medium"
+		texturefile = "gfx/interface/technologies/PER_CAS1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PER_CAS2_medium"
+		texturefile = "gfx/interface/technologies/PER_CAS2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PER_CAS3_medium"
+		texturefile = "gfx/interface/technologies/PER_CAS3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PER_early_fighter_medium"
+		texturefile = "gfx/interface/technologies/PER_early_fighter.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PER_fighter1_medium"
+		texturefile = "gfx/interface/technologies/PER_fighter1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PER_fighter2_medium"
+		texturefile = "gfx/interface/technologies/PER_fighter2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PER_fighter3_medium"
+		texturefile = "gfx/interface/technologies/PER_fighter3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PER_naval_bomber1_medium"
+		texturefile = "gfx/interface/technologies/PER_naval_bomber1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PER_naval_bomber2_medium"
+		texturefile = "gfx/interface/technologies/PER_naval_bomber1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PER_naval_bomber3_medium"
+		texturefile = "gfx/interface/technologies/PER_naval_bomber1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PER_tactical_bomber2_medium"
+		texturefile = "gfx/interface/technologies/PER_tactical_bomber2.dds"
+	}
+
+	### weapons ###
+	
+	SpriteType = {
+		name = "GFX_PER_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/PER_infantry_equipment_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PER_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/PER_infantry_equipment_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_PER_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/PER_infantry_equipment_3.dds"
+	}
+	
+	### TANK ###
+	
+	SpriteType = {
+		name = "GFX_PER_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/PER_light_tank1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PER_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/PER_light_tank2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PER_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/PER_light_tank3.dds"
+	}	
+	
+	### mechanized ###
+	
+	SpriteType = {
+		name = "GFX_PER_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/PER_mechanized_equipment_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_PER_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/PER_mechanized_equipment_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_PER_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/PER_mechanized_equipment_3.dds"
+	}	
+	
+}

@@ -1,0 +1,201 @@
+﻿l_english:
+ 
+ #######################
+ #### BurnishOfIran ####
+ #######################
+ 
+ PER_cultural_integration_01:0 "Wake up the Greater Khorasan"
+ PER_cultural_integration_01_desc:0 "§GCULTURAL INTEGRATION§!\nIn 1856, Britain, in line with its separatist goals in the region, pushed Iran under its military and political leverage, deconstructing Khorasan.\n\nToday will be the end for the §YTreaty of Paris (1856)§!."
+ 
+ PER_cultural_integration_02:0 "Retake Iraq"
+ PER_cultural_integration_02_desc:0 "§GCULTURAL INTEGRATION§!\n§RIRAQ MEANS POSTAL TERRITORY.§!\nThe §YTreaty of Zuhab§! was an accord signed between the Safavid Empire and the Ottoman Empire on §YMay 17§!, §Y1639§!.\n\nToday is the end For our separation."
+ 
+ PER_cultural_integration_03:0 "Retake the Greater Kurdistan "
+ PER_cultural_integration_03_desc:0 "§GCULTURAL INTEGRATION§!\nMany aspects of Kurdish culture are related to the other peoples of Greater Iran, examples include Newroz and Simurgh.\nToday is the end of the §YErzurum treaties§!.\n\nBefore this, §Ywe have been one§! - After this, §Ywe will be one§!."
+ 
+ PER_cultural_integration_04:0 "Persian Gulf"
+ PER_cultural_integration_04_desc:0 "§GCULTURAL INTEGRATION§!\nThe end to the regional treaty and colonialism of England over Great Iran.\n\n\nReclaiming the land of §YBahrain§!, §YJolfaveh§!, §YQatar§! and §YKuwait§!"
+ 
+ PER_cultural_integration_05:0 "North Border"
+ PER_cultural_integration_05_desc:0 "§GCULTURAL INTEGRATION§!\n§YTreaty of Gulistan§!, §YTreaty of Turkmenchay§! and §YTreaty of Akhal§!\nThe treaties imposed on Iran due to defeat in the military war with the Russian Empire and the political and military weaknesses of the Qajar government"
+ 
+ PER_cultural_integration_06:0 "Great Sistan"
+ PER_cultural_integration_06_desc:0 "§GCULTURAL INTEGRATION§!\n§YGoldsmith contract with the UK (1872)§!\nA contract concluded in the Qajar period As a result, a large part of Balochistan has been handed over to England and has long been known as the §RBalochistan of England§!."
+ 
+ PER_improve_infrastructure:0 "Utility Projects"
+ PER_improve_infrastructure_desc:0 "For more efficiency than states that have not expanded because of colonialism, We need a series of measures to repair the infrastructure of these states." 
+ 
+ PER_improve_cultural:0 "Urban infrastructure"
+ PER_improve_cultural_desc:0 "A large number of people live in different parts of the country,\nBut most of the population is in the villages,\nBy building welfare infrastructure in cities,\nwe can use this optimal workforce."
+ 
+ PER_froshtial_german:0 "Frostyal Projects"
+ PER_froshtial_german_desc:0 "The industrial consortium of Frostyal, consisting of Croup, Siemens, AEG, MAN and several other industrial institutes, was supervised by the company."
+
+ PER_prospect_for_resources:0 "Prospect For Resources in middle east" 
+ PER_prospect_for_resources_desc:0 "Our geologists have found a number of promising resource deposits within our territories. We can spend some capital to develop these fields.\nAdvances in extraction technology might make more deposits viable for exploitation."
+
+ PER_research_science:0 "Research Science"
+ PER_research_science_desc:0 "Establishing universities in the country is a major leap in achieving strategic goals. XD"
+ 
+ PER_integration_afghanistan_step01:0 "Harat Wakes up"
+ PER_integration_afghanistan_step01_desc:0 "Final for the Treaty of Paris (1856).\n§RCaution. This will increase the clash.§!"
+ PER_integration_afghanistan_step02:0 "Qandhar Wakes up!"
+ PER_integration_afghanistan_step02_desc:0 "Final for the Treaty of Paris (1856).\n§GNow is the time of consciousness?§!"
+ PER_integration_afghanistan_step03:0 "Kabul Wakes up!"
+ PER_integration_afghanistan_step03_desc:0 "Final for the Treaty of Paris (1856).\n§GNow is the time of consciousness?§!"
+ PER_integration_afghanistan_step04:0 "We Joined Together!"
+ PER_integration_afghanistan_step04_desc:0 "We are relations, Only with a §GCommon Culture§!.\n§RWhy We Fight?§!"
+ 
+ PER_integration_iraq_step01:0 "Al Hajara"
+ PER_integration_iraq_step01_desc:0 "Propaganda in Al Hajara.\n§RCaution. This creates tension in political relations.§!"
+ PER_integration_iraq_step02:0 "Mosul"
+ PER_integration_iraq_step02_desc:0 "Propaganda in Mosul. Give the Kurd brothers morale. \n§RCaution. This creates tension in political relations.§!"
+ PER_integration_iraq_step03:0 "Tisphwon Project"
+ PER_integration_iraq_step03_desc:0 "Start the series of corrective programs In the state of Teisphoon. \n§RCaution. This creates tension in political relations.§!"
+ PER_integration_iraq_step04:0 "We Joined Together!"
+ PER_integration_iraq_step04_desc:0 "We are relations, Only with a §GCommon Culture§!.\n§RWhy We Fight?§!"
+ 
+ PER_integration_kurdi_01_1:0 "Radio advertising to join us (Erzurum)"
+ PER_integration_kurdi_01_1_desc:0 "Radio advertising is a good way to add public information.\n§RCaution. This creates tension in political relations.§!"
+ PER_integration_kurdi_01_2:0 "Radio advertising to join us (Trabzon)"
+ PER_integration_kurdi_01_2_desc:0 "Radio advertising is a good way to add public information.\n§RCaution. This creates tension in political relations.§!"
+ PER_integration_kurdi_02_1:0 "Together with Kurdistan (Malatya)"
+ PER_integration_kurdi_02_1_desc:0 "After this united, we stand together against enemies"
+ PER_integration_kurdi_02_2:0 "Together with Kurdistan (Batman)"
+ PER_integration_kurdi_02_2_desc:0 "After this united, we stand together against enemies"
+ PER_integration_kurdi_03:0 "Move to Raqqeh"
+ PER_integration_kurdi_03_desc:0 "Long live Kurdistan"
+ 
+ PER_integration_persiangulf_1:0 "Kuwait"
+ PER_integration_persiangulf_1_desc:0 "History says that no benevolent Britain was a nation."
+ PER_integration_persiangulf_2:0 "Jolfaveh"
+ PER_integration_persiangulf_2_desc:0 "History says that no benevolent Britain was a nation."
+ PER_integration_persiangulf_3:0 "Qattar"
+ PER_integration_persiangulf_3_desc:0 "History says that no benevolent Britain was a nation."
+ PER_integration_persiangulf_4:0 "Bahrain"
+ PER_integration_persiangulf_4_desc:0 "History says that no benevolent Britain was a nation."
+ 
+ PER_integration_azarabadegan_01:0 "Baku"
+ PER_integration_azarabadegan_01_desc:0 "Long live Great Azarbadegan"
+ PER_integration_azarabadegan_02:0 "Eyravan"
+ PER_integration_azarabadegan_02_desc:0 "Long live Great Azarbadegan"
+ PER_integration_azarabadegan_03:0 "Georgia"
+ PER_integration_azarabadegan_03_desc:0 "Long live Great Azarbadegan"
+ PER_integration_azarabadegan_04:0 "Ganja"
+ PER_integration_azarabadegan_04_desc:0 "Long live Great Azarbadegan"
+ PER_integration_azarabadegan_05:0 "Darband"
+ PER_integration_azarabadegan_05_desc:0 "Long live Great Azarbadegan"
+ PER_integration_azarabadegan_06:0 "Lankaran"
+ PER_integration_azarabadegan_06_desc:0 "Long live Great Azarbadegan"
+ PER_integration_azarabadegan_07:0 "Shiravan"
+ PER_integration_azarabadegan_07_desc:0 "Long live Great Azarbadegan"
+ PER_integration_azarabadegan_08:0 "Nakhjavan"
+ PER_integration_azarabadegan_08_desc:0 "Long live Great Azarbadegan"
+ PER_integration_azarabadegan_09:0 "Gagra"
+ PER_integration_azarabadegan_09_desc:0 "Long live Great Azarbadegan"
+ 
+ PER_integration_khaarazm_01:0 "Marv"
+ PER_integration_khaarazm_01_desc:0 "Move to Kharazm (Step One)"
+ PER_integration_khaarazm_02:0 "Ashgabat"
+ PER_integration_khaarazm_02_desc:0 "Move to Kharazm (Step One)"
+ PER_integration_khaarazm_03:0 "Dushanbe"
+ PER_integration_khaarazm_03_desc:0 "Move to Kharazm (Step One)\nLong live Dushanbe"
+ PER_integration_khaarazm_04:0 "Tashkent"
+ PER_integration_khaarazm_04_desc:0 "Move to Kharazm (Step One)"
+ PER_integration_khaarazm_05:0 "Khaarazm"
+ PER_integration_khaarazm_05_desc:0 "Move to Kharazm (Step One)\nLong live Khaarazm"
+ 
+ PER_integration_sistan_01:0 "Sistan & Balochistan"
+ PER_integration_sistan_01_desc:0 "Balochistan is always an integral part of us"
+ 
+ form_improve_infrastructure_01:0 "East to West"
+ form_improve_infrastructure_01_desc:0 "The National railway will connect Kabul to Baghdad"
+ form_improve_infrastructure_02:0 "Strengthen Northwest"
+ form_improve_infrastructure_02_desc:0 "Improving the quality of life and better support of the military"
+ form_improve_infrastructure_03:0 "Strengthen NorthEast"
+ form_improve_infrastructure_03_desc:0 "Improving the quality of life and better support of the military"
+ form_improve_infrastructure_04:0 "Garmsār to Mashhad"
+ form_improve_infrastructure_04_desc:0 "The building began on March 15, 1938\nAnd basement and rail to 315 km long Shahrood station Until 1320 completed And the exploitation began."
+
+ form_improve_cultural_01:0 "Focus the Population"
+ form_improve_cultural_01_desc:0 "An attempt to deploy people in the cities of\n§YIsfahan§! and §YFars§!."  
+ form_improve_cultural_02:0 "Focus the Population"
+ form_improve_cultural_02_desc:0 "An attempt to deploy people in §YTibriz§! city."  
+ form_improve_cultural_03:0 "Focus the Population"
+ form_improve_cultural_03_desc:0 "An attempt to deploy people in the cities of\n§YAhvaz§! and §YKermanshah§!."  
+ form_improve_cultural_04:0 "Focus the Population"
+ form_improve_cultural_04_desc:0 "An attempt to deploy people in the cities of\n§YKabul§! and §YHerat§!."  
+ form_improve_cultural_05:0 "Focus the Population"
+ form_improve_cultural_05_desc:0 "An attempt to deploy people in the cities of\n§YTisphwon§! and §YMosul§!." 
+
+ form_improve_cultural_06:0 "Focus the Population"
+ form_improve_cultural_06_desc:0 "An attempt to deploy people in the cities of\n§YMalatya§!, §YVan§!, §YErzurum§!, §YTrabzon§!, and §YRaqqeh§!."
+ form_improve_cultural_07:0 "Focus the Population"
+ form_improve_cultural_07_desc:0 "An attempt to deploy people in the cities of\n§YBaku§!, §YArmenia§!, §YGeorgia§!, §YGanja§!, §YDarband§!,\n§YLankaran§!, §YShiravan§!, §YNakhjavan§!, and §YGagra§!."
+ form_improve_cultural_08:0 "Focus the Population"
+ form_improve_cultural_08_desc:0 "An attempt to deploy people in the cities of\n§YTashkent§! and §YMarv§!."
+ form_improve_cultural_09:0 "Focus the Population"
+ form_improve_cultural_09_desc:0 "An attempt to deploy people in the cities of\n§YAshkhabad§!, §YUrgench§! and §YDushanbe§!." 
+ form_improve_cultural_10:0 "Focus the Population"
+ form_improve_cultural_10_desc:0 "An attempt to deploy people in the cities of\n§YPunjab§!, §YPeshawar§!, §YSind§!, §YBaluchistan§!, §YQuetta§! and §YNorth Kashmir§!."
+ form_improve_cultural_11:0 "Focus the Population"
+ form_improve_cultural_11_desc:0 "An attempt to deploy people in the city of\n§YRaqqeh§!." 
+ 
+ form_froshtial_improve_cultural_01:0 "The first construction"
+ form_froshtial_improve_cultural_01_desc:0 "Construction of industrial Complexes"
+ form_froshtial_improve_cultural_02:0 "The second construction"
+ form_froshtial_improve_cultural_02_desc:0 "Construction of industrial Complexes"
+ form_froshtial_improve_cultural_03:0 "The third construction"
+ form_froshtial_improve_cultural_03_desc:0 "Construction of industrial Complexes"
+ form_froshtial_improve_cultural_04:0 "Resource development"
+ form_froshtial_improve_cultural_04_desc:0 "The country has a lot of resources, And to discover these valuable resources,\nWe need the experienced forces in this field, which German engineers are the best choice to achieve this goal"
+ 
+ develop_tehran_steel_deposits:0 "Exploration in Tehran"
+ develop_tehran_chromium_deposits:0 "Exploration in Tehran"
+ develop_tehran_oil_deposits:0 "Exploration in Tehran"
+ develop_isfehan_steel_v1_deposits:0 "Exploration in Isfehan"
+ develop_isfehan_aluminium_deposits:0 "Exploration in Isfehan"
+ develop_isfehan_steel_v2_deposits:0 "Exploration in Isfehan"
+ develop_khorasan_chromium_deposits:0 "Exploration in Khorasan"
+ develop_fars_chromium_deposits:0 "Exploration in Fars"
+ develop_fars_oil_deposits:0 "Exploration in Fars"
+ develop_khuzestan_steel_deposits:0 "Exploration in Khuzestan"
+
+ develop_rasht_steel_deposits:0 "Exploration in Arak"
+ develop_rasht_aluminium_deposits:0 "Exploration in Arak"
+ develop_kerman_steel_deposits:0 "Exploration in Kerman"
+ develop_kerman_chromium_deposits:0 "Exploration in Kerman"
+ develop_kabol_steel_deposits:0 "Exploration in Kabul"
+ 
+ develop_azarabadegan_uni:0 "Build AzarAbadegan University"
+ develop_azarabadegan_uni_desc:0 "Created in 1945"
+ develop_shiraz_uni:0 "Build Shiraz University"
+ develop_shiraz_uni_desc:0 "Created in 1945"
+ 
+ 
+ form_country_iraq_coring_states_tt:0 "Gain cores on all §YIraq§! states.\n"
+ 
+ form_iran_khorasan_states:0 "Controls of Capital and one states from the §YAfghanistan§!."
+ form_iran_khorasan_one_country:0 "We Allied with §YKhorasan§!."
+ form_iran_iraq_part_1:0 "You should control the states of §YMosul§! and §YBaghdad§!."
+ form_iran_iraq_part_2:0 "Controls all §YIraqi§! states."
+ form_iran_kurdian_raqqeh:0 "You should control the states of §YRaqqeh§! in middle east."
+ form_iran_persiangulf_1:0 "You should control the states of §YKuwait§!, §YBahrain§!, §YAbu Dhabi§! and §YQattar§!."
+ form_iran_persiangulf_2:0 "Gain cores on all §YBritish§! states in Persain Gulf."
+
+ form_iran_azarabadegan_1:0 "You should control the states of §YAzerbaijan§!, §YDarband§!, §YLankaran§!, §YShiravan§!, §YGanja§!, §YNakhjavan§!, §YArmenia§!, §YGeorgia§! and §YGagra§!."
+ form_iran_azarabadegan_2:0 "Gain cores on states in the control."
+
+ form_iran_khaarazm_1:0 "You should control the states of §YAshkhabad§!, §YMarv§!, and §YStalinabad§!."
+ form_iran_khaarazm_2:0 "Gain cores on states in the control."
+ form_iran_khaarazm_3:0 "You should control the states of §YTashkent§! and §YUrgench§!."
+ form_iran_khaarazm_4:0 "Gain cores on states in the control."
+ form_iran_sistan_1:0 "You should control the states of §YBaluchistan§!, §YPeshawar§!, §YQuetta§! and §YSind§!."
+ form_iran_sistan_2:0 "Gain cores on states in the control."
+ 
+ 
+ 
+
+ #######################
+ #### BurnishOfIran ####
+ #######################

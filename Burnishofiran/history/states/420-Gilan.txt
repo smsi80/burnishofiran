@@ -1,0 +1,35 @@
+
+state={
+	id=420
+	name="STATE_420"
+	manpower = 1314948
+	
+	state_category = town 
+
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 1
+		}
+		1939.1.1 = {
+			buildings = {
+				infrastructure = 3
+			}	
+		}
+		add_core_of = PER
+		victory_points = {
+			4637 15 
+		}
+		victory_points = {
+			13386 10 
+		}
+		victory_points = {
+			10523 5 
+		}
+	}
+
+	provinces={
+		4553 4580 4609 4637 7969 10523
+		13381 13382 13383 13384 13385 13386 13387 13388 13391 
+	}
+}

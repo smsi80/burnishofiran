@@ -1,0 +1,28 @@
+state = {
+	id = 794
+	name = "STATE_794"		# Raqqah
+	manpower = 225082
+	state_category = town
+	history = {
+		owner = FRA
+
+		victory_points = {
+			13309 9 
+		}
+		victory_points = {
+			1549 5
+		}
+		
+		add_core_of = SYR
+		
+		1939.1.1 = {
+			buildings = {
+				infrastructure = 1
+			}
+		}
+	}
+
+	provinces={
+		901 1549 1578 1606 1634 6883 10882 13309 13310 13311 13313 13314 13319
+	}
+}

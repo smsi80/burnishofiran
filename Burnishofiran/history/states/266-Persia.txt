@@ -1,0 +1,46 @@
+
+state = {
+	id = 266
+	name = "STATE_266"		# Tehran
+	manpower = 1446250
+
+	resources = {
+	}
+	
+	state_category = town
+
+	history = {
+		owner = PER
+		buildings = {
+			infrastructure = 5
+			arms_factory = 2
+			industrial_complex = 1
+			air_base = 2
+		}
+		victory_points = {
+			10837 40 
+		}
+		victory_points = {
+			13406 10 
+		}
+		victory_points = {
+			5067 2 
+		}
+		add_core_of = PER
+		
+		1939.1.1 = {
+			buildings = {
+				infrastructure = 3
+				arms_factory = 2
+				industrial_complex = 3
+			}
+		}
+	}
+
+	provinces = {
+		7602 10385 10768 10837
+		1982 5067 8093 10922 11671 12748 12818 		
+		13392 13393 13394 13395 13396 13397 13398 13399 13400 13401 13402 13403 13404 13405 13406 13407
+		
+	}
+}

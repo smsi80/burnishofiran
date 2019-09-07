@@ -1,0 +1,384 @@
+﻿
+ #######################
+ #### BurnishOfIran ####
+ #######################
+
+capital = 266
+
+oob = "PER_1936"
+set_fuel_ratio = 1.0
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "PER_1936_naval_mtg"
+	else = {
+		set_naval_oob = "PER_1936_naval_legacy"
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	add_ideas = {
+		disarmed_nation
+		civilian_economy
+		
+		
+		neutrality_idea
+		PER_idea_old_training
+		PER_idea_army_ministry_of_war_0
+		PER_idea_economy_with_sov_1
+		PER_idea_angolo-persian_oil_company
+
+	}
+}
+
+
+
+add_political_power = 100
+set_research_slots = 1
+set_stability = 0.65
+set_war_support = 0.45
+set_convoys = 10
+
+
+# Starting tech
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		gw_artillery = 1
+		early_fighter = 1
+		CAS1 = 1	
+	}
+}	
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+		gw_artillery = 1
+		early_fighter = 1
+		CAS1 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1925.4.24"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 60
+	democratic = 10
+	fascism = 10
+	communism = 20
+}
+
+1939.1.1 = {
+	set_politics = {
+	ruling_party = neutrality
+	last_election = "1925.4.24"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 60
+	democratic = 10
+	fascism = 10
+	communism = 20
+}
+	set_research_slots = 1
+	add_political_power = 1198
+	
+	set_stability = 0.62
+	set_war_support = 0.45
+	
+	#generic focuses
+	
+#	complete_national_focus = army_effort
+#	complete_national_focus = equipment_effort
+#	complete_national_focus = motorization_effort
+#	complete_national_focus = aviation_effort
+#	complete_national_focus = naval_effort
+#	complete_national_focus = flexible_navy
+#	complete_national_focus = industrial_effort
+#	complete_national_focus = construction_effort
+#	complete_national_focus = production_effort
+	
+	oob = "PER_1939"
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+			set_naval_oob = "PER_1939_naval_mtg"
+		else = {
+			set_naval_oob = "PER_1939_naval_legacy"
+		}
+	}
+	
+	set_technology = {
+		tech_support = 1
+		tech_recon = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+		gw_artillery = 1
+		interwar_antiair = 1
+		interwar_artillery = 1
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+		
+		#doctrines
+		formation_flying = 1
+		trench_warfare = 1
+		grand_battle_plan = 1
+		prepared_defense = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+		convoy_escorts = 1
+		
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		fuel_silos = 1
+		construction1 = 1
+		dispersed_industry = 1
+	}
+	
+	if = {
+		limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+			basic_destroyer = 1
+		}
+	}
+	
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		set_technology = {
+			early_ship_hull_light = 1
+		}
+	}
+	
+	add_ideas = {
+		disarmed_nation
+		civilian_economy
+		
+		
+		neutrality_idea
+		PER_idea_old_training
+		PER_idea_army_ministry_of_war_0
+		PER_idea_economy_with_sov_1
+		PER_idea_angolo-persian_oil_company
+	}
+}
+
+# His son, who came to power 41
+create_country_leader = {
+	name = "Mohammad Reza Pahlavi"
+	desc = "POLITICS_MOHAMMAD_REZA_PAHLAVI_DESC"
+	picture = "gfx/leaders/PER/Portrait_Iran_M-Reza_Shah_Pahlavi.dds"
+	expire = "1980.7.27"
+	ideology = despotism
+	traits = { homayoni		per_nationalist_symbol get_power_by_others }
+}
+
+create_country_leader = {
+	name = "Reza Shah Pahlavi"
+	desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
+	picture = "Portrait_Iran_Reza_Shah_Pahlavi.dds"
+	expire = "1944.7.26"
+	ideology = despotism
+	traits = { homayoni great_rezashah }
+}
+ 
+create_country_leader = {
+	name = "Soleyman Mirza Eskandari"
+	desc = "POLITICS_SOLEYMAN_MIRZA_ESKANDARI_DESC"
+	picture = "gfx/leaders/PER/Portrait_Iran_soleiman_eskandari_socialism.dds"
+	expire = "1945.1.7"
+	ideology = socialism
+	traits = {	headstrong	}
+}
+
+create_country_leader = {
+	name = "Davud Monshizadeh"
+	desc = "POLITICS_DAVUD_MONSHIZADEH_DESC"
+	picture = "gfx/leaders/PER/Portrait_Iran_davud_monshizadeh.dds"
+	expire = "1989.7.13"
+	ideology = nazism
+	traits = {	dictator	}
+}
+
+create_country_leader = {
+	name = "Iraj Eskandari"
+	desc = "POLITICS_IRAJ_ESKANDARI_DESC"
+	picture = "gfx/leaders/PER/Portrait_Iran_iraj_eskandari.dds"
+	expire = "1988.9.2"
+	ideology = marxism
+	traits = {		}
+}
+
+#####################
+### FIELD_MARSHAL ###
+#####################
+
+
+create_field_marshal = {
+	name = "Abdollah Hedayat"
+	portrait_path = "gfx/leaders/PER/Portrait_PER_Abdollah_Hedayat.dds"
+	traits = { bearer_of_artillery organizer fast_planner infantry_leader aggressive_assaulter inspirational_leader skilled_staffer }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Am Janhanbani"
+	portrait_path = "gfx/leaders/PER/Portrait_PER_Am_Janhanbani.dds"
+	traits = { organizer bearer_of_artillery career_officer harsh_leader infantry_officer hill_fighter logistics_wizard }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+######################
+### ARMY_COMMANDER ###
+######################
+
+create_corps_commander = {
+	name = "A.Ali Badrehai"
+	portrait_path = "gfx/leaders/PER/Portrait_PER_A.Ali_Badrehai.dds"
+	traits = { urban_assault_specialist }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Abbas Gharebaghi"
+	portrait_path = "gfx/leaders/PER/Portrait_PER_Abbas_Gharebaghi.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Ali Oveisi"
+	portrait_path = "gfx/leaders/PER/Portrait_PER_Ali_Oveisi.dds"
+	traits = { desert_fox }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Ali Razmara"
+	portrait_path = "gfx/leaders/PER/Portrait_PER_Ali_Razmara.dds"
+	traits = { infantry_officer infantry_leader ranger career_officer }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Bahram Ariyana"
+	portrait_path = "gfx/leaders/PER/Portrait_PER_Bahram_Ariyana.dds"
+	traits = { inflexible_strategist infantry_officer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Feridon Jam"
+	portrait_path = "gfx/leaders/PER/Portrait_PER_Feridon_Jam.dds"
+	traits = { career_officer infantry_officer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Mahmod Afshartos"
+	portrait_path = "gfx/leaders/PER/Portrait_PER_Mahmod_AfsharTos.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 0
+	defense_skill = 0
+	planning_skill = 0
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Mohammad.Vali Gharani"
+	portrait_path = "gfx/leaders/PER/Portrait_PER_Mohammad-Vali_Gharani.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Nemotallah Nassiri"
+	portrait_path = "gfx/leaders/PER/Portrait_PER_Nemotallah_Nassiri.dds"
+	traits = { Infantry_Officer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+#create_corps_commander = {
+#	name = "Hasan Arfa"
+#	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+#	traits = { desert_fox }
+#	skill = 3
+#	attack_skill = 3
+#	defense_skill = 3
+#	planning_skill = 2
+#	logistics_skill = 2
+#}
+
+######################
+### NAVY_COMMANDER ###
+######################
+
+create_navy_leader = {
+	name = "Ali Baiandar"
+	portrait_path = "gfx/leaders/PER/Portrait_PER_Ali_Baiandar_Navy_1.dds"
+	traits = { career_officer chief_engineer }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 6
+}

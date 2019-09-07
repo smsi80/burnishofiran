@@ -1,0 +1,1281 @@
+
+	#######################
+	#### BurnishOfIran ####
+	#######################
+
+ideas = {
+	
+	#####################
+	### COUNTRY IDEAS ###
+	#####################
+	
+	country = {
+	
+		PER_idea_economy_with_sov_1 = {
+			picture = focus_PER_economy_with_sov
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			visible = {	NOT = { has_war_with = SOV	}	}
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+				stability_factor = -0.1
+				political_power_factor = -0.05
+				communism_drift = 0.03
+			}
+		}
+		
+		PER_idea_economy_with_sov_2 = {
+			picture = focus_PER_economy_with_sov
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			visible = {	NOT = { has_war_with = SOV	}	}
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = {
+				consumer_goods_factor = -0.04
+				stability_factor = -0.15
+				political_power_factor = -0.05
+				communism_drift = 0.06
+			}
+		}
+		
+		PER_idea_army_ministry_of_war_0 = {
+			picture = generic_army_problems
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			allowed_civil_war = {	always = no		}
+			
+			modifier = { 
+				conscription = -0.005
+				training_time_army_factor = 0.2
+				army_org_factor = -0.1
+				enemy_partisan_effect = 0.1
+			}
+		}
+		
+		PER_idea_army_ministry_of_war_1 = {
+			picture = focus_PER_seal-IIMW_1
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			allowed_civil_war = {	always = no		}
+			
+			modifier = {
+				conscription = -0.004
+				training_time_army_factor = 0.1
+				army_org_factor = -0.05
+				enemy_partisan_effect = 0.05
+			}
+		}
+		
+		PER_idea_army_ministry_of_war_2 = {
+			picture = focus_PER_seal-IIMW_2
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			allowed_civil_war = {	always = no		}
+			
+			modifier = { 
+				conscription = -0.002
+				training_time_army_factor = 0
+				army_org_factor = 0
+				enemy_partisan_effect = 0
+			}
+		}
+		
+		PER_idea_army_ministry_of_war_3 = {
+			picture = focus_PER_seal-IIMW_3
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			allowed_civil_war = {	always = no		}
+			
+			modifier = {
+				conscription = 0
+				training_time_army_factor = 0.05
+				army_org_factor = 0.05
+				enemy_partisan_effect = -0.05
+			}
+		}
+		
+		PER_idea_cavalry = {
+			picture = focus_PER_cavalry
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = {
+				cavalry_attack_factor = 0.05
+				cavalry_defence_factor = 0.05
+			}
+		}
+		
+		PER_idea_economy = {
+			picture = generic_goods_red_bonus
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1 
+			}
+		}
+		
+		PER_idea_military_youth_focus = {
+			picture = focus_PER_military_youth
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = communism
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		
+		PER_idea_old_training = {
+			picture = jap_supremacy_of_technology
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = {
+				production_speed_anti_air_building_factor = -0.2
+				production_speed_dockyard_factor = -0.2
+				production_speed_naval_base_factor = -0.2
+				production_speed_air_base_factor = -0.2
+				production_speed_rocket_site_factor = 0.2
+				production_speed_radar_station_factor = 0.2
+				production_speed_nuclear_reactor_factor = 0.5
+				production_speed_synthetic_refinery_factor = 0.5
+				
+				local_resources_factor = -1
+				production_speed_buildings_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.1
+				research_speed_factor = -0.1
+			}
+		}
+		
+		PER_idea_training_elits = {
+			picture = focus_PER_training_elits
+		
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = {
+				conscription = -0.005
+			}
+		}
+		
+		PER_idea_military_academy = {
+			picture = focus_PER_military_academy
+		
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = { 
+				experience_gain_army_factor = 0.01
+			}
+		}
+		
+		PER_idea_militarism_focus = {
+			picture = focus_PER_militarism_focus
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = {
+				conscription = 0.05
+				enemy_partisan_effect = -0.1
+			}
+		}
+		
+		##################### nationalism
+		
+		PER_idea_nationalism_1 = {
+			picture = focus_PER_nationalism_1
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			
+			allowed_civil_war = {	always = no		}
+			
+			rule = {
+				can_create_factions = yes
+				can_force_government = yes
+				can_send_volunteers = yes
+				can_guarantee_other_ideologies = yes
+			}
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+				war_support_factor = 0.05
+				non_core_manpower = 0.02
+			}
+		}
+		
+		PER_idea_nationalism_2 = {
+			picture = focus_PER_nationalism_2
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = {
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+				war_support_factor = 0.1
+				non_core_manpower = 0.04
+			}
+		}
+		
+		PER_idea_family_population = {
+			picture = SOV_scientist_defect
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			
+			allowed_civil_war = {	has_government = neutrality		}
+			
+			modifier = {
+				trade_opinion_factor = 0.05
+			}
+		}
+		
+		PER_idea_iran_united = {
+			picture = focus_PER_ally_with
+			
+			allowed = {		always = no	}
+			removal_cost = -1
+			visible = {	NOT = { has_war_with = PER	} }
+			
+			allowed_civil_war = {	has_government = neutrality		}
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				drift_defence_factor = 0.05
+				military_leader_cost_factor = -0.1
+			}
+		}
+		
+		PER_idea_commercial_contract = {
+			picture = received_attache
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			visible = {	NOT = { has_war_with = GER	} }
+			
+			allowed_civil_war = {	has_government = neutrality		}
+			
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		PER_idea_angolo-persian_oil_company = {
+			picture = aioc
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			visible = {	NOT = { has_war_with = ENG	} }
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = -0.025
+				democratic_drift = 0.03
+			}
+		}
+		
+		PER_idea_angolo-iranian_oil_company = {
+			picture = focus_PER_re-contract_angolo_iranian_oil_company
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			visible = {	NOT = { has_war_with = ENG	} }
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = { 
+				consumer_goods_factor = -0.049
+				democratic_drift = 0.06
+			}
+		}
+		
+		PER_idea_oil_consortium_USA-ENG = {
+			picture = idea_generic_refining_concern_1
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			visible = { NOT = { has_war_with = ENG		has_war_with = USA } }
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_anti_air_building_factor = 0.05
+				production_speed_dockyard_factor = 0.1
+				production_speed_naval_base_factor = 0.1
+				production_speed_air_base_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		PER_idea_economic_contract_with_USA = {
+			picture = focus_PER_economic_contract
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			visible = {	NOT = { has_war_with = USA	} }
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = {
+				mobilization_speed = 0.1
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		
+		PER_idea_Burn-Angolo_persian_oil = {
+			picture = focus_PER_Burn-Angolo_persian_oil
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = { 
+				stability_factor = -0.1
+			}
+		}
+
+		PER_america_defense_ideologies = {
+			picture = anti_soviet_pact
+			
+			allowed = {		always = no		original_tag = PER	}
+			removal_cost = -1
+			visible = {	NOT = { has_war_with = USA	} }
+			
+			allowed_civil_war = {	always = no		}
+			
+			modifier = { 
+				communism_drift = -0.05
+				stability_factor = 0.03
+			}
+		}
+	}
+	
+	#####################
+	### POLOTICAL MAN ###
+	#####################
+	
+	political_advisor = {
+	
+		PER_Abbas-Ali_Khalatbari = {
+			picture = PER_Abbas-Ali_Khalatbari
+			
+			visible = { has_government = neutrality }
+			
+			allowed = {	original_tag = PER }
+
+			traits = { popular_figurehead } #stability_factor = 0.15
+			
+			ai_will_do = { factor = 1 }
+		}
+
+
+		PER_Ahmad_Qavam = {
+			picture = PER_Ahmad_Qavam
+			
+			available = { 
+				has_government = democratic
+				NOT = { has_idea = PER_Mohammad_Ali_Foroughi }
+			}
+			
+			allowed = { original_tag = PER }
+			
+			traits = { silent_workhorse }
+			
+			ai_will_do = { factor = 1 }
+		}
+
+		PER_Ali.Akbar_Davar = {
+			picture = PER_Ali.Akbar_Davar
+			
+			available = { 
+				NOT = { has_government = fascism }
+				if = {
+					limit = {	has_idea = tot_economic_mobilisation	}
+					NOT = { has_idea = PER_Mohammad_Tadayyon }
+				}
+				if = {
+					limit = { or = { has_idea = tot_economic_mobilisation	has_idea = partial_economic_mobilisation	has_idea = low_economic_mobilisation }	has_idea = PER_idea_economy }
+					NOT = { has_idea = PER_Mohammad_Tadayyon }
+				}
+				if = {
+					limit = {	has_idea = tot_economic_mobilisation	}
+					NOT = { has_idea = PER_Baqer_Kazemi }
+				}
+			}
+			
+			allowed = { original_tag = PER }
+
+			traits = { per_economy_minister }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Ali_Soheili = {
+			picture = PER_Ali_Soheili
+
+			available	= { 
+				has_government = neutrality
+				NOT = { has_idea = PER_Mehdiqoli_Hedayat }
+				NOT = { has_idea = PER_Mohammad_Tadayyon }
+			}
+			
+			allowed = { original_tag = PER }
+			
+			traits = { per_secretary_of_state }
+			
+			ai_will_do = { factor = 1 }
+		}
+	
+		PER_Baqer_Kazemi = {
+			picture = PER_Baqer_Kazemi
+			
+			available	= {
+				if = {
+					limit = {	has_idea = tot_economic_mobilisation	}
+					NOT = { has_idea = PER_Mohammad_Tadayyon }
+				}
+				if = {
+					limit = {	has_idea = tot_economic_mobilisation	}
+					NOT = { has_idea = PER_Rostam_Giv }
+				}
+			}
+			
+			allowed = { original_tag = PER }
+			
+			modifier = { democratic_drift = 0.05 }
+			
+			traits = { financial_expert }
+			
+			ai_will_do = { factor = 1 }
+		}
+
+		PER_Hassan_Taghizadeh = {
+			picture = PER_Hassan_Taghizadeh
+			
+			available = { }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { per_reformer }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Hossein_Nakhai = {
+			picture = PER_Hossein_Nakhai
+			
+			available = { has_government = democratic }
+			
+			allowed = { original_tag = PER }
+
+			traits = { per_secretary_of_state }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Hossein_Samiei = {
+			picture = PER_Hossein_Samiei
+			
+			available	= { 
+				has_government = fascism 
+				NOT = { has_idea = tot_economic_mobilisation }
+			}
+			
+			allowed = { original_tag = PER }
+			
+			traits = { per_economy_minister }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Jafar_Sharif-Emami = {
+			picture = PER_Jafar_Sharif-Emami
+			
+			allowed = { original_tag = PER }
+			
+			traits = { captain_of_industry }
+			
+			ai_will_do = { factor = 1 }
+		}
+
+		PER_Jahanshah_Saleh = {
+			picture = PER_Jahanshah_Saleh
+			
+			visible	= { NOT = { has_government = democratic } }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { per_gynecologist }
+			
+			ai_will_do = { factor = 1 }
+		}		
+		
+		PER_Jalal_Abdo = {
+			picture = PER_Jalal_Abdo
+			
+			visible	= { has_government = democratic }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { popular_figurehead } #stability_factor = 0.15
+			
+			ai_will_do = { factor = 1 }
+		}
+
+		PER_Mahmoud_Jam = {
+			picture = PER_Mahmoud_Jam
+				
+			available	= {	has_completed_focus = PER_targeted_policies		NOT = { has_government = communism }	}
+			
+			allowed = { original_tag = PER }
+			
+			traits = { anti_communist_crusader }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Manuchehr_Eghbal = {
+			picture = PER_Manuchehr_Eghbal
+			
+			visible	= { has_government = democratic }
+			
+			allowed = { original_tag = PER }
+			
+			modifier = { democratic_drift = 0.5 }
+			
+			traits = { per_infectious_diseases }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Mehdiqoli_Hedayat = {
+			picture = PER_Mehdiqoli_Hedayat
+			
+			allowed = { original_tag = PER }
+			
+			traits = { per_political_spokesman }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Mohamad_Sajjadi = {
+			picture = PER_Mohamad_Sajjadi
+
+			visible	= { has_government = fascism }
+			
+			allowed = { original_tag = PER }
+
+			traits = { per_lawyer }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Mohammad_Ali_Foroughi = {
+			picture = PER_Mohammad_Ali_Foroughi
+			
+			available	= { 
+				NOT = { has_idea = PER_Ahmad_Qavam }
+			}
+			
+			allowed = { original_tag = PER }
+			
+			traits = { shadow_of_calles }
+			
+			ai_will_do = { factor = 1 }
+		}
+	
+		PER_Mohammad_Ali_Varasteh = {
+			
+			picture = PER_Mohammad_Ali_Varasteh
+			
+			visible	= {	has_government = communism }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { popular_figurehead } #stability_factor = 0.15
+			
+			ai_will_do = { factor = 1 }
+		}
+
+		PER_Mohammad_Maraghehi = {
+			picture = PER_Mohammad_Maraghehi
+			
+			allowed = { original_tag = PER }
+			
+			traits = { compassionate_gentleman }
+			
+			ai_will_do = { factor = 1 }
+		}
+
+		PER_Mohammad_Tadayyon = {
+			picture = PER_Mohammad_Tadayyon
+			
+			available	= {
+				has_government = neutrality
+				if = {
+					limit = {	has_idea = tot_economic_mobilisation	}
+					or = { 
+						NOT = { has_idea = PER_Rostam_Giv }
+						NOT = { has_idea = PER_Baqer_Kazemi }
+					}
+				}
+			}
+			
+			allowed = { original_tag = PER }
+
+			traits = { per_cultural }
+			
+			ai_will_do = { factor = 10 }
+		}
+		
+		PER_Mohsen_Sadr = {
+			picture = PER_Mohsen_Sadr
+			
+			available	= { has_government = neutrality }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { ideological_crusader }
+			
+			ai_will_do = { factor = 1 }
+		}
+	
+		PER_Mostafa_Qoliram = {
+			picture = PER_Mostafa_Qoliram
+			
+			allowed = { original_tag = PER }
+			
+			traits = { heels_nipper }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Musa_Nuri_Esfandiari = {
+			picture = PER_Musa_Nuri_Esfandiari
+			
+			available	= { has_government = democratic }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { ideological_crusader }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Rajab-Ali_Mansor = {
+			picture = PER_Rajab-Ali_Mansor
+			
+			allowed = { original_tag = PER }
+			
+			traits = { syncretic_revanchist }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Reza_Hekmat = {
+			picture = PER_Reza_Hekmat
+			
+			allowed = { original_tag = PER }
+			
+			traits = { communist_revolutionary }
+			
+			ai_will_do = { factor = 1 }
+		}
+
+		PER_Rostam_Giv = {
+			picture = PER_Rostam_Giv
+			
+			available	= { 
+				if = {
+					limit = {	has_idea = tot_economic_mobilisation	}
+					NOT = { has_idea = PER_Mohammad_Tadayyon }
+				}
+				if = {
+					limit = {	has_idea = tot_economic_mobilisation	}
+					NOT = { has_idea = PER_Baqer_Kazemi }
+				}
+			}
+			
+			allowed = { original_tag = PER }
+			
+			traits = { economic_organizer }
+			
+			ai_will_do = { factor = 1 }
+		}
+	}
+	
+	##################
+	### TECHNOLOGY ###
+	##################
+	
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		PERG_MAN_Company = {
+			picture = idea_PERG_MAN_Company
+			cost = 150
+			removal_cost = 10
+			
+			allowed = {		original_tag = PER					}
+			visible = {		
+				has_country_flag = Froshtial_Consortium
+				NOT = { has_war_with = GER }
+			}
+			
+			available = {
+				NOT = { has_government = communism }
+				NOT = { has_government = democratic }
+				has_country_flag = Froshtial_Consortium
+			}
+			
+			research_bonus = { armor = 0.10 }
+			
+			traits = { medium_tank_manufacturer }
+			
+			ai_will_do = { factor = 2 }
+		}
+		
+		PER_generic_tank_manufacturer_1 = {
+			picture = idea_PER_generic_tank_manufacturer_1
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = { armor = 0.10 }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { tank_manufacturer }
+			
+			ai_will_do = { factor = 1 }
+		}
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		PER_generic_naval_manufacturer_2 = {
+			picture = idea_PER_generic_naval_manufacturer_2
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = { naval_equipment = 0.10 }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { naval_manufacturer }
+			
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+##################################################
+	
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		PER_generic_medium_aircraft_manufacturer_3 = {
+			picture = idea_PER_generic_air_manufacturer_3
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = { air_equipment = 0.10 }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_shahbaz = {
+			picture = idea_PER_shahbaz
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = { air_equipment = 0.10 }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { light_aircraft_manufacturer }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_generic_heavy_aircraft_manufacturer_2 = {
+			picture = idea_PER_generic_air_manufacturer_2
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = { air_equipment = 0.10 }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_generic_naval_aircraft_manufacturer_1 = {
+			picture = idea_PER_generic_naval_manufacturer_1
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = { air_equipment = 0.10 }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			ai_will_do = { factor = 1 }
+		}
+	}
+	
+##################################################
+	
+	materiel_manufacturer = {
+		
+		PER_qoorkhaneh = {
+			picture = idea_PER_qoorkhaneh
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = { infantry_weapons = 0.10 }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_generic_motorized_equipment_manufacturer_3 = {
+			picture = idea_PER_generic_motorized_equipment_manufacturer_3
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = { motorized_equipment = 0.10 }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			ai_will_do = { factor = 1 }
+		}
+
+		PER_touprizie_factory = {
+			picture = idea_PER_touprizie_factory
+			cost = 150
+			removal_cost = 10
+			
+			research_bonus = { artillery = 0.10 }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { artillery_manufacturer }
+			
+			ai_will_do = { factor = 1 }
+		}
+	}
+	
+##################################################
+	
+	industrial_concern = {
+		
+		PER_ARJ = {
+			picture = PER_ARJ
+			cost = 150
+			removal_cost = 20
+			
+			allowed = {		original_tag = PER				}
+			
+			research_bonus = {
+				industry = 0.04
+				electronics = 0.08
+			}
+						
+			traits = {	electronics_concern	}
+			ai_will_do = {	factor = 200	}
+		}
+		
+		PER_AEG = {
+			picture = PER_AEG
+			cost = 150
+			removal_cost = 15
+			
+			allowed = {		original_tag = PER					}
+			
+			visible = {
+				has_country_flag = Froshtial_Consortium
+				NOT = { has_war_with = GER }
+			}
+			
+			available = {
+				NOT = { has_government = communism }
+				NOT = { has_government = democratic }
+				has_country_flag = Froshtial_Consortium
+			}
+			research_bonus = { electronics = 0.08 }
+			
+			traits = {	electronics_concern	}
+			ai_will_do = {	factor = 2		}
+		}
+		
+		PERG_Krupp_Company = {
+			picture = idea_PERG_Krupp_Company
+			cost = 150
+			removal_cost = 15
+			
+			allowed = {		original_tag = PER					}
+			
+			visible = {
+				has_country_flag = Froshtial_Consortium
+				NOT = { has_war_with = GER }
+			}
+			
+			available = {
+				NOT = { has_government = communism }
+				NOT = { has_government = democratic }
+				has_country_flag = Froshtial_Consortium
+			}
+			research_bonus = {			industry = 0.10			}
+			
+			traits = {	industrial_concern	}
+			ai_will_do = {	factor = 2		}
+		}
+	
+		PERG_Siemens_Company = {
+			picture = idea_PERG_Siemens_Company
+			cost = 150
+			removal_cost = 15
+			
+			allowed = {		original_tag = PER					}
+			
+			visible = {
+				has_country_flag = Froshtial_Consortium
+				NOT = { has_war_with = GER }
+			}
+			
+			available = {
+				NOT = { has_government = communism }
+				NOT = { has_government = democratic }
+				has_country_flag = Froshtial_Consortium
+			}
+			research_bonus = { electronics = 0.11 }
+			
+			traits = {	electronics_concern	}
+			ai_will_do = {	factor = 1		}
+		}
+	}
+
+##################################################
+	
+	theorist = {
+
+		PER_Ali.Akbar_Siassi = {
+			picture = PER_Ali.Akbar_Siassi
+			
+			allowed = { original_tag = PER }
+			
+			research_bonus = { industry = 0.1 }
+			
+			traits = { per_great_architect }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Mahmod_Hesabi = {
+			picture = PER_Mahmod_Hesabi
+			
+			allowed = { original_tag = PER }
+			
+			modifier = { research_speed_factor = 0.05 }
+			
+			research_bonus = { nuclear = 0.1 }
+						
+			traits = { nuclear_enthusiast }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Ali_Razmara = {
+			picture = PER_Ali_Razmara
+						
+			available = { has_government = neutrality}
+			
+			allowed = { original_tag = PER }
+			
+			research_bonus = { cat_grand_battle_plan = 0.1 }
+			
+			traits = { military_theorist }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Abdollah_Hedayat = {
+			picture = PER_Abdollah_Hedayat
+						
+			available = { has_government = neutrality }
+			
+			allowed = { original_tag = PER }
+			
+			research_bonus = { cat_superior_firepower = 0.1 }
+			
+			traits = { mobile_warfare_expert }
+			
+			ai_will_do = { factor = 1 }
+		}
+	}	
+			
+	
+	################
+	### MILITARY ###
+	################
+
+	army_chief = {
+
+
+		PER_Ahmad_Amir.Ahmadi = {
+			picture = PER_Ahmad_Amir.Ahmadi
+			
+			allowed = { original_tag = PER }
+			
+			traits = { army_infantry_3 }
+			
+			ai_will_do = { factor = 1 }
+		}
+						
+		PER_Ali.Akbar_Derakhshan = {
+			
+			picture = PER_Ali.Akbar_Derakhshan
+						
+			allowed = { original_tag = PER }
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = { factor = 1 }
+		}
+	
+		PER_Hadi_Atabay = {
+			picture = PER_Hadi_Atabay
+			
+			allowed = { original_tag = PER }
+
+			modifier = { 
+				conscription = 0.01				
+				production_speed_buildings_factor = 0.05
+			}
+
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Hadi_Shaghaghi = {
+			picture = PER_Hadi_Shaghaghi
+			
+			allowed = { original_tag = PER }
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = { factor = 1 }
+		}
+
+		PER_Mohamad_Airom = {
+			picture = PER_Mohamad_Airom
+			
+			allowed = { original_tag = PER }
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = { factor = 1 }
+		}
+
+		PER_Mohammad_Shahbakhti = {
+			picture = PER_Mohammad_Shahbakhti
+			
+			allowed = { original_tag = PER }
+
+			traits = { army_chief_reform_2 }
+			
+			ai_will_do = { factor = 1 }
+		}
+	}
+
+##################################################	
+	
+	navy_chief = {
+
+		PER_Faraj_Rasaei = {
+			picture = PER_Faraj_Rasaei
+			
+			allowed = { original_tag = PER }
+			
+			traits = { navy_chief_reform_1 }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Ali_Baiandar = {
+			picture = PER_Ali_Baiandar
+						
+			available = { has_government = neutrality }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = { factor = 2 }
+		}
+	}
+	
+##################################################
+
+	air_chief = {
+	
+		PER_AIR_Ahmad.Khan_Nakhjavan = {
+			picture = PER_AIR_Ahmad.Khan_Nakhjavan
+			
+			allowed = { original_tag = PER }
+						
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_AIR_Eesaa_Eshtodakh = {
+			picture = PER_AIR_Eesaa_Eshtodakh
+			
+			allowed = { original_tag = PER }
+						
+			traits = { air_chief_safety_3 }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_AIR_Hedayat_Gilanshah = {
+			picture = PER_AIR_Hedayat_Gilanshah
+			
+			allowed = { original_tag = PER }
+
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_AIR_Sharafedin_Ghahremani = {
+			picture = PER_AIR_Sharafedin_Ghahremani
+			
+			allowed = { original_tag = PER }
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = { factor = 1 }
+		}
+	}
+	
+##################################################
+
+	high_command = {
+				
+		PER_Am_Janhanbani = {
+			picture = PER_Am_Janhanbani
+						
+			available = { has_government = neutrality }
+			
+			allowed = { original_tag = PER }
+			
+			traits = { army_entrenchment_3 }
+			
+			ai_will_do = { factor = 2 }
+		}
+	
+		
+		PER_Eskandar_Azmudeh = {
+			picture = PER_Eskandar_Azmudeh
+			
+			allowed = { original_tag = PER }
+			
+			traits = { army_logistics_3 }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Karim_BozarJomehri = {			
+			picture = PER_Karim_BozarJomehri
+			
+			allowed = { original_tag = PER }
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Mohammad_Copal = {
+			
+			picture = PER_Mohammad_Copal
+			
+			allowed = { original_tag = PER }
+			
+			traits = { army_artillery_2 }
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		PER_Mohammad_Dargaahi = {
+			
+			picture = PER_Mohammad_Dargaahi
+			
+			allowed = { original_tag = PER }
+			
+			traits = { army_chief_drill_2 }
+			
+			ai_will_do = { factor = 1 }
+		}	
+	}	
+}

@@ -1,0 +1,31 @@
+﻿l_english:
+ 
+ #####################
+ ### burnishofiran ###
+ #####################
+ 
+ PER_fighter_equipment_0:0 "Hawker Fury"
+ PER_fighter_equipment_0_short:0 "Fury"
+ PER_fighter_equipment_1:0 "Hawker Hind"
+ PER_fighter_equipment_1_short:0 "Hind"
+ PER_fighter_equipment_2:0 "Hawker Hurricane"
+ PER_fighter_equipment_2_short:0 "Hurricane"
+ PER_fighter_equipment_3:0 "Republic P-47 Thunderbolt"
+ PER_fighter_equipment_3_short:0 "Thunderbolt"
+ 
+ PER_CAS_equipment_1:0 "Hawker Audax"
+ PER_CAS_equipment_1_short:0 "Audax"
+ PER_CAS_equipment_2:0 "Hawker Typhoon"
+ PER_CAS_equipment_2_short:0 "Typhoon"
+ PER_CAS_equipment_3:0 "Hawker Tempest"
+ PER_CAS_equipment_3_short:0 "Tempest"
+ 
+ PER_nav_bomber_equipment_1:0 "Fairey Swordfish I"
+ PER_nav_bomber_equipment_1_short:0 "Swordfish I"
+ PER_nav_bomber_equipment_2:0 "Fairey Swordfish II"
+ PER_nav_bomber_equipment_2_short:0 "Swordfish II"
+ PER_nav_bomber_equipment_3:0 "Fairey Swordfish III"
+ PER_nav_bomber_equipment_3_short:0 "Swordfish III"
+ 
+ PER_tac_bomber_equipment_2:0 "Avro Anson"
+ PER_tac_bomber_equipment_2_short:0 "Anson"

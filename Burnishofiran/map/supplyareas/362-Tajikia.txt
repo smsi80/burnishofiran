@@ -1,0 +1,8 @@
+supply_area={
+	id=362
+	name="Tajikia"
+	value=4
+	states={
+		742 405 732 
+	}
+}

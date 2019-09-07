@@ -1,0 +1,23 @@
+
+	#####################
+	### burnishofiran ###
+	#####################	
+	
+	###############
+	###  Tanks  ###
+	###############
+
+objectTypes = {
+
+	pdxmesh = {
+		name =	"PER_tank_light_mesh"
+		file =	"gfx/models/units/tanks/PER_tank_light.mesh"
+
+			animation = { id = "attack"			type = "GER_tank_light_attack_animation" }
+			animation = { id = "idle"			type = "GER_tank_light_idle_animation" }
+			animation = { id = "move"			type = "GER_tank_light_moving_animation" }
+	
+		scale = 0.6
+		
+	}
+}

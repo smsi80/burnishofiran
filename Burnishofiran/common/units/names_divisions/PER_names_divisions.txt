@@ -1,0 +1,614 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names. 
+#           Numbers must start from 1 and up. 
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+
+PER_INF_01 = 
+{
+	name = "Piyade Nezam"
+
+	for_countries = { PER }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { PER_INF_01 }
+
+	fallback_name = "Lashkar %d PN"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		21 = { "Lashkar 21 P.Tabriz" }
+		28 = { "Lashkar 28 P.Kordstan" }
+		29 = { "Lashkar 29 P.Kordstan" }
+		64 = { "Lashkar 64 P.Rezaeieh" }
+		65 = { "Lashkar 65 P.Rezaeieh" }
+		77 = { "Lashkar 77 P.Khorasan" }
+		78 = { "Lashkar 78 P.Khorasan" }
+		84 = { "Lashkar 84 P.Khoramabad" }
+		
+		1 = { "Lashkar %d PN" }
+		2 = { "Lashkar %d PN" }
+		3 = { "Lashkar %d PN" }
+		4 = { "Lashkar %d PN" }
+		5 = { "Lashkar %d PN" }
+		6 = { "Lashkar %d PN" }
+		7 = { "Lashkar %d PN" }
+		8 = { "Lashkar %d PN" }
+		9 = { "Lashkar %d PN" }
+		10 = { "Lashkar %d PN" }
+		11 = { "Lashkar %d PN" }
+		12 = { "Lashkar %d PN" }
+		13 = { "Lashkar %d PN" }
+		14 = { "Lashkar %d PN" }
+		15 = { "Lashkar %d PN" }
+		16 = { "Lashkar %d PN" }
+		17 = { "Lashkar %d PN" }
+		18 = { "Lashkar %d PN" }
+		19 = { "Lashkar %d PN" }
+		20 = { "Lashkar %d PN" }
+		
+		22 = { "Lashkar %d PN" }
+		23 = { "Lashkar %d PN" }
+		24 = { "Lashkar %d PN" }
+		25 = { "Lashkar %d PN" }
+		26 = { "Lashkar %d PN" }
+		27 = { "Lashkar %d PN" }
+		
+		30 = { "Lashkar %d PN" }
+		31 = { "Lashkar %d PN" }
+		32 = { "Lashkar %d PN" }
+		33 = { "Lashkar %d PN" }
+		34 = { "Lashkar %d PN" }
+		35 = { "Lashkar %d PN" }
+		36 = { "Lashkar %d PN" }
+		37 = { "Lashkar %d PN" }
+		38 = { "Lashkar %d PN" }
+		39 = { "Lashkar %d PN" }
+		40 = { "Lashkar %d PN" }
+		41 = { "Lashkar %d PN" }
+		42 = { "Lashkar %d PN" }
+		43 = { "Lashkar %d PN" }
+		44 = { "Lashkar %d PN" }
+		45 = { "Lashkar %d PN" }
+		46 = { "Lashkar %d PN" }
+		47 = { "Lashkar %d PN" }
+		48 = { "Lashkar %d PN" }
+		49 = { "Lashkar %d PN" }
+		50 = { "Lashkar %d PN" }
+		51 = { "Lashkar %d PN" }
+		52 = { "Lashkar %d PN" }
+		53 = { "Lashkar %d PN" }
+		54 = { "Lashkar %d PN" }
+		55 = { "Lashkar %d PN" }
+		56 = { "Lashkar %d PN" }
+		57 = { "Lashkar %d PN" }
+		58 = { "Lashkar %d PN" }
+		59 = { "Lashkar %d PN" }
+		60 = { "Lashkar %d PN" }
+		61 = { "Lashkar %d PN" }
+		62 = { "Lashkar %d PN" }
+		63 = { "Lashkar %d PN" }
+		
+		66 = { "Lashkar %d PN" }
+		67 = { "Lashkar %d PN" }
+		68 = { "Lashkar %d PN" }
+		69 = { "Lashkar %d PN" }
+		70 = { "Lashkar %d PN" }
+		71 = { "Lashkar %d PN" }
+		72 = { "Lashkar %d PN" }
+		73 = { "Lashkar %d PN" }
+		74 = { "Lashkar %d PN" }
+		75 = { "Lashkar %d PN" }
+		76 = { "Lashkar %d PN" }
+		
+		79 = { "Lashkar %d PN" }
+		80 = { "Lashkar %d PN" }
+		81 = { "Lashkar %d PN" }
+		82 = { "Lashkar %d PN" }
+		83 = { "Lashkar %d PN" }
+		
+		
+	}
+}
+
+PER_CAV_01 = 
+{
+	name = "Asbaran"
+
+	for_countries = { PER }
+
+	can_use = { always = yes }
+
+	division_types = { "cavalry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { PER_CAV_01 }
+
+	fallback_name = "Lashkar %d Asbaran"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Lashkar %d Asbaran" }
+		2 = { "Lashkar %d Asbaran" }
+		3 = { "Lashkar %d Asbaran" }
+		4 = { "Lashkar %d Asbaran" }
+		5 = { "Lashkar %d Asbaran" }
+		6 = { "Lashkar %d Asbaran" }
+		7 = { "Lashkar %d Asbaran" }
+		8 = { "Lashkar %d Asbaran" }
+		9 = { "Lashkar %d Asbaran" }
+		10 = { "Lashkar %d Asbaran" }
+	}
+}
+
+PER_MOT_01 = 
+{
+	name = "Motorize"
+
+	for_countries = { PER }
+
+	can_use = { always = yes }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { PER_MOT_01 }
+
+	fallback_name = "Lashkar %d Motori"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Lashkar %d Motori" }
+		2 = { "Lashkar %d Motori" }
+		3 = { "Lashkar %d Motori" }
+		4 = { "Lashkar %d Motori" }
+		5 = { "Lashkar %d Motori" }
+		6 = { "Lashkar %d Motori" }
+		7 = { "Lashkar %d Motori" }
+		8 = { "Lashkar %d Motori" }
+		9 = { "Lashkar %d Motori" }
+		10 = { "Lashkar %d Motori" }
+	}
+}
+
+PER_ARM_01 = 
+{
+	name = "Zerehi"
+
+	for_countries = { PER }
+
+	can_use = { always = yes }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { PER_ARM_01 }
+
+	fallback_name = "Lashkar %d Zerehi"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		16 = { "L 16 Zerehi Qazvin" }
+		37 = { "L 37 Zerehi Shiraz" }
+		81 = { "L 81 Zerehi Kermanshah" }
+		88 = { "L 88 Zerehi Sistan" }
+		92 = { "L 92 Zerehi Ahvaz" }
+		
+		1 = { "L %d Zerehi" }
+		2 = { "L %d Zerehi" }
+		3 = { "L %d Zerehi" }
+		4 = { "L %d Zerehi" }
+		5 = { "L %d Zerehi" }
+		6 = { "L %d Zerehi" }
+		7 = { "L %d Zerehi" }
+		8 = { "L %d Zerehi" }
+		9 = { "L %d Zerehi" }
+		10 = { "L %d Zerehi" }
+		11 = { "L %d Zerehi" }
+		12 = { "L %d Zerehi" }
+		13 = { "L %d Zerehi" }
+		14 = { "L %d Zerehi" }
+		15 = { "L %d Zerehi" }
+		
+		17 = { "L %d Zerehi" }
+		18 = { "L %d Zerehi" }
+		19 = { "L %d Zerehi" }
+		20 = { "L %d Zerehi" }
+		21 = { "L %d Zerehi" }
+		22 = { "L %d Zerehi" }
+		23 = { "L %d Zerehi" }
+		24 = { "L %d Zerehi" }
+		25 = { "L %d Zerehi" }
+		26 = { "L %d Zerehi" }
+		27 = { "L %d Zerehi" }
+		28 = { "L %d Zerehi" }
+		29 = { "L %d Zerehi" }
+		30 = { "L %d Zerehi" }
+		31 = { "L %d Zerehi" }
+		32 = { "L %d Zerehi" }
+		33 = { "L %d Zerehi" }
+		34 = { "L %d Zerehi" }
+		35 = { "L %d Zerehi" }
+		36 = { "L %d Zerehi" }
+		
+		38 = { "L %d Zerehi" }
+		39 = { "L %d Zerehi" }
+		40 = { "L %d Zerehi" }
+		41 = { "L %d Zerehi" }
+		42 = { "L %d Zerehi" }
+		43 = { "L %d Zerehi" }
+		44 = { "L %d Zerehi" }
+		45 = { "L %d Zerehi" }
+		46 = { "L %d Zerehi" }
+		47 = { "L %d Zerehi" }
+		48 = { "L %d Zerehi" }
+		49 = { "L %d Zerehi" }
+		50 = { "L %d Zerehi" }
+		51 = { "L %d Zerehi" }
+		52 = { "L %d Zerehi" }
+		53 = { "L %d Zerehi" }
+		54 = { "L %d Zerehi" }
+		55 = { "L %d Zerehi" }
+		56 = { "L %d Zerehi" }
+		57 = { "L %d Zerehi" }
+		58 = { "L %d Zerehi" }
+		59 = { "L %d Zerehi" }
+		60 = { "L %d Zerehi" }
+		61 = { "L %d Zerehi" }
+		62 = { "L %d Zerehi" }
+		63 = { "L %d Zerehi" }
+		64 = { "L %d Zerehi" }
+		65 = { "L %d Zerehi" }
+		66 = { "L %d Zerehi" }
+		67 = { "L %d Zerehi" }
+		68 = { "L %d Zerehi" }
+		69 = { "L %d Zerehi" }
+		70 = { "L %d Zerehi" }
+		71 = { "L %d Zerehi" }
+		72 = { "L %d Zerehi" }
+		73 = { "L %d Zerehi" }
+		74 = { "L %d Zerehi" }
+		75 = { "L %d Zerehi" }
+		76 = { "L %d Zerehi" }
+		77 = { "L %d Zerehi" }
+		78 = { "L %d Zerehi" }
+		79 = { "L %d Zerehi" }
+		80 = { "L %d Zerehi" }
+		
+		82 = { "L %d Zerehi" }
+		83 = { "L %d Zerehi" }
+		84 = { "L %d Zerehi" }
+		85 = { "L %d Zerehi" }
+		86 = { "L %d Zerehi" }
+		87 = { "L %d Zerehi" }
+		
+		89 = { "L %d Zerehi" }
+		90 = { "L %d Zerehi" }
+		91 = { "L %d Zerehi" }
+		
+	}
+}
+
+PER_MEC_01 = 
+{
+	name = "Mekanizeh"
+
+	for_countries = { PER }
+
+	can_use = { always = yes }
+
+	division_types = { "mechanized"  }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { PER_MEC_01 }
+
+	fallback_name = "Lashkar %d Mekanizeh"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Lashkar %d Mekanizeh" }
+		2 = { "Lashkar %d Mekanizeh" }
+		3 = { "Lashkar %d Mekanizeh" }
+		4 = { "Lashkar %d Mekanizeh" }
+		5 = { "Lashkar %d Mekanizeh" }
+		6 = { "Lashkar %d Mekanizeh" }
+		7 = { "Lashkar %d Mekanizeh" }
+		8 = { "Lashkar %d Mekanizeh" }
+		9 = { "Lashkar %d Mekanizeh" }
+		10 = { "Lashkar %d Mekanizeh" }
+	}
+}
+
+PER_GRD_01 = 
+{
+	name = "Guard Javidan"
+
+	for_countries = { PER }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" "mountaineers" "marine" "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { PER_GRD_01 }
+
+	fallback_name = "Lashkar %d Guard Javidan"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Lashkar 1 Guard Javidan" }
+		2 = { "Lashkar 2 Guard Javidan" }
+		3 = { "Lashkar %d Guard Javidan" }
+		4 = { "Lashkar %d Guard Javidan" }
+		5 = { "Lashkar %d Guard Javidan" }
+		6 = { "Lashkar %d Guard Javidan" }
+		7 = { "Lashkar %d Guard Javidan" }
+		8 = { "Lashkar %d Guard Javidan" }
+		9 = { "Lashkar %d Guard Javidan" }
+		10 = { "Lashkar %d Guard Javidan" }
+	}
+}
+
+
+
+PER_ART_01 = 
+{
+	name = "Toup'khaneh"
+
+	for_countries = { PER }
+
+	can_use = { always = yes }
+
+	division_types = { "artillery" }
+
+	# Number reservation system will tie to another group.
+	 link_numbering_with = { PER_ART_01 }
+
+	fallback_name = "Guroh %d Toup'khaneh"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Guroh %d Toup'khaneh" }
+		2 = { "Guroh %d Toup'khaneh" }
+		3 = { "Guroh %d Toup'khaneh" }
+		4 = { "Guroh %d Toup'khaneh" }
+		5 = { "Guroh %d Toup'khaneh" }
+		6 = { "Guroh %d Toup'khaneh" }
+		7 = { "Guroh %d Toup'khaneh" }
+		8 = { "Guroh %d Toup'khaneh" }
+		9 = { "Guroh %d Toup'khaneh" }
+		10 = { "Guroh %d Toup'khaneh" }
+		11 = { "Guroh %d Toup'khaneh" }
+		12 = { "Guroh %d Toup'khaneh" }
+		13 = { "Guroh %d Toup'khaneh" }
+		14 = { "Guroh %d Toup'khaneh" }
+		15 = { "Guroh %d Toup'khaneh" }
+		16 = { "Guroh %d Toup'khaneh" }
+		17 = { "Guroh %d Toup'khaneh" }
+		18 = { "Guroh %d Toup'khaneh" }
+		19 = { "Guroh %d Toup'khaneh" }
+		20 = { "Guroh %d Toup'khaneh" }
+		21 = { "Guroh %d Toup'khaneh" }
+		22 = { "Guroh 22 Toup'khaneh" }
+		23 = { "Guroh %d Toup'khaneh" }
+		24 = { "Guroh %d Toup'khaneh" }
+		25 = { "Guroh %d Toup'khaneh" }
+		26 = { "Guroh %d Toup'khaneh" }
+		27 = { "Guroh %d Toup'khaneh" }
+		28 = { "Guroh %d Toup'khaneh" }
+		29 = { "Guroh %d Toup'khaneh" }
+		30 = { "Guroh %d Toup'khaneh" }
+		31 = { "Guroh %d Toup'khaneh" }
+		32 = { "Guroh %d Toup'khaneh" }
+		33 = { "Guroh 33 Toup'khaneh" }
+		34 = { "Guroh %d Toup'khaneh" }
+		35 = { "Guroh %d Toup'khaneh" }
+		36 = { "Guroh %d Toup'khaneh" }
+		37 = { "Guroh %d Toup'khaneh" }
+		38 = { "Guroh %d Toup'khaneh" }
+		39 = { "Guroh %d Toup'khaneh" }
+		40 = { "Guroh %d Toup'khaneh" }
+		41 = { "Guroh %d Toup'khaneh" }
+		42 = { "Guroh %d Toup'khaneh" }
+		43 = { "Guroh %d Toup'khaneh" }
+		44 = { "Guroh 44 Toup'khaneh" }
+		45 = { "Guroh %d Toup'khaneh" }
+		46 = { "Guroh %d Toup'khaneh" }
+		47 = { "Guroh %d Toup'khaneh" }
+		48 = { "Guroh %d Toup'khaneh" }
+		49 = { "Guroh %d Toup'khaneh" }
+		50 = { "Guroh %d Toup'khaneh" }
+		51 = { "Guroh %d Toup'khaneh" }
+		52 = { "Guroh %d Toup'khaneh" }
+		53 = { "Guroh %d Toup'khaneh" }
+		54 = { "Guroh %d Toup'khaneh" }
+		55 = { "Guroh 55 Toup'khaneh" }
+	}
+}
+
+PER_MAR_01 = 
+{
+	name = "TofanghDarane Daryai"
+
+	for_countries = { PER }
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	# link_numbering_with = { PER_MAR_01 }
+
+	fallback_name = "Tip %d TD Niru'Daryai"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Tip %d TD Niru'Daryai" }
+		2 = { "Tip %d TD Niru'Daryai" }
+		3 = { "Tip %d TD Niru'Daryai" }
+		4 = { "Tip %d TD Niru'Daryai" }
+		5 = { "Tip %d TD Niru'Daryai" }
+		6 = { "Tip %d TD Niru'Daryai" }
+		7 = { "Tip %d TD Niru'Daryai" }
+		8 = { "Tip %d TD Niru'Daryai" }
+		9 = { "Tip %d TD Niru'Daryai" }
+		10 = { "Tip %d TD Niru'Daryai" }
+	}
+}
+
+PER_MTN_01 = 
+{
+	name = "TofanghDarane Piyade"
+
+	for_countries = { PER }
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	# link_numbering_with = { PER_MAR_01 }
+
+	fallback_name = "Tip %d TD Niru'Zamini"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		1 = { "Tip %d TD Niru'Zamini" }
+		2 = { "Tip %d TD Niru'Zamini" }
+		3 = { "Tip %d TD Niru'Zamini" }
+		4 = { "Tip %d TD Niru'Zamini" }
+		5 = { "Tip %d TD Niru'Zamini" }
+		6 = { "Tip %d TD Niru'Zamini" }
+		7 = { "Tip %d TD Niru'Zamini" }
+		8 = { "Tip %d TD Niru'Zamini" }
+		9 = { "Tip %d TD Niru'Zamini" }
+		10 = { "Tip %d TD Niru'Zamini" }
+	}
+}
+
+PER_PAR_01 = 
+{
+	name = "TofanghDarane Havabord"
+
+	for_countries = { PER }
+
+	can_use = { always = yes }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	# link_numbering_with = { PER_MAR_01 }
+	
+	fallback_name = "Tip %d TD Havabord"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered =
+	{
+		23 = { "Tip 23 Havabord Tehran" }
+		55 = { "Tip 55 Havabord Shiraz" }
+		1 = { "Tip %d Havabord" }
+		2 = { "Tip %d Havabord" }
+		3 = { "Tip %d Havabord" }
+		4 = { "Tip %d Havabord" }
+		5 = { "Tip %d Havabord" }
+		6 = { "Tip %d Havabord" }
+		7 = { "Tip %d Havabord" }
+		8 = { "Tip %d Havabord" }
+		9 = { "Tip %d Havabord" }
+		10 = { "Tip %d Havabord" }
+		11 = { "Tip %d Havabord" }
+		12 = { "Tip %d Havabord" }
+		13 = { "Tip %d Havabord" }
+		14 = { "Tip %d Havabord" }
+		15 = { "Tip %d Havabord" }
+		16 = { "Tip %d Havabord" }
+		17 = { "Tip %d Havabord" }
+		18 = { "Tip %d Havabord" }
+		19 = { "Tip %d Havabord" }
+		20 = { "Tip %d Havabord" }
+		21 = { "Tip %d Havabord" }
+		22 = { "Tip %d Havabord" }
+		
+		24 = { "Tip %d Havabord" }
+		25 = { "Tip %d Havabord" }
+		26 = { "Tip %d Havabord" }
+		27 = { "Tip %d Havabord" }
+		28 = { "Tip %d Havabord" }
+		29 = { "Tip %d Havabord" }
+		30 = { "Tip %d Havabord" }
+		31 = { "Tip %d Havabord" }
+		32 = { "Tip %d Havabord" }
+		33 = { "Tip %d Havabord" }
+		34 = { "Tip %d Havabord" }
+		35 = { "Tip %d Havabord" }
+		36 = { "Tip %d Havabord" }
+		37 = { "Tip %d Havabord" }
+		38 = { "Tip %d Havabord" }
+		39 = { "Tip %d Havabord" }
+		40 = { "Tip %d Havabord" }
+		41 = { "Tip %d Havabord" }
+		42 = { "Tip %d Havabord" }
+		43 = { "Tip %d Havabord" }
+		44 = { "Tip %d Havabord" }
+		45 = { "Tip %d Havabord" }
+		46 = { "Tip %d Havabord" }
+		47 = { "Tip %d Havabord" }
+		48 = { "Tip %d Havabord" }
+		49 = { "Tip %d Havabord" }
+		50 = { "Tip %d Havabord" }
+		51 = { "Tip %d Havabord" }
+		52 = { "Tip %d Havabord" }
+		53 = { "Tip %d Havabord" }
+		54 = { "Tip %d Havabord" }
+		
+	}
+}

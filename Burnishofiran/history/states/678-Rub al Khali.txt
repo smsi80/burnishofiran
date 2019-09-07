@@ -1,0 +1,22 @@
+
+state={
+	id=678
+	name="STATE_678"
+	manpower=41012
+	state_category = rural
+
+	history={
+		owner = SAU
+		buildings = {
+			infrastructure = 0
+		}
+		victory_points = {
+			8030 1
+		}
+		add_core_of = SAU
+	}
+
+	provinces={
+		4932 5081 8030 8118 10870 12740 12768  13289 13290 13291 13292 13293 13294
+	}
+}

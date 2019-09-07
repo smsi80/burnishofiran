@@ -1,0 +1,43 @@
+
+	#####################
+	### burnishofiran ###
+	#####################
+
+	###################
+	###  motorized  ###
+	###################
+	
+objectTypes = {
+	pdxmesh = {
+		name =	"PER_mechanized_frame_mesh"
+		file =	"gfx/models/units/vehicles/motorized_frame.mesh"
+		
+		animation = { id = "idle"			type = "motorized_frame_idle_animation" }
+		animation = { id = "move"			type = "motorized_frame_move_animation" }
+		animation = { id = "attack"			type = "motorized_frame_attack_animation" }
+	}
+	
+	pdxmesh = {
+		name = "PER_motorized_frame_mesh"
+		file = "gfx/models/units/vehicles/motorized_frame.mesh"
+		
+		animation = { id = "idle"			type = "motorized_frame_idle_animation" }
+		animation = { id = "move"			type = "motorized_frame_move_animation" }
+		animation = { id = "attack"			type = "motorized_frame_attack_animation" }
+	}
+	
+	###############################
+	###  Vehicle inf WEAPON MG  ###
+	###############################
+	
+	pdxmesh = {
+		name = "PER_inf_w_vehicle_1_mesh"
+		file = "gfx/models/units/PER_inf_w_vehicle_MG1.mesh"
+	}
+
+	pdxmesh = {
+		name = "PER_inf_w_vehicle_2_mesh"
+		file = "gfx/models/units/PER_inf_w_vehicle_MG2.mesh"
+	}
+	
+}

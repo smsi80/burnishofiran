@@ -1,0 +1,32 @@
+
+state={
+	id=416
+	name="STATE_416"
+	manpower = 1059739
+	state_category = large_town
+
+	history={
+		owner = PER
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			13434 10 
+		}
+		add_core_of = PER
+		
+		1939.1.1 = {
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 2
+			}
+		}
+	}
+
+	provinces={
+		1521 1888 1957 2000 5029 5073 7573 10351 10806
+		13425 13426 13427 13428 13429 13430 13431 13432 13433 13434 13435 13436
+		7990 8009 10759 10890 10873 12852 12739 
+	}
+}

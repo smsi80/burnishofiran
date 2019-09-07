@@ -1,0 +1,34 @@
+state = {
+	id =230
+	name = "STATE_230"
+	manpower = 805250
+	buildings_max_level_factor = 1.000
+	state_category = town
+	
+	history = {
+		owner = SOV
+		victory_points = {
+			13308 20 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+
+		}
+		
+		add_core_of = ARM
+		
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+			}
+
+		}
+
+	}
+
+	provinces = {
+		3564 11708 12320 12380 12441 13123 13308 
+	}
+}

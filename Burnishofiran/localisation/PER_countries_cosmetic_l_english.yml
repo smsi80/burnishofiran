@@ -1,0 +1,25 @@
+﻿l_english:
+ 
+ #####################
+ ### burnishofiran ###
+ #####################
+ 
+ IRN_ANCIENT_neutrality:0 "IranShahr"
+ IRN_ANCIENT_fascism:0 "Iran Empire"
+ IRN_ANCIENT_democratic:0 "Allied Iran"
+ IRN_ANCIENT_communism:0 "Central Socialist Republic Iran"
+ IRN_ANCIENT_neutrality_DEF:0 "Iranshahr"
+ IRN_ANCIENT_fascism_DEF:0 "the Iran Empire"
+ IRN_ANCIENT_democratic_DEF:0 "the Allied Iran"
+ IRN_ANCIENT_communism_DEF:0 "the Central Eastern Socialist Republic"
+ 
+ PER_UNIFIED_neutrality:0 "Iran Shahr"
+ PER_UNIFIED_fascism:0 "Iran Empire"
+ PER_UNIFIED_democratic:0 "United Iran"
+ PER_UNIFIED_communism:0 "Middle Eastern Socialist Republic"
+ PER_UNIFIED_neutrality_DEF:0 "Iran Shahr"
+ PER_UNIFIED_fascism_DEF:0 "the Iran Empire"
+ PER_UNIFIED_democratic_DEF:0 "the United Iran"
+ PER_UNIFIED_communism_DEF:0 "the Middle Eastern Socialist Republic"
+  
+

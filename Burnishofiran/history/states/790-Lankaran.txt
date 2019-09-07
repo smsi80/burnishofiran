@@ -1,0 +1,25 @@
+state = {
+	id = 790
+	name = "STATE_790"		#Lankaran
+	manpower = 300000
+	state_category = rural
+	
+	provinces = {
+		12434 4473 13303 13304
+	}
+
+	resources={	}
+
+	history = {
+		owner = SOV
+		victory_points = {
+			13304 5
+		}
+		buildings = {
+			infrastructure = 1
+			
+		}
+		add_core_of = AZR
+	}
+	
+}

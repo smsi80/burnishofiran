@@ -1,0 +1,538 @@
+﻿##### Division Templates #####
+start_equipment_factor = 0.3
+division_template = {
+	name = "Piyade v1"			# Infantry Division
+
+	division_names_group = PER_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Toup'khaneh v1"			# Artillery Group
+
+	division_names_group = PER_ART_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}	
+}
+
+division_template = {
+	name = "Piyade Nezam v1"				# Represents groups of independent infantry brigades
+
+	division_names_group = PER_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Asbaran v1"			# Asbaran Brigade
+
+	division_names_group = PER_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Asbaran v2"			# Asbaran Division
+
+	division_names_group = PER_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Zerehi sabok v1"				
+
+	division_names_group = PER_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+###### OOB ######
+units = {
+	######## LAND OOB ########
+	##### Imperial Iranian Army #####
+	division = {
+		name = "Asbaran Brigade"
+		location = 1896
+		division_template = "Asbaran v1"		
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 1896
+		division_template = "Asbaran v2"		
+		start_experience_factor = 0.23
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 10913
+		division_template = "Asbaran v2"		
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 10837
+		division_template = "Asbaran v2"		
+		start_experience_factor = 0.24
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 13434
+		division_template = "Asbaran v2"		
+		start_experience_factor = 0.29
+		start_equipment_factor = 1
+	}
+
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 10837
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 1896
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 10913
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 13434
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 7982
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 6
+		}
+		location = 13410
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 7
+		}
+		location = 10797
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 8
+		}
+		location = 7953
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 9
+		}
+		location = 13361
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 10
+		}
+		location = 7953
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 11
+		}
+		location = 7953
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 12
+		}
+		location = 10797
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 13
+		}
+		location = 10797
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 14
+		}
+		location = 13410
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 15
+		}
+		location = 13410
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 16
+		}
+		location = 13410
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 17
+		}
+		location = 13361
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 18
+		}
+		location = 13361
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 19
+		}
+		location = 7953
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.24
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 20
+		}
+		location = 7953
+		division_template = "Piyade v1"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		name = "North Persia Group"
+		location = 1896
+		division_template = "Piyade Nezam v1"		
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.3
+	}
+	
+	division = {
+		name = "South Persia Group"
+		location = 13410
+		division_template = "Piyade Nezam v1"		
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 11
+		}
+		location = 10837
+		division_template = "Toup'khaneh v1"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 22
+		}
+		location = 7953
+		division_template = "Toup'khaneh v1"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 33
+		}
+		location = 13361
+		division_template = "Toup'khaneh v1"		
+		start_experience_factor = 0.25
+		start_equipment_factor = 1
+	}
+	
+	division = {
+			division_name = {
+				is_name_ordered = yes
+				name_order = 44
+		}
+		location = 13361
+		division_template = "Toup'khaneh v1"		
+		start_experience_factor = 0.40
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 55
+		}
+		location = 7982
+		division_template = "Toup'khaneh v1"		
+		start_experience_factor = 0.14
+		start_equipment_factor = 1
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 7982
+		division_template = "Toup'khaneh v1"		
+		start_experience_factor = 0.21
+		start_equipment_factor = 0.7
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 7953
+		division_template = "Toup'khaneh v1"		
+		start_experience_factor = 0.23
+		start_equipment_factor = 0.7
+	}
+	
+	division = {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 37
+		}
+		location = 1896
+		division_template = "Zerehi sabok v1"		
+		start_experience_factor = 0.01
+		start_equipment_factor = 0.9
+	}
+	
+	
+	
+	
+}
+
+air_wings = {
+	### Imperial Iranian Air Force ###
+	266 = {
+		# 1st Air Group -- Hawker Furys
+		fighter_equipment_0 =  {
+			owner = "PER" 
+			amount = 120
+		}
+		name = "Hawker Furys"
+		ace={ # Order is important. Ace will be assigned to the wing above (fighter_equipment_0).
+			modifier = "fighter_unique"
+			name = "Mir"
+			surname = "Mahna"
+			callsign = "Shahin"
+			portrait = 1 # Pick random index here, or make special GFX_GER_ace_Erich_Hartmann to override.
+		}
+		
+		# 2nd, 3rd Air Groups -- Hawker Hinds, Audaxes
+		CAS_equipment_1 =  {
+			owner = "PER" 
+			amount = 80
+		}
+		name = "Hawker Hinds, Audaxes"
+		
+		transport_plane_equipment_1 = {
+			owner = "PER" 
+			amount = 20
+		}
+		name = "Tarabary"
+	}
+}
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "PER"
+		}
+		requested_factories = 2
+		progress = 0.7
+		efficiency = 100
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "PER"
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 100
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = CAS_equipment_1
+			creator = "PER"
+		}
+		requested_factories = 1
+		progress = 0.25
+		efficiency = 100
+	}
+	
+}

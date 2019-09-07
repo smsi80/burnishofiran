@@ -1,0 +1,351 @@
+﻿
+ #####################
+ ### burnishofiran ###
+ #####################
+
+##### IRAN/PERSIA NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+PER_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { PER }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "IIS "							
+	fallback_name = "Navshekan %d"					
+
+	unique = {
+		"Damavand" "Palang" "Babr" "Sahand" "Alvand" "Alborz" "Sabalan"
+		"Arian"
+	}
+}
+
+
+### LIGHT CRUISER NAMES###
+PER_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { PER }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "IIS "							
+	fallback_name = "Razmnav Sabok %d"
+
+	unique = {
+		"Shir" "Paykan"		
+	}
+}
+
+### HEAVY CRUISER NAMES###
+PER_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { PER }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "IIS "							
+	fallback_name = "Razmnav Sabok %d"
+
+	unique = {	}
+}
+
+### BATTLESHIP NAMES ###
+PER_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { PER }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = "IIS "							
+	fallback_name = "Nav Razmi %d"		
+
+	unique = {	}
+}
+
+### BATTLECRUISER NAMES ###
+PER_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { PER }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = "IIS "							
+	fallback_name = "Nav Razmi %d"		
+
+	unique = {	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+PER_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { PER }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "IIS "							
+	fallback_name = "Ashianh %d"		
+
+	unique = {
+		"Zaal" "Simorgh" 
+	}
+}
+
+
+### SUBMARINES ###
+PER_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { PER }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "IIS "							
+	fallback_name = "Zir dariaei %d"
+	
+	unique = {
+		"Nooh" "Yunes" "Nahang" "Yugo"
+	}
+}
+
+######################################################################################################
+######################################################################################################
+
+### THEME: Iran Ancient States ###
+PER_Ancient_States = {
+	name = "Ancient States"
+
+	for_countries = {PER }
+
+	type = ship
+	ship_types = {
+		ship_hull_light destroyer
+		ship_hull_cruiser light_cruiser
+		ship_hull_cruiser heavy_cruiser
+		ship_hull_heavy battleship
+		ship_hull_heavy battle_cruiser
+		ship_hull_submarine submarine
+		ship_hull_carrier carrier
+	}
+	
+	prefix = "IIS "							
+
+	unique = {
+		"Taporestan" "Pars" "Mada" "Atropaten" "Ekbatan" "Raga" "Caspiana" "Khocha" "Soziana" "Partua" "Espada"
+		"Zaraca" "Harayu" "Bakhtarish" "Marjana" "Sarqud" "Khurazmish" "Harkhuatish" "Satakosh" "Maca" "Cormana"
+		"Babirush" "Asura" "Arbya" "Mudarya" "Armina" "Catpadoc" "Gadar"
+		"Khorasan" "Pars" "Azarabadegan" "Makran" "Sistan" "Kharazm" "Mad" "Part" "Soltan"
+	}
+}
+
+######################################################################################################
+
+## THEME: Iran Ancient Cities ###
+PER_Ancient_Cities = {
+	name = "Ancient Cities"
+
+	for_countries = {PER }
+
+	type = ship
+	ship_types = {
+		ship_hull_light destroyer
+		ship_hull_cruiser light_cruiser
+		ship_hull_cruiser heavy_cruiser
+		ship_hull_heavy battleship
+		ship_hull_heavy battle_cruiser
+		ship_hull_submarine submarine
+		ship_hull_carrier carrier
+	}
+	
+	prefix = "IIS "							
+
+	unique = {
+		"Anar" "Azakan" "Eban" "Onas" "Apatyeh" "Arg" "Qumis" "Hissar" "Qiliche" "Nushabad" "Partecan" "Asac"
+		"Varcan" "Artacuan" "Susia" "Organ" "Zivuieh" "Azarmidukht" "Abiurd" "Izirta" "Anshan" "Ecsin" "Istakhr"
+		"Bishapur" "Ijdehapikar" "Parsua" "Parse" "Pishivada" "Temukan" "Tavus" "Tun" "Humay Chehrzad" "Khidualo" 
+		"Darabgerd" "Shapurkhast" "Susa" "Sukhteh" "Shirvan" "Zeravand" "Kambadan" "Urganch" "Varena" "Hegmataneh"
+		"Zardac"
+	}
+}
+
+######################################################################################################
+
+## THEME: Iran Cities ###
+PER_cities = {
+	name = "Cities"
+
+	for_countries = {PER }
+
+	type = ship
+	ship_types = {
+		ship_hull_light		destroyer
+		ship_hull_cruiser	light_cruiser
+		ship_hull_cruiser	heavy_cruiser
+		ship_hull_heavy		battleship
+		ship_hull_heavy		battle_cruiser
+		ship_hull_submarine	submarine
+		ship_hull_carrier	carrier
+	}
+	
+	prefix = "IIS "							
+
+	unique = {
+		"Sepahan" "Miandeh" "Ebadan" "Apatyeh" "Miana" "Sudabgerd" "Arasbaran" "Iraq" "Irak" "Shapur" "Gombarun"
+		"Ashraf" "Mahestan" "Papil" "Siadan" "Davarij" "Shasavar" "Sabzevaran" "Radecan" "Qidar" "Dejpul" "Susangerd" 
+		"Kohnehdeh" "Miransha" "Sakhtsar" "Duzdab" "Samangan" "Tusan" "Sanehdj" "Qumshe" "Dehkurd" "Susana" "Shiran" 
+		"Sirdan" "Golshan" "Shahi" "Tun" "Daran" "Pasa" "Kashvin" "Kamandan" "Duashir" "kambadan" "kukalan" "Karevansara"
+		"Tehran" "Ray" "Rasht" "Isfahan" "Kerman" "Mashhad" "Gorgan" "Qom" "Arak" "Zanjan" "Ardebil" "Tabriz" "Khoy" "Urumia"
+		"Mahabad" "Hamedan" "Mahabad" "Illam" "Ahvaz" "Khorramshahr" "Yazd" "Behbahan" "Bushehr" "Shiraz" "Fars" "Zabol"
+		
+	}
+}
+
+######################################################################################################
+
+### THEME: Iran Names (Bano) ###
+PER_NAMES_FAMALE = {
+
+	name = "Iranian Names (Bano)"
+
+	for_countries = {PER }
+
+	type = ship
+	ship_types = {
+		ship_hull_light		destroyer
+		ship_hull_cruiser	light_cruiser
+		ship_hull_cruiser	heavy_cruiser
+		ship_hull_heavy		battleship
+		ship_hull_heavy		battle_cruiser
+		ship_hull_submarine	submarine
+		ship_hull_carrier	carrier
+	}
+	
+	prefix = "IIS "							
+
+	unique = {
+		"Abgineh" "Aram" "Abnus" "Atena" "Atusa" "Akhtar" "Azargun" "Azarnush" "Azin" "Ara" "Artemis" "Arezo" "Armina" 
+		"Armita" "Aryana" "Aryadokht" "Aryna" "Azadeh" "Asa" "Asana" "Astiaj" "Aftab" "Afarin" "Agrin" "Ala" "Ava" "Avid" 
+		"Avisa" "Ahu" "Abrisham" "Arqavan" "Arusha" "Estar" "Afroz" "Afsaneh" "Afsar" "Afsun" "Afshan" "Ameti" "Ametis" 
+		"Amitis" "Anahid" "Andisheh" "Anusheh" "Iran" "Irana" "Iranu" "Iriana" "Iran Dokht" "Banu" "Benafsheh" "Bahar"
+		"Baharan" "Baharak" "Behdis" "Behdokht" "Behshid" "Behnaz" "Behnush" "Buseh" "Bita" "Baran" "Paniz" "Parmis"
+		"Padideh" "Partu" "Pardis" "Parasto" "Parand" "Parnia" "Parvaneh" "Parvin" "Pary" "Parya" "Paryru" "Pryzad"
+		"Parisa" "Parishad" "Parimah" "Parinaz" "Parivash" "Pegah" "Pupak" "Puran" "Puri" "Puneh" "Pymaneh" "Parnia"
+		"Parmida" "Tabandeh" "Taraneh" "Tersa" "Termeh" "Terneh" "Tahmineh" "Tir" "Terang" "Turandukht" "Tusca" "Tina"
+		"Tica" "Tehlar" "Tehnia" "Terifeh" "Tiroj" "Javaneh" "Javan" "Chakaleh" "Khorshid" "Daneh" "Durry" "Darya" "Delara"
+		"Delaram" "Delbar" "Delkesh" "Duca" "Dina" "Ramesh" "Rasher" "Ramina" "Rasa" "Raha" "Raham" "Ravan" "Rudabeh" "Ruja"
+		"Rushanak" "Runak" "Roya" "Ruksana" "Rujin" "Rujina" "Razan" "Rizan" "Zari" "Zarrin" "Zarrindokht" "Zuya" "Ziba"
+		"Zibandeh" "Zina" "Zivar" "Jaleh" "Jarfa" "Jila" "Jiner" "Jina" "Sarak" "Sarina" "Saqar" "Sanaz" "Sayeh" "Sepideh"
+		"Setareh" "Sutodeh" "Sargol" "Sarvenaz" "Samaneh" "Sudabeh" "Sury" "Suzan" "Susan" "Sugol" "Sugand" "Sima" "Simin"
+		"Shaparak" "Shapary" "Shadan" "Shady" "Shana" "Shayesteh" "Shabnam" "Shakiba" "Shamim" "Shahpar" "shahrbano" 
+		"Shahrukh" "Shahrzad" "Shahrnaz" "Shohre" "Shahnaz" "Shahen" "Shoka" "Shaqaieq" "Shekufeh" "Shekuh" "Shakila"
+		"Shyda" "Shyrin" "Shifteh" "Shila" "Shima" "Shiva" "Fereshteh" "Furoq" "Faryba" "Faryma" "Farin" "Farynaz" "Firuzeh"
+		"Farimah" "Farnush" "Qashang" "Kamand" "Karaneh" "Gelareh" "Golavij" "Golbano" "Golbahar" "Golpa" "Golpuneh" "Goltaj"
+		"Golrokh" "Golro" "Golshan" "Golnaz" "Golnar" "Goly" "Gohar" "Goharshad" "Gita" "Gite" "Ladan" "Laleh" "Lalerokh"
+		"Mazon" "Mamak" "Mana" "Mandana" "Manli" "Mahto" "Mahchehreh" "Mahdokht" "Mahnosh" "Marjan" "Morvarid" "Mojdeh" 
+		"Mojgun" "Mastaneh" "Mona" "Manijeh" "Mahta" "Mahtab" "Mahdokht" "Mahdis" "Mehrazar" "Mehrabe" "Mehrane" "Mehraban" 
+		"Mehri" "Mehrak" "Mehri" "Mehrzad" "Mahsa" "Mahasti" "Mahshid" "Mahnaz" "Mehnush" "Mahin" "Mina" "Mino" "Naz" 
+		"Nazanin" "Nazila" "Nahid" "Narges" "Nastaran" "Nasrin" "Negar" "Negin" "Nahal" "Nava" "Nosh Afarin" "Noshin"
+		"Nilofar" "Niko" "Niki" "Niksa" "Nisha" "Niosha" "vida" "Vanda" "Hasti" "Homa" "Hengameh" "Yara" "Yas" "Yasaman"
+		"Yasamin" "Yeganeh" "Yekta" "Yasna" "Yotab"
+	}
+}
+
+######################################################################################################
+
+### THEME: Iran Names (Mehraban) ###
+PER_NAMES_MALE = {
+
+	name = "Iranian Names (Mehraban)"
+
+	for_countries = {PER }
+
+	type = ship 
+	ship_types = {
+		ship_hull_light		destroyer
+		ship_hull_cruiser	light_cruiser
+		ship_hull_cruiser	heavy_cruiser
+		ship_hull_heavy		battleship
+		ship_hull_heavy		battle_cruiser
+		ship_hull_submarine	submarine
+		ship_hull_carrier	carrier
+	}
+	
+	prefix = "IIS "							
+
+	unique = {
+		"Abtin" "Atash" "Atrupat" "Atrin" "Artin" "Azarakhsh" "Azarmeh" "Araz" "Arad" "Arta" "Artan" "Arsham" "Arman" "Armin"
+		"Arvin" "Aria" "Aryaban" "Aryana" "Aryan" "Azad" "Azarmoqan" "Asad" "Astiag" "Alan" "Aveh" "Ario" "Ariafar"	"Ariamen"
+		"Ariamanish" "Aryamehr" "Aryan" "Akhgar" "Arkhsha" "Ardeshir" "Ardalan" "Ardavan" "Arjang" "Aras" "Arsha" "Arshia"
+		"Arvand" "Ajdar" "Ashk" "Ashkan" "Afshar" "Afshin" "Alborz" "Alvand" "Omid" "Anosh" "Anoshiravan" "Orang" "Iraj" "Barbod"
+		"Bamdad" "Bamin" "Bamshad" "Bardia" "Bozorg Mehr" "Behbod" "Bahram" "Bahman" "Behmanesh" "Bijan" "Behroz" "Behrad"
+		"Behzad" "Behdad" "Behshad" "Behnam" "Borzo" "Borna" "Barzan" "Boromand" "Tirdad" "Tahmasb" "Tahmores" "Taban"
+		"Jamasb" "Javid" "Jahan Bakhsh" "Jahan Shah" "Che KO" "Chia" "CHiako" "Khodadad" "Khodabakhsh" "Khodayar" "Khosro"
+		"Dara" "Dadmehr" "Damon" "Danosh" "Dano" "Darab" "Dayako" "Radian" "Rambod" "Ramin" "Ramtin" "Rakhshan" "Rastan"
+		"Rozbeh" "Raman" "Rayan" "Roham" "Rad" "Zand" "Zobin" "Jobin" "Salar" "Sadan" "Saman" "Sam" "Sepanta" "Soren" "Siamak"
+		"Siros" "Sina" "Shervin" "Shaian" "Shahrokh" "Shahin" "Shahram" "Shahrad" "Shahab" "Shariar" "Shirzad" "Shahyar" "Shahnam"
+		"Shirvan" "Shahmal" "Shirkoh" "Farbod" "Farsa" "Farzad" "Farzin" "Fardin" "Fardad" "Farvartidh" "Farman" "Farhang"
+		"Fariborz" "Farnad" "Farhad" "Farnam" "Farham" "Firoz" "Farshad" "Farokh" "Karen" "Kamran" "Kambiz" "Kavvos" "Kenarang"
+		"Kianush" "Kiarash" "Kia" "Kian" "Kosha" "Kikhosro" "Kiqobad" "Keivan" "Kiomars" "Kardo" "Karokh" "Karzan" "Gorgin" "Giho"
+		"Godarz" "Garshasb" "Goshtasb" "Goran" "Lohrasb" "Las" "Lavchak" "Lizan" "Mahdiar" "Maziar" "Makan" "Mani" "Mahan"
+		"Mehregan" "Mardavich" "Manuchehr" "Mahbod" "Mehdad" "Mehrdad" "Mehrshad" "Mehran" "Milad" "Mehrab" "Milan" "Nariman"
+		"Nakisa" "Navid" "Nima" "Niosha" "Nasiko" "Nesko" "Hamon" "Hormoz" "Hormozd" "Homan" "Hoshang" "Hotan" "Hoshiar" "Yavar"
+		"Yadegar" "Ardashir" "Arshad" "Armand" "Aban" "Aran" "Bavand" "Bayram" "Bakhtiar" "Bedad" "Dalir" "Ervin" "Izad" "Farrokh"
+		"Farshid" "Jam" "Khosrow" "Mazdan" "Marzban" "Omid" "Papak" "Parsa" "Parviz" "Payam" "Pedram" "Piruz" "Robin" "Sassan" "Sepehr"
+		"Shahryar" "Turan" "Vahid" "Zurvan"
+	}
+}
+
+######################################################################################################
+
+## THEME: Iran Legendary ###
+PER_legendary = {
+	name = "Legendary"
+
+	for_countries = {PER }
+
+	type = ship
+	ship_types = {	ship_hull_heavy battleship		ship_hull_heavy battle_cruiser	ship_hull_carrier carrier	}
+	
+	prefix = "IIS "							
+
+	unique = {
+		"Arash" "Ario Barzan" "Esfandiar" "Aafrasiab" "Babak" "Tahamtan" "Jamshid" "Jahangir" "Jahan Dar" "Jahan" "Khashayar"
+		"Dariush" "Rostam" "Zartosht" "Soroush" "Sorena" "Soshiant" "Sohrab" "Siavash" "Faramarz" "Farvahar" "Kourosh" "Kaveh"
+		"Mazdak" "Vandad" "Yazdgerd" "Yazdan" "Pouria" "Shapour" "Saam"
+	}
+}
+
+######################################################################################################
+
+## THEME: Iran Gods ###
+PER_GODS = {
+	name = "Gods"
+
+	for_countries = {PER }
+
+	type = ship
+	ship_types = {	ship_hull_heavy battleship		ship_hull_heavy battle_cruiser	ship_hull_carrier carrier	}
+	
+	prefix = "IIS "							
+
+	unique = {
+		"Anahita" "Mitra" "Mehr" "Indra" "Azar" "Varhan" "Vaiu" "Tishter" "sur" "Daiva" "Azi" "Hovar" "Varta" "Yama" "Ahura" "" "" "" 
+	}
+}
+
+######################################################################################################
+
+
+

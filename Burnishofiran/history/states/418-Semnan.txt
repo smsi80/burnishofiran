@@ -1,0 +1,26 @@
+
+state = {
+	id = 418 
+	name = "STATE_418" 		# Marv
+	manpower = 932362
+	
+	state_category = town
+
+	history = {
+		owner = SOV
+		add_core_of = TMS
+		
+		buildings = {
+			infrastructure = 1
+		}
+		
+		victory_points = {
+			7560 15 
+		}
+	}
+
+	provinces = {
+		756 1632 1649 4482 4549 4958 5003 7491 7560 7618 7924 9605 10357 10414 10742
+		13461 13462 13463 13464 13465 13466 13467
+	}
+}

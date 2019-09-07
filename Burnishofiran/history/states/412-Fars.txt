@@ -1,0 +1,42 @@
+
+state = {
+	id = 412
+	name = "STATE_412"
+	manpower = 1918619
+	resources = {
+		oil=10 # was: 19
+	}
+	state_category = large_town
+	
+	
+	history = {
+		owner = PER
+		victory_points = {
+			13346 20 
+		}
+		victory_points = {
+			13347 5 
+		}
+		victory_points = {
+			10797 18 
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			
+			13348 = {
+				naval_base = 1
+			}
+			10797 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = PER
+	}
+
+	provinces = {
+		4959 8117 10797 10881 12832 12863 
+		13336 13337 13338 13339 13340 13341 13342 13343 13344 13345 13346 13347 13348
+		5089
+	}
+}

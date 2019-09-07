@@ -1,0 +1,482 @@
+	#####################
+	### BurnishOfIran ###
+	#####################
+
+spriteTypes = {
+	
+	#####################
+	### COUNTRY IDEAS ###
+	#####################
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_ally_with"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_ally_with.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_Burn-Angolo_persian_oil"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_Burn-Angolo_persian_oil.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_cavalry"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_cavalry.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_economic_contract"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_economic_contract.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_economy_with_sov"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_economy_with_sov.dds"
+	}
+		
+	spriteType = {
+		name = "GFX_idea_focus_PER_militarism_focus"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_militarism_focus.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_military_academy"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_military_academy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_military_youth"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_military_youth.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_nationalism_1"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_nationalism_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_nationalism_2"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_nationalism_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_re-contract_angolo_iranian_oil_company"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_re-contract_angolo_iranian_oil_company.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_seal-IIMW_1"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_seal-IIMW_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_seal-IIMW_2"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_seal-IIMW_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_seal-IIMW_3"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_seal-IIMW_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_focus_PER_training_elits"
+		texturefile = "gfx/interface/ideas/idea_focus_PER_training_elits.dds"
+	}
+	
+
+	
+	
+	
+	
+	
+	
+	#####################
+	### POLOTICAL MAN ###
+	#####################
+	
+	spriteType = {
+		name = "GFX_idea_PER_Abbas_Aram"
+		texturefile = "gfx/interface/ideas/idea_PER_Abbas_Aram.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Abbas-Ali_Khalatbari"
+		texturefile = "gfx/interface/ideas/idea_PER_Abbas-Ali_Khalatbari.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Abdolah_Entezam"
+		texturefile = "gfx/interface/ideas/idea_PER_Abdolah_Entezam.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Abdolhossein_Teymourtash"
+		texturefile = "gfx/interface/ideas/idea_PER_Abdolhossein_Teymourtash.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Abdollah_Hedayat"
+		texturefile = "gfx/interface/ideas/idea_PER_Abdollah_Hedayat.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Abolqaasem_Najm"
+		texturefile = "gfx/interface/ideas/idea_PER_Abolqaasem_Najm.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Ahmad_Amir.Ahmadi"
+		texturefile = "gfx/interface/ideas/idea_PER_Ahmad_Amir.Ahmadi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Ahmad_Mirfendereski"
+		texturefile = "gfx/interface/ideas/idea_PER_Ahmad_Mirfendereski.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Ahmad_Qavam"
+		texturefile = "gfx/interface/ideas/idea_PER_Ahmad_Qavam.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_AIR_Ahmad.Khan_Nakhjavan"
+		texturefile = "gfx/interface/ideas/idea_PER_AIR_Ahmad.Khan_Nakhjavan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_AIR_Eesaa_Eshtodakh"
+		texturefile = "gfx/interface/ideas/idea_PER_AIR_Eesaa_Eshtodakh.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_AIR_Hedayat_Gilanshah"
+		texturefile = "gfx/interface/ideas/idea_PER_AIR_Hedayat_Gilanshah.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_AIR_Mohamad_Khatami"
+		texturefile = "gfx/interface/ideas/idea_PER_AIR_Mohamad_Khatami.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_AIR_Sharafedin_Ghahremani"
+		texturefile = "gfx/interface/ideas/idea_PER_AIR_Sharafedin_Ghahremani.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Ali.Akbar_Davar"
+		texturefile = "gfx/interface/ideas/idea_PER_Ali.Akbar_Davar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Ali.Akbar_Derakhshan"
+		texturefile = "gfx/interface/ideas/idea_PER_Ali.Akbar_Derakhshan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Ali.Akbar_Siassi"
+		texturefile = "gfx/interface/ideas/idea_PER_Ali.Akbar_Siassi.dds"
+	}
+		
+	spriteType = {
+		name = "GFX_idea_PER_Ali_Baiandar"
+		texturefile = "gfx/interface/ideas/idea_PER_Ali_Baiandar.dds"
+	}
+		
+	spriteType = {
+		name = "GFX_idea_PER_Ali_Razmara"
+		texturefile = "gfx/interface/ideas/idea_PER_Ali_Razmara.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Ali_Soheili"
+		texturefile = "gfx/interface/ideas/idea_PER_Ali_Soheili.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Am_Janhanbani"
+		texturefile = "gfx/interface/ideas/idea_PER_Am_Janhanbani.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Amir_Asadollah_Alam"
+		texturefile = "gfx/interface/ideas/idea_PER_Amir_Asadollah_Alam.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Baqer_Kazemi"
+		texturefile = "gfx/interface/ideas/idea_PER_Baqer_Kazemi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Ebrahim_Hakimi"
+		texturefile = "gfx/interface/ideas/idea_PER_Ebrahim_Hakimi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Enayatollah_Samiei"
+		texturefile = "gfx/interface/ideas/idea_PER_Enayatollah_Samiei.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Eskandar_Azmudeh"
+		texturefile = "gfx/interface/ideas/idea_PER_Eskandar_Azmudeh.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Faraj_Rasaei"
+		texturefile = "gfx/interface/ideas/idea_PER_Faraj_Rasaei.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Hadi_Atabay"
+		texturefile = "gfx/interface/ideas/idea_PER_Hadi_Atabay.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Hadi_Shaghaghi"
+		texturefile = "gfx/interface/ideas/idea_PER_Hadi_Shaghaghi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Hassan_Mostowfi"
+		texturefile = "gfx/interface/ideas/idea_PER_Hassan_Mostowfi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Hassan_Taghizadeh"
+		texturefile = "gfx/interface/ideas/idea_PER_Hassan_Taghizadeh.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Hossein_Nakhai"
+		texturefile = "gfx/interface/ideas/idea_PER_Hossein_Nakhai.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Hossein_Samiei"
+		texturefile = "gfx/interface/ideas/idea_PER_Hossein_Samiei.dds"
+		
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Jafar_Sharif-Emami"
+		texturefile = "gfx/interface/ideas/idea_PER_Jafar_Sharif-Emami.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Jahanshah_Saleh"
+		texturefile = "gfx/interface/ideas/idea_PER_Jahanshah_Saleh.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_PER_Jalal_Abdo"
+		texturefile = "gfx/interface/ideas/idea_PER_Jalal_Abdo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Jalal_Tehrani"
+		texturefile = "gfx/interface/ideas/idea_PER_Jalal_Tehrani.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Karim_BozarJomehri"
+		texturefile = "gfx/interface/ideas/idea_PER_Karim_BozarJomehri.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mahmod_Hesabi"
+		texturefile = "gfx/interface/ideas/idea_PER_Mahmod_Hesabi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mahmoud_Jam"
+		texturefile = "gfx/interface/ideas/idea_PER_Mahmoud_Jam.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Manuchehr_Eghbal"
+		texturefile = "gfx/interface/ideas/idea_PER_Manuchehr_Eghbal.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Matin_Daftari"
+		texturefile = "gfx/interface/ideas/idea_PER_Matin_Daftari.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mehdiqoli_Hedayat"
+		texturefile = "gfx/interface/ideas/idea_PER_Mehdiqoli_Hedayat.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mohamad_Airom"
+		texturefile = "gfx/interface/ideas/idea_PER_Mohamad_Airom.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mohamad_Sajjadi"
+		texturefile = "gfx/interface/ideas/idea_PER_Mohamad_Sajjadi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mohammad_Ali_Foroughi"
+		texturefile = "gfx/interface/ideas/idea_PER_Mohammad_Ali_Foroughi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mohammad_Ali_Varasteh"
+		texturefile = "gfx/interface/ideas/idea_PER_Mohammad_Ali_Varasteh.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mohammad_Copal"
+		texturefile = "gfx/interface/ideas/idea_PER_Mohammad_Copal.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mohammad_Dargaahi"
+		texturefile = "gfx/interface/ideas/idea_PER_Mohammad_Dargaahi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mohammad_Maraghehi"
+		texturefile = "gfx/interface/ideas/idea_PER_Mohammad_Maraghehi.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mohammad_Shahbakhti"
+		texturefile = "gfx/interface/ideas/idea_PER_Mohammad_Shahbakhti.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mohammad_Tadayyon"
+		texturefile = "gfx/interface/ideas/idea_PER_Mohammad_Tadayyon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mohsen_Sadr"
+		texturefile = "gfx/interface/ideas/idea_PER_Mohsen_Sadr.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Morteza.Qoli_Bayat"
+		texturefile = "gfx/interface/ideas/idea_PER_Morteza.Qoli_Bayat.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mostafa_Adl"
+		texturefile = "gfx/interface/ideas/idea_PER_Mostafa_Adl.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Mostafa_Qoliram"
+		texturefile = "gfx/interface/ideas/idea_PER_Mostafa_Qoliram.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Musa_Nuri_Esfandiari"
+		texturefile = "gfx/interface/ideas/idea_PER_Musa_Nuri_Esfandiari.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Rajab-Ali_Mansor"
+		texturefile = "gfx/interface/ideas/idea_PER_Rajab-Ali_Mansor.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Reza_Hekmat"
+		texturefile = "gfx/interface/ideas/idea_PER_Reza_Hekmat.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Rostam_Giv"
+		texturefile = "gfx/interface/ideas/idea_PER_Rostam_Giv.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Shamseddin_Amir-Alaei"
+		texturefile = "gfx/interface/ideas/idea_PER_Shamseddin_Amir-Alaei.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_Jafar_Sharif-Emami"
+		texturefile = "gfx/interface/ideas/idea_PER_Jafar_Sharif-Emami.dds"
+	}
+	
+	################
+	### designer ###
+	################
+	
+	spriteType = {
+		name = "GFX_idea_PERG_MAN_Company"
+		texturefile = "gfx/interface/ideas/idea_PERG_MAN_Company.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PERG_Siemens_Company"
+		texturefile = "gfx/interface/ideas/idea_PERG_Siemens_Company.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PERG_Krupp_Company"
+		texturefile = "gfx/interface/ideas/idea_PERG_Krupp_Company.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_AEG"
+		texturefile = "gfx/interface/ideas/idea_PER_AEG.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_ARJ"
+		texturefile = "gfx/interface/ideas/idea_PER_ARJ.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_shahbaz"
+		texturefile = "gfx/interface/ideas/idea_PER_shahbaz.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_qoorkhaneh"
+		texturefile = "gfx/interface/ideas/idea_PER_qoorkhaneh.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_touprizie_factory"
+		texturefile = "gfx/interface/ideas/idea_PER_touprizie_factory.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_generic_medium_aircraft_manufacturer_3"
+		texturefile = "gfx/interface/ideas/idea_PER_generic_air_manufacturer_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_generic_heavy_aircraft_manufacturer_2"
+		texturefile = "gfx/interface/ideas/idea_PER_generic_air_manufacturer_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_generic_motorized_equipment_manufacturer_3"
+		texturefile = "gfx/interface/ideas/idea_PER_generic_motorized_equipment_manufacturer_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_generic_naval_aircraft_manufacturer_1"
+		texturefile = "gfx/interface/ideas/idea_PER_generic_naval_manufacturer_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_generic_naval_manufacturer_2"
+		texturefile = "gfx/interface/ideas/idea_PER_generic_naval_manufacturer_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_PER_generic_tank_manufacturer_1"
+		texturefile = "gfx/interface/ideas/idea_PER_generic_tank_manufacturer_1.dds"
+	}
+	
+}

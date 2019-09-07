@@ -1,0 +1,25 @@
+﻿###########################
+# Iran Events
+###########################
+
+add_namespace = iran
+
+# President dies
+country_event = {
+	id = iran.1
+	title = iran.1.t
+	desc = iran.1.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	trigger = {
+	tag = PER
+	AND = {
+	date >1941.1.1
+		}
+	}
+	option = {
+		name = iran.1.a
+		retire_country_leader = yes
+	}
+}

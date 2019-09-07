@@ -1,0 +1,36 @@
+
+state = {
+	id = 417
+	name = "STATE_417" # Urmia
+	manpower = 936396
+	state_category = town
+
+	history = {
+		owner = PER
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = PER
+		victory_points = {
+			7604 15 
+		}
+		victory_points = {
+			13372 5 
+		}
+		victory_points = {
+			13366 5 
+		}
+		
+		1939.1.1 = {
+			buildings = {
+				infrastructure = 1
+			}
+		}
+	}
+
+	provinces = {
+		1822 12861 2071 7604 1636
+		13366 13367 13368 13369 13370 13371 13372 13373 
+		13120
+	}
+}

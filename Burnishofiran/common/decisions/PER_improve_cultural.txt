@@ -1,0 +1,498 @@
+
+ #######################
+ #### BurnishOfIran ####
+ #######################
+
+####################################################################################################
+
+PER_improve_cultural = {
+
+##################################################
+	
+	form_improve_cultural_01 = {
+		
+		icon = per_improve_cultural
+		cost = 50
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+		
+		highlight_states = { state = 411 }
+				
+		visible = {
+			has_completed_focus = PER_family_population
+			
+			AND = {	controls_state = 411		controls_state = 412 }
+		}
+		
+		available = {
+			is_subject = no
+			
+			has_tech = construction3
+			
+			has_manpower > 200000
+		}
+		
+		complete_effect = {		hidden_effect = {	add_manpower = -200000	}		}
+		
+		remove_effect = {
+			hidden_effect = { 
+				hidden_effect = { add_manpower = 200000 }
+				
+				411 = { set_state_category = large_city }
+				412 = { set_state_category = large_city }
+			}
+		}
+		
+		ai_will_do = {	factor = 200	}
+	}
+	
+##################################################
+	
+	form_improve_cultural_02 = {
+		
+		icon = per_improve_cultural
+		cost = 50
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+		
+		highlight_states = { state = 419 }
+				
+		visible = {
+			has_completed_focus = PER_family_population
+			
+			AND = {	controls_state = 419 }
+		}
+		
+		available = {
+			is_subject = no
+			
+			has_tech = construction5
+			
+			has_manpower > 200000
+		}
+		
+		complete_effect = {		hidden_effect = {	add_manpower = -200000	}		}
+		
+		remove_effect = {
+			hidden_effect = { 
+				add_manpower = 200000
+				
+				419 = { set_state_category = metropolis }
+			}
+		}
+		
+		ai_will_do = {	factor = 200	}
+	}	
+		
+##################################################
+	
+	form_improve_cultural_03 = {
+		
+		icon = per_improve_cultural
+		cost = 50
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+		
+		highlight_states = { state = 413 }
+				
+		visible = {
+			has_completed_focus = PER_family_population
+			
+			AND = {	controls_state = 413		controls_state = 421}
+		}
+		
+		available = {
+			is_subject = no
+			
+			has_tech = construction3
+			
+			has_manpower > 100000
+		}
+		
+		complete_effect = {		hidden_effect = {	add_manpower = -100000	}		}
+		
+		remove_effect = {
+			hidden_effect = { 
+				add_manpower = 100000
+				
+				413 = { set_state_category = large_city }
+				421 = { set_state_category = city }
+			}
+		}
+		
+		ai_will_do = {	factor = 200	}
+	}	
+	
+##################################################
+	
+	form_improve_cultural_04 = {
+		
+		icon = per_improve_cultural
+		cost = 50
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+		
+		highlight_states = { state = 267 }
+				
+		visible = {
+			has_completed_focus = PER_family_population
+			
+			AND = {	controls_state = 267		controls_state = 410		controls_state = 415 }
+		}
+		
+		available = {
+			is_subject = no
+			
+			has_tech = construction4
+			
+			has_manpower > 200000
+		}
+		
+		complete_effect = {		hidden_effect = {	add_manpower = -200000	}		}
+		
+		remove_effect = {
+			hidden_effect = { 
+				add_manpower = 200000
+				
+				267 = { set_state_category = large_city }
+				415 = { set_state_category = city }
+			}
+		}
+		
+		ai_will_do = {	factor = 200	}
+	}
+	
+##################################################
+	
+	form_improve_cultural_05 = {
+		
+		icon = per_improve_cultural
+		cost = 50
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+		
+		highlight_states = { state = 291 }
+				
+		visible = {
+			has_completed_focus = PER_family_population
+			
+			AND = {	controls_state = 291		controls_state = 676 }
+		}
+		
+		available = {
+			is_subject = no
+			
+			has_tech = construction4
+			
+			has_manpower > 200000
+		}
+		
+		complete_effect = {		hidden_effect = {	add_manpower = -200000	}		}
+		
+		remove_effect = {
+			hidden_effect = { 
+				add_manpower = 200000
+				
+				291 = { set_state_category = large_city }
+				676 = { set_state_category = large_town }
+			}
+		}
+		
+		ai_will_do = {	factor = 200	}
+	}
+	
+##################################################	
+	
+	form_improve_cultural_06 = {
+		
+		icon = per_improve_cultural
+		cost = 50
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+		
+		highlight_states = { state = 352 }
+				
+		visible = {
+			has_completed_focus = PER_family_population
+			
+			AND = {	
+					controls_state = 350
+					controls_state = 352
+					controls_state = 353
+					controls_state = 354
+			}
+		}
+		
+		available = {
+			is_subject = no
+						
+			has_tech = construction4
+			
+			has_manpower > 200000
+		}
+		
+		complete_effect = {		hidden_effect = {	add_manpower = -200000	}		}
+		
+		remove_effect = {
+			hidden_effect = { 
+				add_manpower = 200000
+				
+				350 = { set_state_category = town }
+				352 = { set_state_category = large_town }
+				353 = { set_state_category = large_town }
+				354 = { set_state_category = town }
+			}
+		}
+		
+		ai_will_do = {	factor = 200	}
+	}
+	
+##################################################	
+	
+	form_improve_cultural_07 = {
+		
+		icon = per_improve_cultural
+		cost = 50
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+		
+		highlight_states = { state = 788 }
+				
+		visible = {
+			has_completed_focus = PER_family_population
+			
+			AND = {
+					controls_state = 229		controls_state = 230		controls_state = 231
+					controls_state = 788		controls_state = 789		controls_state = 790
+					controls_state = 791		controls_state = 792		controls_state = 793
+			}
+		}
+		
+		available = {
+			is_subject = no
+			
+			has_tech = construction5
+			
+			has_manpower > 200000
+		}
+		
+		complete_effect = {		hidden_effect = {	add_manpower = -200000	}		}
+		
+		remove_effect = {
+			hidden_effect = { 
+				add_manpower = 200000
+				
+				229 = { set_state_category = city }
+				230 = { set_state_category = large_town }
+				231 = { set_state_category = large_town }
+				788 = { set_state_category = town }
+				789 = { set_state_category = town }
+				790 = { set_state_category = town }
+				791 = { set_state_category = town }
+				792 = { set_state_category = town }
+				793 = { set_state_category = large_town }
+			}
+		}
+		ai_will_do = {	factor = 200	}
+	}
+	
+##################################################	
+	
+	form_improve_cultural_08 = {
+		
+		icon = per_improve_cultural
+		cost = 50
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+		
+		highlight_states = { state = 405 }
+				
+		visible = {
+			has_completed_focus = PER_family_population
+			
+			AND = {	
+					controls_state = 405		controls_state = 418
+			}
+		}
+		
+		available = {
+			is_subject = no
+		
+			has_tech = construction5
+			
+			has_manpower > 400000
+		}
+		
+		complete_effect = {		hidden_effect = {	add_manpower = -200000	}		}
+		
+		remove_effect = {
+			hidden_effect = { 
+				add_manpower = 400000
+				
+				405 = { set_state_category = metropolis }
+				418 = { set_state_category = large_city }
+			}
+		}
+		
+		ai_will_do = {	factor = 200	}
+	}
+	
+##################################################	
+	
+	form_improve_cultural_09 = {
+		
+		icon = per_improve_cultural
+		cost = 50
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+		
+		highlight_states = { state = 585 }
+				
+		visible = {
+			has_completed_focus = PER_family_population
+			
+			AND = {	
+					controls_state = 584		controls_state = 585		controls_state = 742
+			}
+		}
+		
+		available = {
+			is_subject = no
+		
+			has_tech = construction5
+			
+			has_manpower > 400000
+		}
+		
+		complete_effect = {		hidden_effect = {	add_manpower = -100000	}		}
+		
+		remove_effect = {
+			hidden_effect = { 
+				add_manpower = 400000
+				
+				584 = { set_state_category = large_town }
+				585 = { set_state_category = large_town }
+				742 = { set_state_category = large_town }
+			}
+		}
+		
+		ai_will_do = {	factor = 200	}
+	}
+	
+##################################################	
+	
+	form_improve_cultural_10 = {
+		
+		icon = per_improve_cultural
+		cost = 50
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+		
+		highlight_states = { state = 440 }
+		
+		visible = {
+			has_completed_focus = PER_family_population
+			
+			AND = {	
+					controls_state = 440		controls_state = 442		controls_state = 443
+					controls_state = 444		controls_state = 445		controls_state = 787
+			}
+		}
+		
+		available = {
+			is_subject = no
+			
+			has_tech = construction5
+			
+			has_manpower > 400000
+		}
+		
+		complete_effect = {		hidden_effect = {	add_manpower = -400000	}		}
+		
+		remove_effect = {
+			hidden_effect = { 
+				add_manpower = 400000
+				
+				440 = { set_state_category = metropolis }
+				442 = { set_state_category = large_town }
+				443 = { set_state_category = large_town }
+				444 = { set_state_category = large_town }
+				445 = { set_state_category = large_town }
+				787 = { set_state_category = large_town }
+			}
+		}
+		
+		ai_will_do = {	factor = 200	}
+	}
+	
+##################################################	
+	
+	form_improve_cultural_11 = {
+		
+		icon = per_improve_cultural
+		cost = 50
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+		
+		highlight_states = { state = 794 }
+				
+		visible = {
+			has_completed_focus = PER_family_population
+			
+			AND = {		controls_state = 794	}
+		}
+		
+		available = {
+			is_subject = no
+						
+			has_tech = construction4
+			
+			has_manpower > 200000
+		}
+		
+		complete_effect = {		hidden_effect = {	add_manpower = -50000	}		}
+		
+		remove_effect = {
+			hidden_effect = { 
+				add_manpower = 200000
+					
+				794 = { set_state_category = large_town }
+			}
+		}
+		
+		ai_will_do = {	factor = 200	}
+	}
+}

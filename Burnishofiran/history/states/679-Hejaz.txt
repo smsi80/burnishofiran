@@ -1,0 +1,32 @@
+state={
+	id=679
+	name="STATE_679"
+	manpower = 2511000
+	
+	state_category = pastoral
+
+	history={
+		owner = SAU
+		victory_points = {
+			5037 10 
+		}
+		victory_points = {
+			13298 1 
+		}
+		victory_points = {
+			13297 1 
+		}
+		buildings = {
+			infrastructure = 0
+			12883 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = SAU
+	}
+
+	provinces={
+		1033 1923 2027 2033 2090 2095 4981 5006 5037 7934 8073 8092 10748 10786 10835 12101 12758 12883 13295 13296 13297 13298 13299 13300
+
+	}
+}

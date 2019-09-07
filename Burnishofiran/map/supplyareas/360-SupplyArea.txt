@@ -1,0 +1,8 @@
+supply_area={
+	id=360
+	name="Khorasan"
+	value=7
+	states={
+		416
+	}
+}

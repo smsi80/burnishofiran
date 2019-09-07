@@ -1,0 +1,35 @@
+state = {
+	id = 793
+	name = "STATE_793" #		Gagra
+	manpower = 1125082
+	state_category = town
+	history = {
+		owner = SOV
+
+		victory_points = {
+			3653 20 
+		}
+		victory_points = {
+			11617 12 
+		}
+		buildings = {
+			infrastructure = 1
+			3653 = {
+				naval_base = 2
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = ARM
+		1939.1.1 = {
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 1
+			}
+		}
+	}
+
+	provinces = {
+		654 672 772 3653 3656 9626 11599 11617 
+	}
+
+}

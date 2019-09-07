@@ -1,0 +1,24 @@
+
+state = {
+	id = 410
+	name = "STATE_410" # Qandhar
+	manpower = 341053
+	
+	state_category = rural
+
+	history = {
+		owner = AFG
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			13446 5 
+		}
+		add_core_of = AFG
+	}
+
+	provinces = {
+		2101 4949 5020 5064 8090 10789 
+		13437 13443 13444 13446 13448 13449 13450 13451 13452
+	}
+}

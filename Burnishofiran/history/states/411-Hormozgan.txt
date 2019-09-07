@@ -1,0 +1,42 @@
+
+state = {
+	id = 411
+	name = "STATE_411" #Isfahan
+	manpower = 2165272
+	resources = {
+		steel = 5
+	}
+	state_category = city
+	
+
+	history = {
+		owner = PER
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			13410 20 
+		}
+		victory_points = {
+			13415 10 
+		}
+		
+		add_core_of = PER
+		
+		1939.1.1 = {
+			buildings = {
+				infrastructure = 1
+				arms_factory = 2
+				industrial_complex = 4
+			}
+		}
+	}
+
+	provinces = {
+		1963 2026 4928 4966 4983 8031 8074 10828 12756 12780
+		12704 
+		13408 13409 13410 13411 13412 13413 13414 13415 13416 13417 13418 13419 13420 13421 13422 13423 13424
+ 	}
+}

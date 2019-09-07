@@ -1,0 +1,118 @@
+	#####################
+	### BurnishOfIran ###
+	#####################
+
+spriteTypes = {	
+
+	### ICON ###
+	
+	spriteType = {
+		name = "GFX_decision_category_icon_per_consortium_froshtial"
+		texturefile = "gfx/interface/decisions/decision_category_icon_per_consortium_froshtial.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_category_icon_per_improve_cultural"
+		texturefile = "gfx/interface/decisions/decision_category_icon_per_improve_cultural.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_category_icon_per_lion"
+		texturefile = "gfx/interface/decisions/decision_category_icon_per_lion.dds"
+	}
+
+	### PICTURE ###
+		
+	spriteType = {
+		name = "GFX_decision_category_picture_per_froshtial_german"
+		texturefile = "gfx/interface/decisions/decision_category_picture_per_froshtial_german.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_decision_category_picture_per_improve_cultural"
+		texturefile = "gfx/interface/decisions/decision_category_picture_per_improve_cultural.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_category_picture_per_improve_infrastructure"
+		texturefile = "gfx/interface/decisions/decision_category_picture_per_improve_infrastructure.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_picture_per_iran_afganestan"
+		texturefile = "gfx/interface/decisions/decision_category_picture_per_iran_afganestan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_category_picture_per_iran_iraq"
+		texturefile = "gfx/interface/decisions/decision_category_picture_per_iran_iraq.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_category_picture_per_iran_kurdian"
+		texturefile = "gfx/interface/decisions/decision_category_picture_per_iran_kurdian.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_category_picture_per_iran_sistan"
+		texturefile = "gfx/interface/decisions/decision_category_picture_per_iran_sistan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_category_picture_per_iran_sov"
+		texturefile = "gfx/interface/decisions/decision_category_picture_per_iran_sov.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_category_picture_per_iran_uk"
+		texturefile = "gfx/interface/decisions/decision_category_picture_per_iran_uk.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_category_picture_per_prospect_for_resources"
+		texturefile = "gfx/interface/decisions/decision_category_picture_per_prospect_for_resources.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_category_picture_per_research_science"
+		texturefile = "gfx/interface/decisions/decision_category_picture_per_research_science.dds"
+	}
+	
+	### SMALL ICON ###
+	
+	spriteType = {
+		name = "GFX_decision_per_froshtial_german_industry_1"
+		texturefile = "gfx/interface/decisions/decision_per_froshtial_german_industry_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_per_froshtial_german_industry_2"
+		texturefile = "gfx/interface/decisions/decision_per_froshtial_german_industry_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_per_froshtial_german_iron_smelting"
+		texturefile = "gfx/interface/decisions/decision_per_froshtial_german_iron_smelting.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_per_improve_cultural"
+		texturefile = "gfx/interface/decisions/decision_per_improve_cultural.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_per_operation_railroad_asset"
+		texturefile = "gfx/interface/decisions/decision_per_operation_railroad_asset.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_per_university_azarabadegan"
+		texturefile = "gfx/interface/decisions/decision_per_university_azarabadegan.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_decision_per_university_shiraz"
+		texturefile = "gfx/interface/decisions/decision_per_university_shiraz.dds"
+	}	
+
+}

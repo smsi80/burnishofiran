@@ -1,0 +1,51 @@
+
+units = {
+	####### NAVAL UNITS #######
+	###### Persian Guard ######
+	fleet = {
+		name = "Caspian"
+		naval_base = 7982 # Bandar Abbas
+		### North Guard ###	
+		task_force = {					
+			name = "Caspian Guard 1"				
+			location = 7982 # Persian Gulf
+			### North Squadron ###
+			ship = { name = "Shahsavar" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+			# 5st Destroyer Division  			
+			ship = { name = "Anzali" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+			ship = { name = "Nahang1" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+			ship = { name = "Nahang2" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }				
+			ship = { name = "Chaloss" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }		
+		}
+	}
+	fleet = {
+		name = "Persian Guard"
+		naval_base = 10797 # Boshehr
+		### Persian Guard ###	
+		task_force = {					
+			name = "Persian Guard 1"				
+			location = 10797 # Persian Gulf
+			### Destroyer Squadron ###
+			ship = { name = "Homai" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = ITA version_name = "Taranto Class" } } }
+			# 1st Destroyer Division
+			ship = { name = "Babr" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+			ship = { name = "Simorgh" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }				
+			ship = { name = "Shahbaz" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }	
+			# 2st Destroyer Division  	
+			ship = { name = "Karcass" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }			
+			ship = { name = "Palang" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+			ship = { name = "Shahrokh" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Navigatori Class" } } }
+		}
+	}
+}
+
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+}
+
+#####################

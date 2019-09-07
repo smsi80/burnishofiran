@@ -1,0 +1,1543 @@
+
+ #######################
+ #### BurnishOfIran ####
+ #######################
+
+####################################################################################################
+
+PER_cultural_integration_01 = {
+
+##################################################
+	
+	PER_integration_afghanistan_step01 = {
+	
+		icon = eng_propaganda_campaigns
+		cost = 50
+		days_remove = 180
+		is_good = no
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 415 }
+		
+		visible = {
+			PER = { owns_state = 266 }
+##### Add other leader here #####
+#			or = { has_country_leader = { ruling_only = yes			name = "Reza Shah Pahlavi" } }
+			NOT = { has_global_flag = form_persian_empire_flag }
+			or = {
+#				if = {
+#					limit = { 
+#					NOT = { 
+#					has_completed_focus = PER_retake_iranshahr 
+#					}
+#					}
+					has_completed_focus = PER_retake_kabol
+#				}
+#				if = {
+#					limit = { 
+#					NOT = { 
+#					has_completed_focus = PER_unification_of_iranshahr
+#					}
+#					}
+#					controls_state = 415
+#				}
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			controls_state = 415
+		}
+		
+		complete_effect = {
+			ENG = {	add_opinion_modifier = { target = PER		modifier = protest_action_light } }
+			
+			SOV = { add_opinion_modifier = { target = PER		modifier = protest_action_light } }
+		}
+		
+		remove_effect = {	415 = { add_core_of = PER }	}
+		
+		ai_will_do = { factor = 100 }
+	}
+
+##################################################
+
+	PER_integration_afghanistan_step02 = {
+	
+		icon = eng_propaganda_campaigns
+		cost = 70
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 410 }
+		
+		visible = {
+			tag = PER
+			PER = { owns_state = 266 }
+#			or = { has_country_leader = { ruling_only = yes			name = "Reza Shah Pahlavi" } }
+			or = {
+#				if = {
+#					limit = {
+#					NOT = {
+#					has_completed_focus = PER_retake_iranshahr
+#					}
+#					}
+					has_completed_focus = PER_retake_kabol
+#				}
+#				if = {
+#					limit = { 
+#					NOT = { 
+#					has_completed_focus = PER_unification_of_iranshahr
+#					}
+#					}
+#					controls_state = 410
+#				}
+			}
+		}
+
+		available = {
+			is_subject = no
+			has_civil_war = no
+			controls_state = 410
+		}
+		
+		complete_effect = { 
+			ENG = {	add_opinion_modifier = { target = PER		modifier = protest_action_light } }
+			
+			SOV = { add_opinion_modifier = { target = PER		modifier = protest_action_light } }
+		}
+		
+		remove_effect = {	410 = { add_core_of = PER }	}
+		
+		ai_will_do = { factor = 50 }
+	}
+
+##################################################
+
+	PER_integration_afghanistan_step03 = {
+	
+		icon = eng_propaganda_campaigns
+		cost = 70
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 267 }
+		
+		visible = {
+			tag = PER
+			PER = { owns_state = 266 }
+#			or = { has_country_leader = { ruling_only = yes			name = "Reza Shah Pahlavi" } }
+			or = {
+#				if = {
+#					limit = {
+#					NOT = {
+#					has_completed_focus = PER_retake_iranshahr
+#					}
+#					}
+					has_completed_focus = PER_retake_kabol
+#				}
+#				if = {
+#					limit = {
+#					NOT = {
+#					has_completed_focus = PER_unification_of_iranshahr
+#					}
+#					}
+#					controls_state = 267
+#				}
+			}
+		}
+
+		available = {
+			is_subject = no
+			has_civil_war = no
+			controls_state = 267
+		}
+		
+		complete_effect = { 
+			ENG = {	add_opinion_modifier = { target = PER		modifier = protest_action	} }
+			
+			SOV = { add_opinion_modifier = { target = PER		modifier = protest_action	} }
+		}	
+		
+		remove_effect = {
+			267 = { add_core_of = PER }
+			
+			hidden_effect = {	
+				if = {
+					limit = {
+						NOT = {	has_country_flag = IRAN_ANCIENT	}
+					}
+					set_cosmetic_tag = IRN_ANCIENT
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 50 }
+	}	
+
+##################################################
+
+	PER_integration_afghanistan_step04 = {
+	
+		icon = generic_nationalism
+		cost = 70
+		days_remove = 1
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		target_trigger = { FROM = { tag = AFG } }
+		
+		visible = {
+			tag = PER
+			PER = { owns_state = 266 }
+#			or = { has_country_leader = { ruling_only = yes			name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kabol
+			AFG = { exists = yes }
+		}
+
+		available = {
+			is_subject = no
+			has_civil_war = no
+			has_war_with = AFG
+			custom_trigger_tooltip = {
+				tooltip = form_iran_khorasan_states
+				or = {
+					custom_trigger_tooltip = { controls_state = 267		controls_state = 410 }
+					custom_trigger_tooltip = { controls_state = 267		controls_state = 415 }
+				}
+			}
+		}
+		complete_effect = { 
+			ENG = { add_opinion_modifier = { target = PER		modifier = protest_action 		} }
+			
+			SOV = { add_opinion_modifier = { target = PER		modifier = protest_action		} }
+			
+			GER = { add_opinion_modifier = { target = PER		modifier = per_common_policies 	} }
+		}
+		
+		targeted_modifier = { tag = PER		defense_bonus_against = 0.01 }
+		
+		remove_effect = {
+			annex_country = { target = AFG		transfer_troops = yes }
+			
+			add_equipment_to_stockpile = { type = infantry_weapons	amount = 12500 }
+			
+			hidden_effect = {	add_political_power = 40	}
+		}
+		
+		ai_will_do = { factor = 200 }
+	}
+}
+
+####################################################################################################
+
+PER_cultural_integration_02 = {
+
+##################################################
+
+	PER_integration_iraq_step01 = {
+	
+		icon = hol_radio_oranje
+		cost = 50
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 676 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_baghdad
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			controls_state = 676
+		}
+		
+		complete_effect = {
+			ENG = {	add_opinion_modifier = { target = PER		modifier = protest_action_light } }
+			
+			SOV = { add_opinion_modifier = { target = PER		modifier = protest_action_light } }
+		}
+		
+		remove_effect = {
+			676 = { add_core_of = PER }
+			
+			add_political_power = 20
+		}
+		
+		ai_will_do = { factor = 100 }
+	}
+	
+##################################################	
+
+	PER_integration_iraq_step02 = {
+	
+		icon = eng_propaganda_campaigns
+		cost = 70
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 675 }
+		
+		visible = {
+			tag = PER
+			PER = { owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_baghdad
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			controls_state = 675
+		}
+		
+		complete_effect = {
+			ENG = { add_opinion_modifier = { target = PER	modifier = protest_action			} }
+			
+			SOV = {	add_opinion_modifier = { target = PER	modifier = protest_action 			} }
+			
+			TUR = { add_opinion_modifier = { target = PER	modifier = protest_action			} }
+			
+			GER = { add_opinion_modifier = { target = PER	modifier = per_common_policies		} }
+		}
+		
+		remove_effect = {
+			675 = { add_core_of = PER }
+			
+			add_political_power = 20
+		}
+
+		ai_will_do = { factor = 100 }
+	}
+	
+##################################################
+
+	PER_integration_iraq_step03 = {
+	
+		icon = eng_propaganda_campaigns
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 291 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_baghdad
+		}
+	
+		available = {
+			is_subject = no
+			has_civil_war = no
+			custom_trigger_tooltip = {	
+				tooltip = form_iran_iraq_part_2
+					controls_state = 291
+					controls_state = 675
+					controls_state = 676
+			}
+		}
+		
+		complete_effect = {
+			ENG = {	add_opinion_modifier = { target = PER	modifier = protest_action_light	} }
+		}
+		
+		remove_effect = {
+			291 = { add_core_of = PER		set_state_name = "Tisefoon" }
+			
+			add_political_power = 120
+			
+			hidden_effect = {
+				remove_resource_rights = 291
+				
+				if = {
+					limit = {
+						NOT = {	has_cosmetic_tag = IRN_ANCIENT	}
+						
+					}
+					set_cosmetic_tag = IRN_ANCIENT
+				}
+			}
+		}
+		
+		ai_will_do = { factor = 200 }
+	}
+	
+##################################################
+	
+	PER_integration_iraq_step04 = {
+	
+		icon = generic_nationalism
+		cost = 70
+		days_remove = 1
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		target_trigger = {	FROM = { tag = IRQ }	}
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_baghdad
+			IRQ = { exists = yes }
+		}
+	
+		available = {
+			is_subject = no
+			has_civil_war = no
+			has_war_with = IRQ
+#			casualties < 10000
+			custom_trigger_tooltip = {
+				tooltip = form_iran_iraq_part_1
+					controls_state = 676
+					controls_state = 291
+			}
+		}
+		
+		complete_effect = {
+			ENG = { add_opinion_modifier = { target = PER	modifier = protest_action			} }
+			
+			SOV = { add_opinion_modifier = { target = PER	modifier = protest_action 			} }
+			
+			TUR = { add_opinion_modifier = { target = PER	modifier = protest_action			} }
+			
+			GER = { add_opinion_modifier = { target = PER	modifier = per_common_policies		} }	
+		}
+		
+		remove_effect = {
+			annex_country = { target = IRQ		transfer_troops = yes }
+			
+			add_political_power = 20
+		}
+		
+		ai_will_do = { factor = 200 }
+	}
+}
+
+####################################################################################################
+
+PER_cultural_integration_03 = {
+
+##################################################
+	 
+	PER_integration_kurdi_01_1 = {
+	
+		icon = hol_radio_oranje
+		cost = 50
+		days_remove = 180
+		is_good = no
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 353 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes 		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_turkey
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			custom_trigger_tooltip = {
+				tooltip = form_iran_khorasan_one_country
+				controls_state = 267
+				controls_state = 410
+				controls_state = 415
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_iran_iraq_part_1
+				controls_state = 291
+				controls_state = 675
+				controls_state = 676
+			}
+			
+			controls_state = 353
+		}
+		
+		complete_effect = {
+			
+			hidden_effect = {
+				
+				ENG = { add_opinion_modifier = { target = PER		modifier = protest_action			} }
+			
+				SOV = {	add_opinion_modifier = { target = PER		modifier = protest_action 			} }
+			}
+		}
+		
+		remove_effect = {	353 = { add_core_of = PER }		}
+		
+		ai_will_do = { factor = 50 }
+	}
+	
+##################################################
+
+	PER_integration_kurdi_01_2 = {
+	
+		icon = hol_radio_oranje
+		cost = 50
+		days_remove = 180
+		is_good = no
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 354 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes 		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_turkey
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			custom_trigger_tooltip = {
+				tooltip = form_iran_khorasan_one_country
+				controls_state = 267
+				controls_state = 410
+				controls_state = 415
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_iran_iraq_part_1
+				controls_state = 291
+				controls_state = 675
+				controls_state = 676
+			}
+			
+			controls_state = 354
+		}
+		
+		complete_effect = {
+			ENG = { add_opinion_modifier = { target = PER		modifier = protest_action			} }
+			
+			SOV = {	add_opinion_modifier = { target = PER		modifier = protest_action 			} }
+		}
+		
+		remove_effect = {	354 = { add_core_of = PER }		}
+		
+		ai_will_do = { factor = 50 }
+	}
+	
+##################################################
+
+	PER_integration_kurdi_02_1 = {
+	
+		icon = generic_nationalism
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 350 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_turkey
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			custom_trigger_tooltip = {
+				tooltip = form_iran_khorasan_one_country
+				controls_state = 267
+				controls_state = 410
+				controls_state = 415
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_iran_iraq_part_1
+				controls_state = 291
+				controls_state = 675
+				controls_state = 676
+			}
+
+			controls_state = 350
+		}
+		
+		complete_effect = {
+			ENG = { add_opinion_modifier = { target = PER	modifier = protest_action			} }
+			
+			SOV = {	add_opinion_modifier = { target = PER	modifier = protest_action 			} }
+		}
+		
+		remove_effect = {	350 = { add_core_of = PER }		}
+		
+		ai_will_do = { factor = 200 }
+	}
+	
+##################################################
+
+	PER_integration_kurdi_02_2 = {
+	
+		icon = generic_nationalism
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 352 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_turkey
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			custom_trigger_tooltip = {
+				tooltip = form_iran_khorasan_one_country
+				controls_state = 267
+				controls_state = 410
+				controls_state = 415
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_iran_iraq_part_1
+				controls_state = 291
+				controls_state = 675
+				controls_state = 676
+			}
+
+			controls_state = 352
+		}
+		
+		complete_effect = {
+			ENG = { add_opinion_modifier = { target = PER	modifier = protest_action			} }
+			
+			SOV = {	add_opinion_modifier = { target = PER	modifier = protest_action 			} }
+		}
+		
+		remove_effect = {	352 = { add_core_of = PER }		}
+		
+		ai_will_do = { factor = 200 }
+	}
+
+##################################################
+
+	PER_integration_kurdi_03 = {
+	
+		icon = generic_nationalism
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 794 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_turkey
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			custom_trigger_tooltip = {
+				tooltip = form_iran_kurdian_part_4
+				controls_state = 794
+			}
+		}
+		
+		complete_effect = {
+			ENG = { add_opinion_modifier = { target = PER	modifier = protest_action			} }
+			
+			SOV = {	add_opinion_modifier = { target = PER	modifier = protest_action 			} }
+		}
+		
+		remove_effect = {	794 = { add_core_of = PER }		}
+		
+		ai_will_do = { factor = 50 }
+	}
+}
+
+####################################################################################################
+
+PER_cultural_integration_04 = {
+
+##################################################
+
+	PER_integration_persiangulf_1 = {
+	
+		icon = oppression
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 656 }
+		
+		visible = {
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_end_of_looting
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			controls_state = 656
+		}
+		
+		complete_effect = {
+			ENG = { add_opinion_modifier = { target = PER	modifier = protest_action			} }
+			
+			USA = {	add_opinion_modifier = { target = PER	modifier = protest_action 			} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			656 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 150 }
+	}
+
+##################################################
+
+	PER_integration_persiangulf_2 = {
+	
+		icon = oppression
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 658 }
+		
+		visible = {
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_end_of_looting
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			controls_state = 658
+		}
+		
+		complete_effect = {
+			ENG = { add_opinion_modifier = { target = PER	modifier = protest_action			} }
+			
+			USA = {	add_opinion_modifier = { target = PER	modifier = protest_action 			} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			658 = { add_core_of = PER		set_state_name = "Jolfaveh"}
+		}
+		
+		ai_will_do = { factor = 150 }
+	}
+
+##################################################
+	
+	PER_integration_persiangulf_3 = {
+	
+		icon = oppression
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 765 }
+		
+		visible = {
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_end_of_looting
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			controls_state = 765
+		}
+		
+		complete_effect = {
+			ENG = { add_opinion_modifier = { target = PER	modifier = protest_action			} }
+			
+			USA = {	add_opinion_modifier = { target = PER	modifier = protest_action 			} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			765 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 150 }
+	}
+
+##################################################
+	
+	PER_integration_persiangulf_4 = {
+	
+		icon = oppression
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 795 }
+		
+		visible = {
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_end_of_looting
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			controls_state = 795
+		}
+		
+		complete_effect = {
+			ENG = { add_opinion_modifier = { target = PER	modifier = protest_action			} }
+			
+			USA = {	add_opinion_modifier = { target = PER	modifier = protest_action 			} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			795 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 150 }
+	}
+}
+
+####################################################################################################
+
+PER_cultural_integration_05 = {
+
+##################################################
+	
+	PER_integration_azarabadegan_01 = {
+	
+		icon = generic_civil_support
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 229 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+			controls_state = 229
+		}
+		
+		complete_effect = {
+			GER = { add_opinion_modifier = { target = PER		modifier = per_common_policies		} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			229 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 200 }
+	}
+	
+##################################################
+	
+	PER_integration_azarabadegan_02 = {
+	
+		icon = generic_civil_support
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 230 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+			
+			controls_state = 230
+		}
+		
+		complete_effect = {
+			GER = { add_opinion_modifier = { target = PER		modifier = per_common_policies		} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+		
+			230 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 200 }
+	}
+	
+##################################################
+	
+	PER_integration_azarabadegan_03 = {
+	
+		icon = generic_civil_support
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 231 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+
+			controls_state = 231
+		}
+		
+		complete_effect = {
+			GER = { add_opinion_modifier = { target = PER		modifier = per_common_policies		} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			231 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 200 }
+	}
+	
+##################################################
+	
+	PER_integration_azarabadegan_04 = {
+	
+		icon = generic_civil_support
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 788 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+
+			controls_state = 788
+		}
+		
+		complete_effect = {
+			GER = { add_opinion_modifier = { target = PER		modifier = per_common_policies		} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			788 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 200 }
+	}
+	
+##################################################
+	
+	PER_integration_azarabadegan_05 = {
+	
+		icon = generic_civil_support
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 789 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+
+			controls_state = 789
+		}
+		
+		complete_effect = {
+			GER = { add_opinion_modifier = { target = PER		modifier = per_common_policies		} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+		
+			789 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 200 }
+	}
+	
+##################################################
+	
+	PER_integration_azarabadegan_06 = {
+	
+		icon = generic_civil_support
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 790 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+
+			controls_state = 790
+		}
+		
+		complete_effect = {
+			GER = { add_opinion_modifier = { target = PER		modifier = per_common_policies		} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			790 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 200 }
+	}
+	
+##################################################
+	
+	PER_integration_azarabadegan_07 = {
+	
+		icon = generic_civil_support
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 791 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+
+			controls_state = 791
+		}
+		
+		complete_effect = {
+			GER = { add_opinion_modifier = { target = PER		modifier = per_common_policies		} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			791 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 200 }
+	}
+	
+##################################################
+	
+	PER_integration_azarabadegan_08 = {
+	
+		icon = generic_civil_support
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 792 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+			
+			controls_state = 792
+		}
+		
+		complete_effect = {
+			GER = { add_opinion_modifier = { target = PER		modifier = per_common_policies		} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			792 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 200 }
+	}
+	
+##################################################
+	
+	PER_integration_azarabadegan_09 = {
+	
+		icon = generic_civil_support
+		cost = 80
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 793 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+			
+			controls_state = 793
+		}
+		
+		complete_effect = {
+			GER = { add_opinion_modifier = { target = PER		modifier = per_common_policies		} }
+		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			793 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 200 }
+	}
+	
+##################################################
+	
+	PER_integration_khaarazm_01 = {
+	
+		icon = generic_civil_support
+		cost = 60
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 418 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+			
+			controls_state = 418
+		}
+		
+		complete_effect = {		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			418 = { add_core_of = PER }		
+		}
+		
+		ai_will_do = { factor = 100 }
+	}
+
+##################################################
+	
+	PER_integration_khaarazm_02 = {
+	
+		icon = generic_civil_support
+		cost = 60
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 584 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+			
+			controls_state = 584
+		}
+		
+		complete_effect = {		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			584 = { add_core_of = PER }		
+		}
+		
+		ai_will_do = { factor = 100 }
+	}
+
+##################################################
+	
+	PER_integration_khaarazm_03 = {
+	
+		icon = generic_civil_support
+		cost = 60
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 742 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes		name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+			
+			controls_state = 742
+		}
+		
+		complete_effect = {		}
+		
+		remove_effect = {
+			add_political_power = 30
+			
+			742 = { add_core_of = PER		set_state_name = "Dushanbe"	}			
+		}
+		
+		ai_will_do = { factor = 100 }
+	}
+
+##################################################
+	
+	PER_integration_khaarazm_04 = {
+	
+		icon = generic_civil_support
+		cost = 60
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 405 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = { has_country_leader = { ruling_only = yes			name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			
+			controls_state = 405
+		}
+		
+		complete_effect = {		}
+		
+		remove_effect = {
+			add_political_power = 80
+			
+			405 = { add_core_of = PER }
+		}
+		
+		ai_will_do = { factor = 100 }
+	}
+	
+##################################################
+	
+	PER_integration_khaarazm_05 = {
+	
+		icon = generic_civil_support
+		cost = 60
+		days_remove = 180
+		is_good = yes
+		fire_only_once = yes
+		allowed = {
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		highlight_states = { state = 585 }
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = { has_country_leader = { ruling_only = yes			name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_kharazm_georgia
+		}
+		available = {
+			is_subject = no
+			has_civil_war = no
+			
+			controls_state = 585
+		}
+		
+		complete_effect = {		}
+		
+		remove_effect = {
+			add_political_power = 80
+			
+			585 = { add_core_of = PER	set_state_name = "Khaarazm" }		
+			
+			set_province_name = { id = 12324	name = "Khaarazm" }
+		}
+		
+		ai_will_do = { factor = 100 }
+	}
+}
+
+####################################################################################################
+
+PER_cultural_integration_06 = {
+
+##################################################	
+
+	PER_integration_sistan_01 = {
+	
+		icon = generic_civil_support
+		cost = 80
+		days_remove = 250
+		is_good = yes
+		fire_only_once = yes
+		allowed = {			
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		visible = {
+			tag = PER
+			PER = {	owns_state = 266 }
+#			or = {	has_country_leader = { ruling_only = yes name = "Reza Shah Pahlavi" } }
+			has_completed_focus = PER_retake_baluchistan
+		}
+		
+		available = {
+			is_subject = no
+			has_civil_war = no
+			custom_trigger_tooltip = {
+				tooltip = form_iran_sistan_1
+				controls_state = 442
+				controls_state = 443
+				controls_state = 444
+				controls_state = 445
+			}
+		}
+		
+		complete_effect = {		}
+		
+		remove_effect = {
+			add_political_power = 20
+		
+			custom_effect_tooltip = form_iran_sistan_2
+			
+			hidden_effect = { 
+			443 = { add_core_of = PER }		444 = { add_core_of = PER }
+			445 = { add_core_of = PER }		442 = { add_core_of = PER }	
+			}
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+}
+
+
+

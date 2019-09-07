@@ -1,0 +1,4774 @@
+
+	#######################
+	#### BurnishOfIran ####
+	#######################
+
+focus_tree = {
+	id = iran_focus_tree
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			original_tag = PER
+			has_dlc = "Man the Guns"
+		}
+		
+		modifier = {
+			add = 10
+			tag = PER
+		}
+	}
+	
+	continuous_focus_position = { x = 20 y = 1080 }
+	default = no
+	
+#	focus = {
+#		id = PER_
+#		#icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#		
+#		cost = 0.001
+#		
+#		ai_will_do = {
+#			factor = 1
+#		}
+#		
+#		available = {
+#		
+#		}
+#		
+#		bypass = {
+#		
+#		}
+#		
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#		
+#		complete_tooltip = {
+#		
+#		}
+#		
+#		completion_reward = {
+#		
+#		}
+#	}
+
+################################################## Ministry of War ##################################################
+
+########## Focus for ministry_of_war_1
+
+	focus = {
+		id = PER_ministry_of_war_1
+		icon = GFX_focus_PER_seal-IIMW_1
+		x = 7
+		y = 0
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_command_power = 10
+			swap_ideas = {
+			    remove_idea = PER_idea_army_ministry_of_war_0
+				add_idea = PER_idea_army_ministry_of_war_1
+			}
+		}
+	}
+	
+########## Focus for naval_effort_1
+	
+	focus = {
+		id = PER_naval_effort_1
+		icon = GFX_focus_PER_seal-IIN_1
+		x = 3
+		y = 1
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_ministry_of_war_1 }
+		
+		complete_tooltip = {
+			navy_experience = 50
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 50
+			
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 14
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+########## Focus for aviation_effort_1
+	
+	focus = {
+		id = PER_aviation_effort_1
+		icon = GFX_focus_PER_seal-IIAF_1
+		x = 7
+		y = 1
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_ministry_of_war_1 }
+		
+		complete_tooltip = {
+			air_experience = 50
+			
+			if = {
+				limit = { 
+					has_country_flag = aviation_effort_AB
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+		completion_reward = {
+			air_experience= 50
+			
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+		}
+	}
+	
+########## Focus for army_effort_1
+	
+	focus = {
+		id = PER_army_effort_1
+		icon = GFX_focus_PER_seal-IIGF_1
+		
+		x = 11
+		y = 1
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_ministry_of_war_1 }
+		
+		complete_tooltip = {
+			army_experience = 50
+			
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}	
+		}
+		
+		completion_reward = {
+			army_experience = 50
+			
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+########## Focus for large_navy
+	
+	focus = {
+		id = PER_large_navy
+		icon = GFX_goal_generic_build_navy
+		x = 2
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = ITA }		ITA = { exists = yes }	}
+		
+		prerequisite = { focus = PER_naval_effort_1 }
+		mutually_exclusive = { focus = PER_flexible_navy }
+		
+		completion_reward = {
+			ITA = {
+				add_opinion_modifier = {
+					target = PER
+					modifier = aided_industry
+				}
+			}
+		
+			add_tech_bonus = {
+				name = flexible_order_tech
+				bonus = 1.0
+				uses = 2
+				technology = trade_interdiction
+				technology = raider_patrols
+				technology = capital_ship_raiders
+				technology = battlefleet_concentration_ti
+				technology = floating_fortress_ti
+			}
+		}
+	}
+	
+########## Focus for flexible_navy
+
+	focus = {
+		id = PER_flexible_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 4
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_naval_effort_1 }
+		mutually_exclusive = { focus = PER_large_navy }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+	
+	
+########## Focus for fighter_focus
+	
+	focus = {
+		id = PER_fighter_focus
+		icon = GFX_goal_generic_air_fighter2
+		
+		x = 7
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_aviation_effort_1 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+	
+
+
+########## Focus for equipment_effort_1
+	
+	focus = {
+		id = PER_equipment_effort_1
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		
+		x = 11
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_army_effort_1 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+########## Focus for order_fleet_1
+
+	focus = {
+		id = PER_order_fleet_1
+		icon = GFX_focus_generic_destroyer
+		
+		x = 2
+		y = 3
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_large_navy }
+		
+		available = {	NOT = { has_war_with = ITA }		ITA = { exists = yes }	}
+		
+		complete_tooltip = {
+			ITA = {
+				add_equipment_to_stockpile = {
+					type = destroyer
+					amount = 5
+					producer = ITA
+				}
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = ITA }
+				}
+				add_equipment_to_stockpile = {
+					type = destroyer
+					amount = 5
+					producer = ITA
+				}
+				ITA = {
+					transfer_ship = {
+						prefer_name = "HMS Achilles"
+						type = destroyer
+						target = PER
+					}
+					transfer_ship = {
+						prefer_name = "HMS Achilles"
+						type = destroyer
+						target = PER
+					}
+					transfer_ship = {
+						prefer_name = "HMS Achilles"
+						type = destroyer
+						target = PER
+					}
+					transfer_ship = {
+						prefer_name = "HMS Achilles"
+						type = destroyer
+						target = PER
+					}
+					transfer_ship = {
+						prefer_name = "HMS Achilles"
+						type = destroyer
+						target = PER
+					}
+				}
+			}
+		}
+	}
+	
+	
+
+########## Focus for light_fleet
+
+	focus = {
+		id = PER_light_fleet
+		icon = GFX_focus_generic_destroyer
+		
+		x = 4
+		y = 3
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	amount_research_slots > 3	}
+		
+		prerequisite = { focus = PER_flexible_navy }
+		
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					amount_research_slots > 2
+				}
+				add_tech_bonus = {
+					name = dd_bonus
+					bonus = 1.0
+					uses = 1
+					category = dd_tech
+				}
+			}
+		}
+	}
+
+########## Focus for tac_effort
+	
+	focus = {
+		id = PER_tac_effort
+		icon = GFX_goal_generic_air_bomber
+		
+		x = 6
+		y = 3
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_fighter_focus }
+		mutually_exclusive = { focus = PER_cas_effort }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	
+########## Focus for cas_effort
+	
+	focus = {
+		id = PER_cas_effort
+		icon = GFX_goal_generic_CAS
+		
+		x = 8
+		y = 3
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_fighter_focus }
+		mutually_exclusive = { focus = PER_tac_effort }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+########## Focus for production_effort_ab_1
+	
+	focus = {
+		id = PER_production_effort_ab_1
+		icon = GFX_goal_generic_construct_mil_factory
+		
+		x = 11
+		y = 3
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_equipment_effort_1 }
+		
+		available = {
+			NOT = { num_of_available_civilian_factories > 20 }
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 19
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for order_fleet_2
+	
+	focus = {
+		id = PER_order_fleet_2
+		icon = GFX_focus_generic_cruiser2
+		
+		x = 2
+		y = 4
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_order_fleet_1 }
+		
+		available = {	NOT = { has_war_with = ITA }		ITA = { exists = yes }	}
+		
+		complete_tooltip = {
+			ITA = {
+				add_equipment_to_stockpile = {
+					type = light_cruiser
+					amount = 3
+					producer = ITA
+				}
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = ITA }
+				}
+				add_equipment_to_stockpile = {
+					type = light_cruiser
+					amount = 3
+					producer = ITA
+				}
+				ITA = {
+					transfer_ship = {
+						prefer_name = "JOBIN 6"
+						type = light_cruiser
+						target = PER
+					}
+					transfer_ship = {
+						prefer_name = "JOBIN 7"
+						type = light_cruiser
+						target = PER
+					}
+					transfer_ship = {
+						prefer_name = "JOBIN 8"
+						type = light_cruiser
+						target = PER
+					}
+				}
+			}
+		}
+	} 
+
+
+
+########## Focus for medium_fleet
+	
+	focus = {
+		id = PER_medium_fleet
+		icon = GFX_focus_generic_cruiser2
+		
+		x = 4
+		y = 4
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	amount_research_slots > 3	}
+		
+		prerequisite = { focus = PER_light_fleet }
+		
+		complete_tooltip = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					amount_research_slots > 2
+				}
+				add_tech_bonus = {
+					name = cr_bonus
+					bonus = 1.0
+					ahead_reduction = 2
+					uses = 1
+					category = cl_tech
+					category = ca_tech
+				}
+			}
+		}
+	}
+	
+########## Focus for DOC_effort_B
+	
+	focus = {
+		id = PER_doc_effort_b
+		icon = GFX_goal_generic_attack_allies
+		
+		x = 6
+		y = 4
+		
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		ai_will_do = {	factor = 1	}
+		
+		prerequisite = { focus = PER_tac_effort }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name =  op_dest_bonus
+				bonus = 1.0
+				uses = 1
+				category = operational_integrity_tree
+			}
+		}
+	}
+	
+########## Focus for DOC_effort_A
+	focus = {
+		id = PER_doc_effort_a
+		icon = GFX_goal_generic_build_airforce
+		
+		x = 8
+		y = 4
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_cas_effort }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_sup_bonus
+				bonus = 1.0
+				uses = 1
+				category = battlefield_support_tree
+			}
+		}
+	}
+	
+########## Focus for cavalry_focus
+	focus = {
+		id = PER_cavalry_focus
+		icon = GFX_goal_generic_cavalry
+		
+		x = 10
+		y = 4
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_equipment_effort_1 }
+		mutually_exclusive = { focus = PER_motorization_focus }
+		
+		completion_reward = {
+			add_ideas = PER_idea_cavalry
+		}
+	}
+	
+########## Focus for motorization_focus
+	focus = {
+		id = PER_motorization_focus
+		icon = GFX_goal_generic_army_motorized
+		
+		x = 12
+		y = 4
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	} 
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_equipment_effort_1 }
+		mutually_exclusive = { focus = PER_cavalry_focus }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 2.0
+				category = motorized_equipment
+			}
+		}
+	}
+	
+	
+##################################################	
+########## Focus for ministry_of_war_2 ##########
+
+	focus = {
+		id = PER_ministry_of_war_2
+		icon = GFX_focus_PER_seal-IIMW_2
+		
+		prerequisite = {
+			focus = PER_motorization_focus
+			focus = PER_cavalry_focus
+			focus = PER_doc_effort_a
+			focus = PER_doc_effort_b
+			focus = PER_medium_fleet
+			focus = PER_order_fleet_2
+		}
+		
+		x = 7
+		y = 5
+		
+		cost = 7
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_command_power = 10
+			swap_ideas = {
+				remove_idea = PER_idea_army_ministry_of_war_1
+				add_idea = PER_idea_army_ministry_of_war_2
+			}
+		}
+	}
+	
+########## Focus for naval_effort_2
+	
+	focus = {
+		id = PER_naval_effort_2
+		icon = GFX_focus_PER_seal-IIN_2
+		
+		x = 3
+		y = 7
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_order_fleet_2	focus = PER_medium_fleet }
+		prerequisite = { focus = PER_ministry_of_war_2 }
+		
+		
+		complete_tooltip = {
+			navy_experience = 50
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience= 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built_2
+			}
+			
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built_2 }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built_2
+			}
+			
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built_2 }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 14
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+########## Focus for NAV_effort_2
+	
+	focus = {
+		id = PER_nav_effort_2
+		icon = GFX_goal_generic_air_naval_bomber
+		
+		x = 6
+		y = 6
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_doc_effort_b	focus = PER_doc_effort_a }
+		prerequisite = { focus = PER_ministry_of_war_2 }
+		mutually_exclusive = { focus = PER_nav_effort_1 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	} 
+	
+########## Focus for NAV_effort_1
+	
+	focus = {
+		id = PER_nav_effort_1
+		icon = GFX_goal_generic_navy_carrier
+		
+		x = 8
+		y = 6
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_doc_effort_b	focus = PER_doc_effort_a }
+		prerequisite = { focus = PER_ministry_of_war_2 }
+		mutually_exclusive = { focus = PER_nav_effort_2 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_air_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_air
+			}
+		}
+	}
+	
+########## Focus for equipment_effort_2
+	
+	focus = {
+		id = PER_equipment_effort_2
+		icon = GFX_goal_generic_small_arms
+		
+		x = 10
+		y = 6
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_cavalry_focus	focus = PER_motorization_focus }
+		prerequisite = { focus = PER_ministry_of_war_2 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+########## Focus for mechanization_effort
+	
+	focus = {
+		id = PER_mechanization_effort
+		icon = GFX_focus_PER_mechanization_effort
+		
+		x = 12
+		y = 6
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			has_tech = motorised_infantry
+		}
+		
+		prerequisite = { focus = PER_motorization_focus }
+		prerequisite = { focus = PER_ministry_of_war_2 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1.0
+				category = motorized_equipment
+			}
+		}
+	}
+	
+########## Focus for aviation_effort_2
+	
+	focus = {
+		id = PER_aviation_effort_2
+		icon = GFX_focus_PER_seal-IIAF_2
+		
+		x = 7
+		y = 7
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_nav_effort_1	focus = PER_nav_effort_2 }
+		
+		completion_reward = {
+			air_experience= 50
+			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	
+########## Focus for army_effort_2
+	
+	focus = {
+		id = PER_army_effort_2
+		icon = GFX_focus_PER_seal-IIGF_2
+		
+		x = 11
+		y = 7
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_equipment_effort_2		focus = PER_mechanization_effort }
+		
+		completion_reward = {
+			add_tech_bonus= {
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+########## Focus for equipment_effort_3
+	
+	focus = {
+		id = PER_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		
+		x = 9
+		y = 8
+		
+		cost = 10
+		
+		
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_army_effort_2 }
+		
+		ai_will_do = {	factor = 1	}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = arty_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	
+########## Focus for armor_effort
+	
+	focus = {
+		id = PER_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		
+		x = 13
+		y = 8
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_army_effort_2 }
+		mutually_exclusive = { focus = PER_anti_tank_effort }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = light_armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = cat_light_armor
+			}
+		}
+	}
+	
+########## Focus for anti_tank_effort
+	
+	focus = {
+		id = PER_anti_tank_effort
+		icon = GFX_goal_generic_army_artillery2
+		
+		x = 11
+		y = 8
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_army_effort_2 }
+		mutually_exclusive = { focus = PER_armor_effort }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = ant_tank_bonus
+				bonus = 1.0
+				uses = 1
+				category = cat_anti_tank
+			}
+		}
+	}
+	
+########## Focus for production_effort_ab_2
+	
+	focus = {
+		id = PER_production_effort_ab_2
+		icon = GFX_goal_generic_construct_mil_factory
+		
+		x = 13
+		y = 9
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			NOT = { num_of_available_civilian_factories > 40 }
+		}
+		
+		prerequisite = { focus = PER_armor_effort }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 14
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for army_effort_3
+	
+	focus = {
+		id = PER_army_effort_3
+		icon = GFX_focus_PER_seal-IIGF_3
+		
+		x = 11
+		y = 10
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = {
+			focus = PER_equipment_effort_3
+			focus = PER_armor_effort
+			focus = PER_anti_tank_effort
+		}
+		
+		completion_reward = {
+			add_tech_bonus= {
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+########## Focus for special_forces_1
+	
+	focus = {
+		id = PER_special_forces_1
+		icon = GFX_goal_generic_amphibious_assault
+		
+		x = 3
+		y = 11
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_naval_effort_2 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = marines_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = marines
+				technology = marines2
+			}
+		}
+	}
+	
+########## Focus for special_forces_2
+	
+	focus = {
+		id = PER_special_forces_2
+		icon = GFX_focus_generic_paratrooper
+		
+		x = 7
+		y = 11
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_aviation_effort_2 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = paratroopers_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+			}
+		}
+	}
+	
+########## Focus for special_forces_3
+	
+	focus = {
+		id = PER_special_forces_3
+		icon = GFX_goal_generic_special_forces
+		
+		x = 11
+		y = 11
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_army_effort_3 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = mountaineers_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+	
+########## Focus for ministry_of_war_3
+	
+	focus = {
+		id = PER_ministry_of_war_3
+		icon = GFX_focus_PER_seal-IIMW_3
+		
+		prerequisite = {
+			focus = PER_special_forces_1
+			focus = PER_special_forces_2
+			focus = PER_special_forces_3
+		}
+		
+		x = 7
+		y = 12
+		
+		cost = 7
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_command_power = 10
+			add_ideas = special_forces
+			swap_ideas = {
+				remove_idea = PER_idea_army_ministry_of_war_2
+				add_idea = PER_idea_army_ministry_of_war_3
+			}
+		}
+	}
+	
+################################################## Economic ##################################################
+
+########## Focus for economic_effort
+	
+	focus = {
+		id = PER_economic_effort
+		icon = GFX_goal_generic_consumer_goods
+		
+		x = 20
+		y = 0
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_timed_idea= {
+				idea = PER_idea_economy
+				days = 1000
+			}
+		}
+	}
+	
+########## Focus for military_plan_a
+	
+	focus = {
+		id = PER_military_plan_a
+		icon = GFX_focus_secret_rearmament
+		
+		x = 15
+		y = 1
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_economic_effort }
+		mutually_exclusive = { focus = PER_industrial_plan_b }
+		
+		completion_reward = {
+			add_tech_bonus= {
+				name = production_bonus
+				bonus = 1.5
+				uses = 1
+				technology = basic_machine_tools
+				technology = improved_machine_tools
+				technology = advanced_machine_tools
+			}
+		}
+	}
+	
+########## Focus for industrial_plan_b
+	
+	focus = {
+		id = PER_industrial_plan_b
+		icon = GFX_goal_generic_production
+		
+		x = 19
+		y = 1
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_economic_effort }
+		mutually_exclusive = { focus = PER_military_plan_a }
+		
+		completion_reward = {
+			add_tech_bonus= {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = construction_tech
+			}
+		}
+	}
+	
+########## Focus for construction_effort_a1
+	
+	focus = {
+		id = PER_construction_effort_a1
+		icon = GFX_goal_generic_construction2
+		
+		x = 15
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_military_plan_a }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for production_effort_a1
+	
+	focus = {
+		id = PER_production_effort_a1
+		icon = GFX_goal_generic_construct_mil_factory
+		
+		x = 15
+		y = 3
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_construction_effort_a1 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for production_effort_a2
+	
+	focus = {
+		id = PER_production_effort_a2
+		icon = GFX_goal_generic_construct_mil_factory
+		
+		x = 15
+		y = 4
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_production_effort_a1 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+########## Focus for production_effort_a3
+	
+	focus = {
+		id = PER_production_effort_a3
+		icon = GFX_goal_generic_construct_mil_factory
+		
+		x = 15
+		y = 5
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_production_effort_a2 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+########## Focus for production_effort_a4
+	
+	focus = {
+		id = PER_production_effort_a4
+		icon = GFX_goal_generic_construct_mil_factory
+		
+		x = 15
+		y = 6
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_production_effort_a3 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 4
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 4
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for infrastructure_effort_1
+	
+	focus = {
+		id = PER_infrastructure_effort_1
+		icon = GFX_goal_generic_construction2
+		
+		x = 17
+		y = 2
+		
+		cost = 7
+		
+		ai_will_do = {	factor = 1	} 
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_military_plan_a	focus = PER_industrial_plan_b }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 0
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+########## Focus for infrastructure_effort_2
+	
+	focus = {
+		id = PER_infrastructure_effort_2
+		icon = GFX_goal_generic_construct_infrastructure
+		
+		x = 17
+		y = 3
+		
+		cost = 7
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_infrastructure_effort_1 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 0
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for infrastructure_effort_3
+	
+	focus = {
+		id = PER_infrastructure_effort_3
+		icon = GFX_goal_generic_construct_infrastructure
+		
+		x = 17
+		y = 4
+		
+		cost = 7
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_infrastructure_effort_2 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 0
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for infrastructure_effort_4
+	
+	focus = {
+		id = PER_infrastructure_effort_4
+		icon = GFX_goal_generic_construct_infrastructure
+		
+		x = 17
+		y = 5
+		
+		cost = 7
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_infrastructure_effort_3 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 0
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+		
+########## Focus for infrastructure_effort_5
+	
+	focus = {
+		id = PER_infrastructure_effort_5
+		icon = GFX_goal_generic_construct_civilian
+		
+		x = 17
+		y = 6
+		
+		cost = 7
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_infrastructure_effort_4 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = infrastructure
+						size < 0
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for construction_effort_b1
+	
+	focus = {
+		id = PER_construction_effort_b1
+		icon = GFX_goal_generic_construction2
+		
+		x = 19
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_industrial_plan_b }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for construction_effort_b2
+	
+	focus = {
+		id = PER_construction_effort_b2
+		icon = GFX_focus_generic_industry_1
+		
+		x = 19
+		y = 3
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_construction_effort_b1 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for construction_effort_b3
+	
+	focus = {
+		id = PER_construction_effort_b3
+		icon = GFX_focus_generic_industry_2
+		
+		x = 19
+		y = 4
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_construction_effort_b2 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for construction_effort_b4
+	
+	focus = {
+		id = PER_construction_effort_b4
+		icon = GFX_focus_generic_industry_3
+		
+		x = 19
+		y = 5
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_construction_effort_b3 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for construction_effort_b5
+	
+	focus = {
+		id = PER_construction_effort_b5
+		icon = GFX_goal_generic_construct_civ_factory
+		
+		x = 19
+		y = 6
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_construction_effort_b4 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for industrial_effort_2
+	
+	focus = {
+		id = PER_industrial_effort_2
+		icon = GFX_goal_generic_air_production
+		
+		x = 18
+		y = 7
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { 
+			focus = PER_infrastructure_effort_5
+			focus = PER_construction_effort_b5
+			focus = PER_production_effort_a4
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	
+########## Focus for extra_tech_slot_1
+	
+	focus = {
+		id = PER_extra_tech_slot_1
+		icon = GFX_focus_research
+		
+		x = 18
+		y = 8
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_industrial_effort_2 }
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+########## Focus for secret_weapons
+	
+	focus = {
+		id = PER_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		
+		x = 18
+		y = 11
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_extra_tech_slot_1 }
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 4
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+		}
+	}
+	
+########## Focus for construction_effort_ab1
+	
+	focus = {
+		id = PER_construction_effort_ab1
+		icon = GFX_goal_generic_construct_civ_factory
+		
+		x = 17
+		y = 9
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_extra_tech_slot_1 }
+		prerequisite = { focus = PER_infrastructure_effort_5 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for construction_effort_ab2
+	
+	Focus = {
+		id = PER_construction_effort_ab2
+		icon = GFX_goal_generic_construct_civ_factory
+		
+		x = 17
+		y = 10
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_construction_effort_ab1 }
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+########## Focus for Cancel_the_contract
+	
+	focus = {
+		id = PER_cancel_the_contract
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		
+		x = 17
+		y = 13
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	has_idea = PER_idea_economy_with_sov_1	}
+		
+		prerequisite = { focus = PER_construction_effort_ab2 }
+		
+		mutually_exclusive = { focus = PER_contract_with_soviet }
+		
+		bypass = {	}
+		
+		completion_reward = {
+			remove_ideas = PER_idea_economy_with_sov_1
+		}
+	}
+	
+########## Focus for extra_tech_slot_2
+	
+	focus = {
+		id = PER_extra_tech_slot_2
+		icon = GFX_focus_research2
+		
+		x = 19
+		y = 9
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_nationalism }
+		prerequisite = { focus = PER_extra_tech_slot_1 }
+		
+		available = {	num_of_factories > 50	}
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+########## Focus for resource_prospecting_1
+	
+	focus = {
+		id = PER_resource_prospecting_1
+		icon = GFX_goal_generic_construct_civilian
+		
+		x = 19
+		y = 10
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_extra_tech_slot_2 }
+		
+		complete_tooltip = {
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = resource_prospecting_bonus
+		}
+	}
+	
+########## Focus for resource_prospecting_2
+	
+#	focus = {
+#		id = PER_resource_prospecting_2
+#		icon = GFX_goal_generic_construct_civilian
+		
+#		x = 21
+#		y = 12
+		
+#		cost = 0.001
+		
+#		ai_will_do = {	factor = 1	}
+		
+#		available_if_capitulated = yes
+		
+#		prerequisite = { focus = PER_resource_prospecting }
+		
+#		completion_reward = {
+#			custom_trigger_tooltip = {
+#				tooltip = resource_prospecting_bonus
+#			}
+#		}
+#	}
+	
+################################################## Nationalism ##################################################
+
+########## Focus for properties_internal
+	
+	focus = {
+		id = PER_properties_internal
+		icon = GFX_focus_PER_properties_internal
+		
+		x = 22
+		y = 1
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_economic_effort }
+		
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	
+########## Focus for conscription_youth
+	
+	focus = {
+		id = PER_conscription_youth
+		icon = GFX_focus_PER_conscription_youth
+		
+		x = 21
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_properties_internal }
+		
+		completion_reward = {
+			add_ideas = PER_idea_military_youth_focus
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+				limit = { has_government = neutrality }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.2
+				}
+			}
+		}
+	}
+	 
+########## Focus for training_elits
+	
+	focus = {
+		id = PER_training_elits
+		icon = GFX_focus_PER_training_elits
+		
+		x = 23
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = { has_manpower > 200000 }
+		
+		prerequisite = { focus = PER_properties_internal }
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = PER_idea_training_elits
+				days = 300
+			}
+		}
+	}
+
+########## Focus for Military Academy
+	
+	focus = {
+		id = PER_military_academy
+		icon = GFX_focus_generic_military_academy
+		
+		x = 22
+		y = 3
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_conscription_youth		focus = PER_training_elits }
+		
+		completion_reward = {
+			add_ideas = per_idea_military_academy
+		}
+	}
+	
+
+########## Focus for militarism
+	
+	focus = {
+		id = PER_militarism
+		icon = GFX_goal_generic_political_pressure
+		
+		x = 22
+		y = 4
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_military_academy }
+		
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			add_ideas = PER_idea_militarism_focus
+			army_experience = 20
+			set_rule = { can_send_volunteers = yes }
+		}
+	}
+
+########## Focus for paramilitarism
+	
+	focus = {
+		id = PER_paramilitarism
+		icon = GFX_goal_generic_military_sphere
+		
+		x = 22
+		y = 6
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_militarism }
+		
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+	}
+
+########## Focus for Nationalism
+	
+	focus = {
+		id = PER_nationalism
+		icon = GFX_focus_hol_united_netherlands
+		
+		x = 22
+		y = 7
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_paramilitarism }
+		
+		completion_reward = {
+			add_ideas = PER_idea_nationalism_1
+		}
+	}
+	
+########## Focus for Burn_Angolo-Iranian_oil_1
+	
+	focus = {
+		id = PER_burn_angolo-iranian_oil_1
+		icon = GFX_focus_PER_Burn-Angolo_iranian_oil_1
+		
+		x = 25
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_properties_internal }
+		
+		completion_reward = {
+			remove_ideas = PER_idea_angolo-persian_oil_company
+			ENG = {
+				remove_resource_rights = 412
+				remove_resource_rights = 413
+				remove_resource_rights = 421
+				add_opinion_modifier = {
+					target = PER
+					modifier = rejected_demands
+				}
+			}
+		}
+	}
+	
+########## Focus for Burn-Angolo_iranian_oil_2
+	
+	focus = {
+		id = PER_burn_angolo-iranian_oil_2
+		icon = GFX_focus_PER_Burn-Angolo_iranian_oil_2
+		
+		x = 25
+		y = 4
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_burn_angolo-iranian_oil_1 }
+		mutually_exclusive = { focus = PER_re-contract_angolo_iranian_oil }
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = PER_idea_Burn-Angolo_persian_oil
+				days = 360
+			}
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = -48
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = PER
+					modifier = ENG_maintaining_the_balance_of_power_bad
+				}
+			}
+		}
+	}
+	
+########## Focus for end_of_looting
+	
+	focus = {
+		id = PER_end_of_looting
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		
+		x = 25
+		y = 5
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		bypass = {
+			has_war_with = ENG
+		}
+		
+		prerequisite = { focus = PER_burn_angolo-iranian_oil_2 }
+#		mutually_exclusive = { focus = PER_re-contract_angolo_iranian_oil }
+		
+		completion_reward = {
+			ENG = { 
+				declare_war_on = {
+					target = PER
+					type = take_claimed_state
+				}
+			}
+		}
+	}
+	
+########## Focus for employment_elits
+	
+	focus = {
+		id = PER_employment_elits
+		icon = GFX_focus_PER_employment_elits
+		
+		x = 23
+		y = 5
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = {	has_idea = PER_idea_training_elits	}	}
+		
+#		prerequisite = { focus = PER_paramilitarism }
+		prerequisite = { focus = PER_training_elits }
+		
+		completion_reward = {
+			remove_ideas = PER_idea_old_training
+		}
+	}
+
+########## Focus for national_Oil_industry
+	
+	focus = {
+		id = PER_national_oil_industry
+		icon = GFX_focus_PER_national_oil_industry
+		
+		x = 25
+		y = 6
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = {	has_idea = PER_idea_Burn-Angolo_persian_oil	}	}
+		
+		prerequisite = { focus = PER_employment_elits }
+		prerequisite = { focus = PER_end_of_looting }
+		
+		completion_reward = {
+			custom_effect_tooltip = PER_national_oil_industry_title
+
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = 48
+			}
+		}
+	}
+		
+########## Focus for family_population
+	
+	focus = {
+		id = PER_family_population
+		icon = GFX_focus_PER_family_population
+		
+		x = 24
+		y = 7
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_employment_elits }
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = PER_idea_family_population
+				days = 150
+			}
+			custom_effect_tooltip = PER_family_population_abilities
+		}
+	}
+	
+################################################## unification ##################################################
+
+########## Focus for unification_of_iranshahr
+	
+	focus = {
+		id = PER_unification_of_iranshahr
+		icon = GFX_focus_PER_unification_of_iranshahr
+		
+		x = 24
+		y = 8
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			PER = { has_government = neutrality }
+			AFG = { exists = yes	is_in_faction = no	has_government = neutrality }
+			not = { has_war_with = AFG }
+		}
+		
+		bypass = {	AFG = { exists = no }	NOT = { has_completed_focus = PER_retake_iranshahr } }
+		
+		prerequisite = { focus = PER_nationalism }
+		mutually_exclusive = { focus = PER_retake_iranshahr }
+		
+		completion_reward = {
+			if = {
+				limit = { AFG = { exists = yes } }
+				
+				create_faction = "United nations"
+				
+				PER = { add_to_faction = AFG }
+				
+				AFG = { add_ideas = PER_idea_iran_united }
+				
+				PER = { add_ideas = PER_idea_iran_united }
+			}
+			
+			if = {
+				limit = { AFG = { exists = no } }
+				
+				custom_effect_tooltip = PER_integration_afghanistan
+			}
+		}
+	}
+	
+########## Focus for ally_with_muscat
+	
+	focus = {
+		id = PER_ally_with_muscat
+		icon = GFX_focus_PER_ally_with_muscat
+		
+		x = 23
+		y = 9
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			PER = { has_government = neutrality }
+			OMA = { exists = yes	is_in_faction = no	has_government = neutrality }
+			not = { has_war_with = OMA }
+		}
+		
+		prerequisite = { focus = PER_unification_of_iranshahr }
+		
+		completion_reward = {
+			if = {
+				limit = { AFG = { exists = yes } }
+				
+				PER = { add_to_faction = OMA }
+				OMA = { add_ideas = idea_iran_united }
+			}
+			
+			if = {
+				limit = { AFG = { exists = no }			NOT = { has_completed_focus = PER_ally_with_sana }	NOT = { has_completed_focus = PER_ally_with_baghdad } }
+				
+				create_faction = "United nations"
+				
+				PER = { add_to_faction = OMA }
+				
+				OMA = { add_ideas = PER_idea_iran_united }
+				
+				PER = { add_ideas = PER_idea_iran_united }
+			}
+			
+			if = {
+				limit = { AFG = { exists = no }			or = { has_completed_focus = PER_ally_with_sana		has_completed_focus = PER_ally_with_baghdad } }
+				
+				PER = { add_to_faction = OMA }
+				
+				OMA = { add_ideas = PER_idea_iran_united }
+			}
+		}
+	}
+	
+########## Focus for ally_with_sana
+	
+	focus = {
+		id = PER_ally_with_sana
+		icon = GFX_focus_PER_ally_with_muscat
+		
+		x = 25
+		y = 9
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			PER = { has_government = neutrality }
+			YEM = { exists = yes	is_in_faction = no	has_government = neutrality }
+			not = { has_war_with = YEM }
+		}
+		
+		prerequisite = { focus = PER_unification_of_iranshahr }
+		
+		completion_reward = {
+			if = {
+				limit = { AFG = { exists = yes } }
+				
+				PER = { add_to_faction = YEM }
+				OMA = { add_ideas = idea_iran_united }
+			}
+			
+			if = {
+				limit = { AFG = { exists = no }			NOT = { has_completed_focus = PER_ally_with_muscat }	NOT = { has_completed_focus = PER_ally_with_baghdad } }
+				
+				create_faction = "United nations"
+				
+				PER = { add_to_faction = YEM }
+				
+				YEM = { add_ideas = PER_idea_iran_united }
+				
+				PER = { add_ideas = PER_idea_iran_united }
+			}
+			
+			if = {
+				limit = { AFG = { exists = no }			or = { has_completed_focus = PER_ally_with_muscat	has_completed_focus = PER_ally_with_baghdad } }
+				
+				PER = { add_to_faction = YEM }
+				
+				YEM = { add_ideas = PER_idea_iran_united }
+			}
+		}
+	}
+	
+########## Focus for ally_with_baghdad
+	
+	focus = {
+		id = PER_ally_with_baghdad
+		icon = GFX_focus_PER_ally_with_baghdad
+		
+		x = 24
+		y = 10
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			PER = { has_government = neutrality }
+			IRQ = { exists = yes	is_in_faction = no	has_government = neutrality }
+			not = { has_war_with = IRQ }
+		}
+		
+		bypass = {	IRQ = { exists = no }	}
+		
+		prerequisite = { focus = PER_unification_of_iranshahr }
+		
+		completion_reward = {
+			if = {
+				limit = { IRQ = { exists = yes }	AFG = { exists = yes } }
+				
+				PER = { add_to_faction = IRQ }
+				IRQ = { add_ideas = idea_iran_united }
+			}
+			
+			if = {
+				limit = { IRQ = { exists = yes }	AFG = { exists = no }	NOT = { has_completed_focus = PER_ally_with_muscat }	NOT = { has_completed_focus = PER_ally_with_sana } }
+				
+				create_faction = "United nations"
+					
+				PER = { add_to_faction = IRQ }
+					
+				IRQ = { add_ideas = PER_idea_iran_united }
+			}
+			
+			if = {
+				limit = { IRQ = { exists = yes }	AFG = { exists = no }	OR = { has_completed_focus = PER_ally_with_muscat		has_completed_focus = PER_ally_with_sana } }
+				
+				PER = { add_to_faction = IRQ }
+				
+				IRQ = { add_ideas = PER_idea_iran_united }
+			}
+			
+			if = {
+				limit = { IRQ = { exists = no } }
+					
+				custom_effect_tooltip = PER_integration_iraq
+			}
+		}
+	}
+	
+########## Focus for ally_with_turkey
+	
+	focus = {
+		id = PER_ally_with_turkey
+		icon = GFX_focus_PER_ally_with_turkay
+		
+		x = 26
+		y = 11
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			PER = { has_government = neutrality }
+			TUR = { exists = yes	is_in_faction = no	has_government = neutrality }
+			NOT = { has_war_with = TUR }
+			if = {
+				limit = { AFG = { exists = no }		IRQ = { exists = no } }
+				or = { is_in_faction_with = OMA		is_in_faction_with = YEM	}
+			}
+		}
+		
+		prerequisite = { focus = PER_ally_with_baghdad }
+		
+		completion_reward = {
+			PER = { add_to_faction = TUR }
+			
+			TUR = { add_ideas = idea_iran_united }
+		}
+	}
+	
+########## Focus for ally_with_qattar
+	
+	focus = {
+		id = PER_ally_with_qattar
+		icon = GFX_focus_PER_ally_with_qattar
+		
+		x = 25
+		y = 12
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			PER = { has_government = neutrality }
+			QAT = { exists = yes	is_in_faction = no	has_government = neutrality }
+			not = { has_war_with = QAT }
+			if = {
+				limit = { AFG = { exists = no }		IRQ = { exists = no } }
+				or = { is_in_faction_with = OMA		is_in_faction_with = YEM	}
+			}
+		}
+		
+		prerequisite = { focus = PER_ally_with_baghdad }
+		
+		completion_reward = {
+			PER = { add_to_faction = QAT }
+			
+			QAT = { add_ideas = idea_iran_united }
+		}
+	}
+	
+########## Focus for ally_with_kuwait
+	
+	focus = {
+		id = PER_ally_with_kuweit
+		icon = GFX_focus_PER_ally_with_kuwait
+		
+		x = 24
+		y = 11
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			PER = { has_government = neutrality }
+			KUW = { exists = yes	is_in_faction = no	has_government = neutrality }
+			not = { has_war_with = KUW }
+			if = {
+				limit = { AFG = { exists = no }		IRQ = { exists = no } }
+				or = { is_in_faction_with = OMA		is_in_faction_with = YEM	}
+			}
+		}
+		
+		prerequisite = { focus = PER_ally_with_baghdad }
+		
+		completion_reward = {
+			PER = { add_to_faction = KUW }
+			
+			KUW = { add_ideas = idea_iran_united }
+		}
+	}
+	
+########## Focus for ally_with_emirates
+	
+	focus = {
+		id = PER_ally_with_emirates
+		icon = GFX_focus_PER_ally_with_emirates
+		
+		x = 23
+		y = 12
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			PER = { has_government = neutrality }
+			UAE = { exists = yes	is_in_faction = no	has_government = neutrality }
+			not = { has_war_with = UAE }
+			if = {
+				limit = { AFG = { exists = no }		IRQ = { exists = no } }
+				or = { is_in_faction_with = OMA		is_in_faction_with = YEM	}
+			}
+		}
+		
+		prerequisite = { focus = PER_ally_with_baghdad }
+		
+		completion_reward = {
+			PER = { add_to_faction = UAE }
+			
+			UAE = { add_ideas = idea_iran_united }
+		}
+	}
+	
+########## Focus for ally_with_pakistan
+	
+	focus = {
+		id = PER_ally_with_pakistan
+		icon = GFX_focus_PER_ally_with_pakistan
+		
+		x = 22
+		y = 11
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			PER = { has_government = neutrality }
+			PAK = { exists = yes	is_in_faction = no	has_government = neutrality }
+			not = { has_war_with = PAK }
+			if = {
+				limit = { AFG = { exists = no }		IRQ = { exists = no } }
+				or = { is_in_faction_with = OMA		is_in_faction_with = YEM	}
+			}
+		}
+		
+		prerequisite = { focus = PER_ally_with_baghdad }
+		
+		completion_reward = {
+			PER = { add_to_faction = PAK }
+			
+			PAK = { add_ideas = idea_iran_united }
+		}
+	}
+	
+################################################## retake ##################################################
+
+########## Focus for retake_iranshahr
+	
+	Focus = {
+		id = PER_retake_iranshahr
+		icon = GFX_focus_PER_retake_iranshahr
+		
+		x = 30
+		y = 8
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			PER = { or = { has_government = neutrality	has_government = fascism } }
+			OR = {
+				has_equipment = { infantry_equipment_0 > 4999 }
+				has_equipment = { infantry_equipment_1 > 4999 }
+				has_equipment = { infantry_equipment_2 > 4999 }
+			}
+		}
+		
+		prerequisite = { focus = PER_nationalism }
+		prerequisite = { focus = PER_family_population }
+		mutually_exclusive = { focus = PER_unification_of_iranshahr }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PER_idea_nationalism_1
+				add_idea = PER_idea_nationalism_2
+			}
+		}
+	}
+	
+########## Focus for retake_kabol
+	
+	focus = {
+		id = PER_retake_kabol
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		
+		x = 29
+		y = 9
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = { 
+			AFG = { exists = yes	owns_state = 267	owns_state = 410	owns_state = 415}
+			
+			divisions_in_border_state = { size > 5		state = 416		border_state = 415 }
+			
+			divisions_in_border_state = { size > 2		state = 414		border_state = 410 }
+			
+		}
+		
+		prerequisite = { focus = PER_retake_iranshahr }
+		
+		bypass = {	or = {	AFG = { exists = no }	has_war_with = AFG	}	}
+		will_lead_to_war_with = AFG
+		completion_reward = {
+			ENG = {	add_opinion_modifier = { target = PER		modifier = protest_action_light	} }
+			
+			SOV = {	add_opinion_modifier = { target = PER		modifier = protest_action_light	} }
+			
+			custom_effect_tooltip = PER_integration_afghanistan
+			
+			if = {
+				limit = {	AFG = { exists = yes }	}
+				create_wargoal = { type = take_state_focus	target = AFG	generator = { 415 }	}
+				AFG = { add_opinion_modifier = { target = PER		modifier = protest_action_strong } }
+			}
+		}
+	}
+	
+########## Focus for retake_baluchistan
+	
+	focus = {
+		id = PER_retake_baluchistan
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		
+		x = 28
+		y = 10
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	RAJ = { exists = yes }	}
+		
+		prerequisite = { focus = PER_retake_kabol }
+		
+		bypass = {	or = {	RAJ = { exists = no }	has_war_with = RAJ	}	}
+		will_lead_to_war_with = RAJ
+		completion_reward = {
+			custom_effect_tooltip = PER_integration_baluchistan
+			if = {
+				limit = {	
+					RAJ = { 
+						exists = yes
+						controls_state = 442
+						controls_state = 443
+						controls_state = 444
+						controls_state = 445
+					}
+				}
+				create_wargoal = { type = take_state_focus	target = RAJ	generator = { 443 }	} 
+			}
+			if = {
+				limit = {	
+					PAK = { 
+						exists = yes
+						controls_state = 442
+						controls_state = 443
+						controls_state = 444
+						controls_state = 445
+					}
+				}
+				create_wargoal = { type = take_state_focus	target = PAK	generator = { 443 }	} 
+			}
+		}
+	}
+	
+########## Focus for retake_kharazm_georgi
+	
+	focus = {
+		id = PER_retake_kharazm_georgia
+		icon = GFX_goal_generic_major_war
+		
+		x = 30
+		y = 11
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = { SOV = { exists = yes	}	}
+		
+		prerequisite = { focus = PER_retake_kabol	focus = PER_retake_baghdad }
+		
+		bypass = {	or = {	SOV = { exists = no }	has_war_with = SOV	}	}
+		will_lead_to_war_with = SOV
+		completion_reward = {
+			custom_effect_tooltip = PER_integration_soviet
+			
+			if = {
+				limit = {	
+					SOV = { 
+						exists = yes
+						controls_state = 229
+						controls_state = 230
+						controls_state = 231
+						controls_state = 405
+						controls_state = 418
+						controls_state = 584
+						controls_state = 585
+						controls_state = 742
+						controls_state = 788
+						controls_state = 789
+						controls_state = 790
+						controls_state = 791
+						controls_state = 792
+						controls_state = 793
+					}
+				}
+				create_wargoal = { type = take_state_focus	target = SOV	generator = { 585 }	} 
+			}
+		}
+	}
+
+########## Focus for retake_turkey
+	
+	focus = {
+		id = PER_retake_turkey
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		
+		x = 32
+		y = 10
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			num_divisions > 30
+			TUR = {
+				exists = yes
+				owns_state = 350
+				owns_state = 352
+				owns_state = 353
+				owns_state = 354
+			}
+		}
+		
+		prerequisite = { focus = PER_retake_baghdad }
+		prerequisite = { focus = PER_retake_kabol }
+		
+		bypass = {	or = {	TUR = { exists = no }	has_war_with = TUR	}	}
+		will_lead_to_war_with = TUR
+		completion_reward = {
+			custom_effect_tooltip = PER_integration_kurdistan
+			
+			if = {
+				limit = {
+					TUR = {
+						exists = yes
+						or = {
+							controls_state = 350
+							controls_state = 352
+							controls_state = 353
+							controls_state = 354
+						}
+					}
+				}
+				create_wargoal = { type = take_state_focus	target = TUR	generator = { 352 }	}
+				TUR = {	add_opinion_modifier = {	target = PER			modifier = protest_action_strong } }
+			}
+		}
+	}
+	
+########## Focus for retake_baghdad
+
+	focus = {
+		id = PER_retake_baghdad
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		
+		x = 31
+		y = 9
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			num_divisions > 15
+			IRQ = { exists = yes	owns_state = 291	owns_state = 675	owns_state = 676 }
+		}
+		
+		prerequisite = { focus = PER_retake_iranshahr }
+		
+		bypass = {	or = {	IRQ = { exists = no }	has_war_with = IRQ	}	}
+		will_lead_to_war_with = IRQ
+		completion_reward = {
+			IRQ = { add_opinion_modifier = { target = PER		modifier = protest_action_strong } }
+			
+			ENG = { add_opinion_modifier = { target = PER		modifier = protest_action_light	} }
+			
+			SOV = {	add_opinion_modifier = { target = PER		modifier = protest_action_light } }
+			
+			TUR = {	add_opinion_modifier = { target = PER		modifier = protest_action_light	} }
+			
+			GER = {	add_opinion_modifier = { target = PER		modifier = per_common_policies	} }
+			
+			custom_effect_tooltip = PER_integration_iraq
+			
+			if = {
+				limit = {
+					IRQ = { 
+						exists = yes
+						or = {
+							controls_state = 291
+							controls_state = 675
+							controls_state = 676
+						}
+					}
+				}
+				create_wargoal = { type = take_state_focus	target = IRQ	generator = { 291 }	} 
+			}
+		}
+	}
+	
+################################################## Third Power ##################################################
+	
+########## Focus for third_power
+	
+	focus = {
+		id = PER_third_power
+		icon = GFX_goal_tripartite_pact
+		
+		x = 30
+		y = 0
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	
+########## Focus for anti_liberty
+	
+	focus = {
+		id = PER_anti_liberty
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		
+		x = 29
+		y = 1
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_third_power }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+		}
+	} 
+	
+########## Focus for anti_communism
+	
+	focus = {
+		id = PER_anti_communism
+		icon = GFX_goal_anti_comintern_pact
+		
+		x = 31
+		y = 1
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		prerequisite = { focus = PER_third_power }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+		}
+	}
+	 
+########## Focus for british_power
+	
+	focus = {
+		id = PER_british_power
+		icon = GFX_focus_chi_british_cooperation
+		
+		x = 27
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = ENG }		ENG = { exists = yes }	}
+		
+		completion_reward = {
+			add_political_power = 50
+
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = PER
+					modifier = neutrality_leanings_good
+				}
+			}
+			PER = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = neutrality_leanings_good
+				}
+			}
+		}
+	}
+	
+########## Focus for Re-contract_Angolo_Iranian_oil
+	
+	focus = {
+		id = PER_re-contract_angolo_iranian_oil
+		icon = GFX_focus_PER_re-contract_angolo_iranian_oil
+		
+		x = 27
+		y = 4
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = ENG }		ENG = { exists = yes }	}
+		
+		prerequisite = { focus = PER_burn_angolo-iranian_oil_1 }
+		prerequisite = { focus = PER_british_power }
+		mutually_exclusive = { focus = PER_burn_angolo-iranian_oil_2 } 
+		
+		completion_reward = {
+			add_ideas = PER_idea_angolo-iranian_oil_company
+			give_resource_rights = { receiver = ENG state = 412 }
+			give_resource_rights = { receiver = ENG state = 413 }
+			ENG = {
+				remove_opinion_modifier = {
+					target = PER
+					modifier = rejected_demands
+				}
+			}
+		}
+	}
+	
+########## Focus for military_access_eng
+	
+	focus = {
+		id = PER_military_access_eng
+		icon = GFX_focus_eng_the_sun_never_sets
+		
+		x = 27
+		y = 5
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = ENG }		ENG = { exists = yes }	}
+		
+		prerequisite = { focus = PER_re-contract_angolo_iranian_oil }
+		
+		completion_reward = {
+			give_military_access = ENG
+			PER = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = neutrality_leanings_good
+				}
+			}
+		}
+	}
+	
+########## Focus for german_power
+	
+	focus = {
+		id = PER_german_power
+		icon = GFX_focus_chi_mission_to_germany
+		
+		x = 29
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = GER }		GER = { exists = yes }	}
+		
+		prerequisite = { focus = PER_anti_liberty }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+	
+########## Focus for commercial_contract
+	
+	focus = {
+		id = PER_commercial_contract
+		icon = GFX_focus_PER_commercial_contract
+		
+		x = 29
+		y = 3
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = GER }		GER = { exists = yes }	}
+		
+		prerequisite = { focus = PER_german_power }
+		
+		completion_reward = {
+			add_timed_idea= {
+				idea = PER_idea_commercial_contract
+				days = 720
+			}
+		}
+	}
+	
+########## Focus for economic_consortium
+	
+	focus = {
+		id = PER_economic_consortium
+		icon = GFX_goal_generic_position_armies
+		
+		x = 29
+		y = 4
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = GER }		GER = { exists = yes }	}
+		
+		prerequisite = { focus = PER_commercial_contract }
+		mutually_exclusive = { focus = PER_military_access_eng }
+ 
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = {
+					target = PER
+					modifier = aided_industry
+				}
+			}
+			custom_effect_tooltip = PER_froshtial_german_activities
+		}
+	}
+	
+########## Focus for usa_power
+	
+	focus = {
+		id = PER_usa_power
+		icon = GFX_focus_chi_mission_to_the_us
+		
+		x = 31
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = USA }		USA = { exists = yes }	}
+		
+		prerequisite = { focus = PER_anti_communism }
+		mutually_exclusive = { focus = PER_soviet_union_power }
+		
+		completion_reward = {
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+		}
+	}
+	
+########## Focus for america_first
+	
+	focus = {
+		id = PER_america_first
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		
+		x = 31
+		y = 3
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	USA = { has_completed_focus = USA_america_first }	NOT = { has_war_with = USA }		USA = { exists = yes }	}
+		
+		prerequisite = { focus = PER_usa_power }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			add_timed_idea = {
+				idea = PER_america_defense_ideologies
+				days = 320
+			}
+		}
+	}
+	
+########## Focus for targeted_policies
+	
+	focus = {
+		id = PER_targeted_policies
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		
+		x = 31
+		y = 4
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = USA }		USA = { exists = yes }	}
+		
+		prerequisite = { focus = PER_america_first }
+		
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+		    show_ideas_tooltip = PER_Mahmoud_Jam
+		}
+	}
+	
+########## Focus for oil_consortium
+	
+	focus = {
+		id = PER_oil_consortium
+		icon = GFX_focus_PER_oil_consortium
+		
+		x = 29
+		y = 6
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			OR = {
+				NOT = { has_war_with = USA }
+				NOT = { has_war_with = ENG }
+			}
+			USA = { exists = yes }
+		}
+		
+		prerequisite = { focus = PER_re-contract_angolo_iranian_oil }
+		prerequisite = { focus = PER_targeted_policies }
+		
+		completion_reward = {
+			hidden_effect = {
+				remove_resource_rights = 421
+				remove_resource_rights = 413
+			}
+			
+			
+			give_resource_rights = { receiver = USA state = 413 }
+			
+			PER = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = aided_industry
+				}
+			}
+			PER = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = aided_industry
+				}
+			}
+			
+			add_ideas = PER_idea_oil_consortium_USA-ENG
+		}
+	}
+	
+########## Focus for economic_contract
+	
+	focus = {
+		id = PER_economic_contract
+		icon = GFX_focus_mex_privatisation
+		
+		x = 31
+		y = 5
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = USA }		USA = { exists = yes }	}
+		
+		prerequisite = { focus = PER_targeted_policies }
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = PER_idea_economic_contract_with_USA
+				days = 100
+			}
+		}
+	}
+	
+########## Focus for military_access_usa
+	
+	focus = {
+		id = PER_military_access_usa
+		icon = GFX_focus_ger_strike_at_the_source
+		
+		x = 31
+		y = 6
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = USA }		USA = { exists = yes }	}
+		
+		prerequisite = { focus = PER_economic_contract }
+		
+		completion_reward = {
+			give_military_access = USA
+		}
+	}
+	
+########## Focus for soviet_union_power
+	
+	focus = {
+		id = PER_soviet_union_power
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		
+		x = 33
+		y = 2
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = SOV }		SOV = { exists = yes }	}
+		
+		mutually_exclusive = { focus = PER_usa_power }
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+	
+########## Focus for non_aggression_pact
+	
+	focus = {
+		id = PER_non_aggression_pact
+		icon = GFX_goal_generic_major_alliance
+		
+		x = 33
+		y = 6
+		
+		cost = 10
+		
+		ai_will_do = {	factor = 1	}
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = SOV }		SOV = { exists = yes }	}
+		
+		prerequisite = { focus = PER_soviet_union_power }
+		
+		completion_reward = {
+			give_military_access = SOV
+			PER = {
+				diplomatic_relation = {
+					country = SOV
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+		}
+	}
+
+########## Focus for contract_with_soviet
+	
+	focus = {
+		id = PER_contract_with_soviet
+		icon = GFX_focus_hol_the_foundations_of_defense
+		
+		x = 33
+		y = 13
+		
+		cost = 10
+		
+		available_if_capitulated = yes
+		
+		available = {	NOT = { has_war_with = SOV }		SOV = { exists = yes }	}
+		
+		prerequisite = { focus = PER_non_aggression_pact }
+		mutually_exclusive = { focus = PER_cancel_the_contract }
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PER_idea_economy_with_sov_1
+				add_idea = PER_idea_economy_with_sov_2
+			}
+		}
+	}
+	
+########## End of focuses 
+}

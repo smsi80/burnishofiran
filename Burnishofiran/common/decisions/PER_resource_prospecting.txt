@@ -1,0 +1,622 @@
+
+####################################################################################################
+
+PER_prospect_for_resources = {
+
+##################################################
+	
+	develop_tehran_steel_deposits = { #266
+		
+		icon =				steel
+		is_good =			yes
+		fire_only_once =	yes
+		cost =				25
+		days_remove =		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 266 }
+
+		visible = {
+			controls_state = 266
+			has_tech =	excavation1
+			266 = {		NOT = {		has_state_flag = tehran_develop_v1	}	 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 12
+			owns_state = 266
+		}
+		
+		modifier = {	civilian_factory_use = 2	}
+			
+		ai_will_do = {	factor = 100	}
+		
+		remove_effect = { 
+			266 = {		add_resource = {	type = steel		amount = 10	} }
+			hidden_effect = { 266 = {		set_state_flag = tehran_develop_v1 } }
+		}
+	}
+	
+##################################################
+	
+	develop_tehran_chromium_deposits = { #266
+		
+		icon =				chromium
+		is_good =			yes
+		fire_only_once =	yes
+		cost =				25
+		days_remove =		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 266 }
+
+		visible = {
+			controls_state = 266
+			has_tech =	excavation1
+			266 = {		NOT = {		has_state_flag = tehran_develop_chromium	}	 }
+			266 = {		has_state_flag = tehran_develop_v1	 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 12
+			owns_state = 266
+		}
+		
+		modifier = {	civilian_factory_use = 2	}
+			
+		ai_will_do = {	factor = 100	}
+		
+		remove_effect = { 
+			266 = {		add_resource = {	type = chromium		amount = 10	} }
+			hidden_effect = {	266 = {		set_state_flag = tehran_develop_chromium	}	}
+		}
+	}
+	
+##################################################
+	
+	develop_tehran_oil_deposits = { #266
+		
+		icon = 				oil
+		is_good = 			yes
+		fire_only_once = 	yes
+		cost = 				25
+		days_remove = 		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 266 }
+
+		visible = {
+			has_tech =	excavation3
+			controls_state = 266
+			266 = {		NOT = {		has_state_flag = tehran_develop_oil	}	 }
+			266 = {		has_state_flag = tehran_develop_v1 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+	
+		available = {
+			has_tech =	advanced_oil_processing
+			num_of_civilian_factories_available_for_projects > 12
+			owns_state = 266
+			if = {
+				limit = {original_tag = PER tag = PER }
+				or = {
+					has_completed_focus = PER_national_oil_industry
+					has_completed_focus = PER_oil_consortium
+				}
+			}
+		}
+	
+		modifier = {	civilian_factory_use = 4	}
+
+		ai_will_do = {	factor = 50	}
+		
+		remove_effect = {	
+			266 = {		add_resource = {	type = oil		amount = 20	}	}
+			hidden_effect = {	266 = {		set_state_flag = tehran_develop_oil	}	}
+		}
+	}
+
+##################################################
+	
+	develop_isfehan_steel_v1_deposits = { #411
+		
+		icon =				steel
+		is_good =			yes
+		fire_only_once =	yes
+		cost =				25
+		days_remove =		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 411 }
+
+		visible = {
+			controls_state = 411
+			has_tech =	excavation1
+			411 = {		NOT = {		has_state_flag = isfehan_develop_v1	}	 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+
+		available = {
+			has_tech =	excavation2
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 411
+		}
+
+		modifier = {	civilian_factory_use = 2	}
+
+		ai_will_do = {	factor = 100	}
+		
+		remove_effect = { 
+			411 = {		add_resource = {	type = steel		amount = 10	} }
+			hidden_effect = {	411 = {		set_state_flag = isfehan_develop_v1 }	}
+		}
+	}
+		
+##################################################
+	
+	develop_isfehan_aluminium_deposits = { #411
+		
+		icon =				aluminium
+		is_good =			yes
+		fire_only_once =	yes
+		cost =				25
+		days_remove =		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 411 }
+
+		visible = {
+			controls_state = 411
+			411 = {		NOT = {		has_state_flag = isfehan_develop_v2	}	 }
+			411 = {		has_state_flag = isfehan_develop_v1		}
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+		
+		available = {
+			has_tech =	excavation4
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 411
+		}
+
+		modifier = {	civilian_factory_use = 5	}
+		
+		ai_will_do = {	factor = 90	}
+		
+		remove_effect = { 
+			411 = {		add_resource = {	type = aluminium		amount = 25	} }
+			hidden_effect = {	411 = {		clr_state_flag = isfehan_develop_v1		set_state_flag = isfehan_develop_v2 }	}
+		}
+	}		
+	
+##################################################
+	
+	develop_isfehan_steel_v2_deposits = { #411
+		
+		icon =				steel
+		is_good =			yes
+		fire_only_once =	yes
+		cost =				25
+		days_remove =		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 411 }
+
+		visible = {
+			controls_state = 411
+			411 = {		NOT = {		has_state_flag = isfehan_develop_v3	}	 }
+			411 = {		has_state_flag = isfehan_develop_v2 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+
+		available = {
+			has_tech = excavation5
+			num_of_civilian_factories_available_for_projects > 14
+			owns_state = 411
+		}
+
+		modifier = {	civilian_factory_use = 6	}
+		
+		ai_will_do = {	factor = 90	}
+		
+		remove_effect = { 
+			411 = {		add_resource = {	type = steel		amount = 30	} }
+			hidden_effect = {	411 = {		clr_state_flag = isfehan_develop_v2		set_state_flag = isfehan_develop_v3 }	}
+		}
+	}
+		
+##################################################
+	
+	develop_khorasan_chromium_deposits = { #416
+		
+		icon =				chromium
+		is_good =			yes
+		fire_only_once =	yes
+		cost =				25
+		days_remove =		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 416 }
+
+		visible = {
+			controls_state = 416
+			has_tech =	excavation2
+			416 = {		NOT = {		has_state_flag = khorasan_develop_v1	}	 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+		
+		available = {
+			has_tech =	excavation3
+			num_of_civilian_factories_available_for_projects > 13
+			owns_state = 416
+		}
+
+		modifier = {	civilian_factory_use = 3	}
+		
+		ai_will_do = {	factor = 90	}
+		
+		remove_effect = { 
+			416 = {		add_resource = {	type = chromium		amount = 15	}	}
+			hidden_effect = {	416 = {		set_state_flag = khorasan_develop_v1	 }	}
+		}
+	}
+		
+##################################################
+	
+	develop_fars_chromium_deposits = { #412
+		
+		icon =				chromium
+		is_good =			yes
+		fire_only_once =	yes
+		cost =				25
+		days_remove =		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 412 }
+
+		visible = {
+			controls_state = 412
+			has_tech =	excavation2
+			412 = {		NOT = {		has_state_flag = fars_develop_v1	}	 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+
+		available = {
+			has_tech =	excavation3
+			num_of_civilian_factories_available_for_projects > 13
+			owns_state = 412
+		}
+		
+		modifier = {	civilian_factory_use = 3	}
+		
+		ai_will_do = {	factor = 90	}
+		
+		remove_effect = { 
+			412 = {		add_resource = {	type = chromium		amount = 15	} }
+			hidden_effect = {	412 = {		set_state_flag = fars_develop_v1	}	}
+		}
+	}	
+	
+##################################################
+	
+	develop_fars_oil_deposits = { #412
+		
+		icon = 				oil
+		is_good = 			yes
+		fire_only_once =	yes
+		cost =				25
+		days_remove =		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 412 }
+
+		visible = {
+			has_tech =	synth_oil_experiments
+			controls_state = 412
+			412 = {		NOT = {		has_state_flag = fars_develop_v2	}	 }
+			412 = {		has_state_flag = fars_develop_v1 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+	
+		available = {
+			has_tech =	advanced_oil_processing
+			num_of_civilian_factories_available_for_projects > 14
+			owns_state = 412
+			if = {
+				limit = {original_tag = PER tag = PER }
+				or = {
+					has_completed_focus = PER_national_oil_industry
+					has_completed_focus = PER_oil_consortium
+				}
+			}
+		}
+	
+		modifier = {	civilian_factory_use = 4	}
+
+		ai_will_do = {	factor = 50	}
+		
+		remove_effect = { 
+			412 = {		add_resource = {	type = oil		amount = 20	} }
+			hidden_effect = {	412 = {		clr_state_flag = fars_develop_v1	set_state_flag = fars_develop_v2	}	}
+		}
+	}
+	
+##################################################
+	
+	develop_khuzestan_steel_deposits = { #413
+		
+		icon = 				steel
+		is_good = 			yes
+		fire_only_once = 	yes
+		cost = 				25
+		days_remove = 		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 413 }
+
+		visible = {
+			has_tech =	excavation2
+			controls_state = 413
+			413 = {		NOT = {		has_state_flag = Khuzestan_develop_v1	}	 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+	
+		available = {
+			has_tech =	excavation3
+			num_of_civilian_factories_available_for_projects > 12
+			owns_state = 413
+		}
+	
+		modifier = {	civilian_factory_use = 2	}
+
+		ai_will_do = {	factor = 50	}
+		
+		remove_effect = {	
+			413 = {		add_resource = {	type = steel		amount = 10	}	}
+			hidden_effect = {	413 = {	set_state_flag = Khuzestan_develop_v1	}	}
+		}
+	}	
+
+##################################################
+	
+	develop_rasht_steel_deposits = { #420_Arak
+		
+		icon = 				steel
+		is_good = 			yes
+		fire_only_once = 	yes
+		cost = 				25
+		days_remove = 		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 420 }
+
+		visible = {
+			has_tech =	excavation3
+			controls_state = 420
+			420 = {		NOT = {		has_state_flag = Arak_develop_v1	}	 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+	
+		available = {
+			has_tech =	excavation4
+			num_of_civilian_factories_available_for_projects > 20
+			owns_state = 420
+		}
+	
+		modifier = {	civilian_factory_use = 10	}
+
+		ai_will_do = {	factor = 100	}
+		
+		remove_effect = {			
+			420 = {		add_resource = {	type = steel		amount = 50	}	}
+			hidden_effect = {	420 = {	set_state_flag = Arak_develop_v1	}	}
+		}
+	}
+	
+##################################################
+	
+	develop_rasht_aluminium_deposits = { #420_Arak
+		
+		icon = 				aluminium
+		is_good = 			yes
+		fire_only_once = 	yes
+		cost = 				25
+		days_remove = 		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 420 }
+
+		visible = {
+			has_tech =	excavation4
+			controls_state = 420
+			420 = {		NOT = {		has_state_flag = Arak_develop_v2	}	 }
+			420 = {		has_state_flag = Arak_develop_v1	}
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+	
+		available = {
+			has_tech =	excavation5
+			num_of_civilian_factories_available_for_projects > 20
+			owns_state = 420
+		}
+	
+		modifier = {	civilian_factory_use = 10	}
+
+		ai_will_do = {	factor = 100	}
+		
+		remove_effect = {			
+			420 = {		add_resource = {	type = aluminium		amount = 20	}	}
+			hidden_effect = {	420 = {	clr_state_flag = Arak_develop_v1	set_state_flag = Arak_develop_v2	}	}
+		}
+	}
+	
+##################################################
+	
+	develop_kerman_steel_deposits = { #414_Kerman
+		
+		icon = 				steel
+		is_good = 			yes
+		fire_only_once = 	yes
+		cost = 				25
+		days_remove = 		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 414 }
+
+		visible = {
+			has_tech =	excavation1
+			controls_state = 414
+			414 = {		NOT = {		has_state_flag = kerman_develop_v1	}	 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+	
+		available = {
+			has_tech =	excavation2
+			num_of_civilian_factories_available_for_projects > 18
+			owns_state = 414
+		}
+	
+		modifier = {	civilian_factory_use = 8	}
+
+		ai_will_do = {	factor = 50	}
+		
+		remove_effect = {			
+			414 = {		add_resource = {	type = steel		amount = 40	}	}
+			hidden_effect = {	414 = {	set_state_flag = kerman_develop_v1 }	}
+		}
+	}
+	
+##################################################
+	
+	develop_kerman_chromium_deposits = { #414_Kerman
+		
+		icon = 				chromium
+		is_good = 			yes
+		fire_only_once = 	yes
+		cost = 				25
+		days_remove = 		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 414 }
+
+		visible = {
+			has_tech =	excavation2
+			controls_state = 414
+			414 = {		NOT = {		has_state_flag = kerman_develop_v2	}	 }
+			414 = {		has_state_flag = kerman_develop_v1 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+	
+		available = {
+			has_tech =	excavation3
+			num_of_civilian_factories_available_for_projects > 12
+			owns_state = 414
+		}
+	
+		modifier = {	civilian_factory_use = 2	}
+
+		ai_will_do = {	factor = 50	}
+		
+		remove_effect = {			
+			414 = {		add_resource = {	type = chromium		amount = 10	}	}
+			hidden_effect = {	414 = {	clr_state_flag = kerman_develop_v1		set_state_flag = kerman_develop_v2 }	}
+		}
+	}
+	
+##################################################	
+
+	develop_kabol_steel_deposits = { #267
+		
+		icon =				steel
+		is_good =			yes
+		fire_only_once =	yes
+		cost =				25
+		days_remove =		60
+		
+		allowed = {		has_dlc = "Man the Guns"	}
+
+		highlight_states = { state = 267 }
+
+		visible = {
+			controls_state = 267
+			has_tech =	excavation2
+			267 = {		NOT = {		has_state_flag = kabol_develop_v1	}	 }
+			if = {
+				limit = {original_tag = PER tag = PER }
+				has_completed_focus = PER_resource_prospecting_1
+			}
+		}
+
+		available = {
+			has_tech =	excavation3
+			num_of_civilian_factories_available_for_projects > 14
+			owns_state = 267
+		}
+
+		modifier = {	civilian_factory_use = 4	}
+		
+		ai_will_do = {	factor = 100	}
+		
+		remove_effect = { 
+			267 = {		add_resource = {	type = steel		amount = 20	}	}
+			hidden_effect = {	267 = {		set_state_flag = kabol_develop_v1	}	 }
+		}
+	}
+}
