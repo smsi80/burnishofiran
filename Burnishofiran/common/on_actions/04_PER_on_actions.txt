@@ -58,10 +58,8 @@ on_actions = {
 					give_resource_rights = { receiver = ENG state = 291 }
 				}
 				ENG = {
-					give_guarantee = IRQ
-				
+					give_guarantee = IRQ}
 				}
-			}
 		}
 	}
 }
