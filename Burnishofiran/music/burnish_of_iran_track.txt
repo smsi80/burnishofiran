@@ -1,0 +1,410 @@
+# Songs from the esteemed metal band Sabaton
+# 10 song to enjoy while playing Hearts of Iron IV
+
+	#######################
+	#### BurnishOfIran ####
+	#######################
+music_station = "burnish_of_iran"
+
+music = {
+	song = "morghe-sahar_akram"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+		}
+	}
+}
+
+music = {
+	song = "sabzehroo"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+		}
+	}
+}
+
+music = {
+	song = "jaane-jahan"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+		}
+	}
+}
+
+music = {
+	song = "raghse-golha"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "shahansha"
+	
+	chance = {
+		modifier = {
+			factor = 8
+			tag = PER
+			has_war = yes
+			has_government = neutrality
+		}
+	}
+	chance = {
+		modifier = {
+			factor = 0
+			tag = PER
+			has_war = yes
+			NOT = {	has_government = neutrality }
+		}
+	}
+}
+
+music = {
+	song = "crowds"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+		}
+	}
+	chance = {
+		modifier = {
+			factor = 6
+			tag = PER
+			has_war = yes
+		}
+	}
+}
+
+music = {
+	song = "an-sarv-ke-gooyand"
+	
+	chance = {
+		modifier = {
+			factor = 8
+			tag = PER
+			has_war = yes
+		}
+	}
+}
+
+music = {
+	song = "bade-bahari"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "khab-o-khiyal"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "faregh-az-degaran"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = yes
+		}
+	}
+}
+
+music = {
+	song = "goleh-pamchal_1"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "goleh-pamchal_2"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = yes
+		}
+	}
+}
+
+music = {
+	song = "morghe-sahar_ghamar"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "azarbaijan"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = yes
+		}
+		
+		modifier = {
+			factor = 8
+			tag = PER
+			has_war_with = SOV
+		}
+
+		modifier = {
+			factor = 10
+			tag = PER
+			has_war_with = SOV
+			SOV = {
+				controls_state = 417
+			}
+		}
+	}
+}
+
+music = {
+	song = "elahe-naz"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = yes
+		}
+	}
+}
+
+music = {
+	song = "ey-iran"
+	
+	chance = {
+		modifier = {
+			factor = 7
+			tag = PER
+			has_war = yes
+			has_government = neutrality
+		}
+	}
+}
+
+music = {
+	song = "geryeh-kon"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "hasti"
+	
+	chance = {
+		modifier = {
+			factor = 6
+			tag = PER
+			has_war = yes
+		}
+	}
+}
+
+music = {
+	song = "toushe-omr"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "sargashteh"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "tora-mancheshm-dar-raham"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "arame-del"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "baz-miresad-nobate-khorrami"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+		}
+	}
+}
+
+music = {
+	song = "keshvare-dariush"
+	
+	chance = {
+		modifier = {
+			factor = 6
+			tag = PER
+			has_war = yes
+			has_government = neutrality
+		}
+	}
+}
+
+music = {
+	song = "rana"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+		}
+	}
+}
+
+music = {
+	song = "ghoghaye-setaregan"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+			has_war = no
+		}
+	}
+}
+
+music = {
+	song = "dowlate-alliye"
+	
+	chance = {
+		modifier = {
+			factor = 6
+			tag = PER
+			has_war = yes
+			has_government = neutrality
+		}
+	}
+}
+
+music = {
+	song = "salam-e-shah_1906"
+	
+	chance = {
+		modifier = {
+			factor = 6
+			tag = PER
+			has_war = yes
+			has_government = neutrality
+		}
+	}
+}
+
+music = {
+	song = "salam-e-shah_1910"
+	
+	chance = {
+		modifier = {
+			factor = 6
+			tag = PER
+			has_war = yes
+			has_government = neutrality
+		}
+	}
+}
+
+music = {
+	song = "sorudeh"
+	
+	chance = {
+		modifier = {
+			factor = 6
+			tag = PER
+			has_war = yes
+			has_government = neutrality
+		}
+	}
+}
+
+music = {
+	song = "national-anthem"
+	
+	chance = {
+		modifier = {
+			factor = 6
+			tag = PER
+			has_government = neutrality
+		}
+	}
+}

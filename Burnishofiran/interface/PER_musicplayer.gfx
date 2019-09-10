@@ -1,0 +1,9 @@
+spriteTypes = {
+
+
+	spriteType = {
+		name = "GFX_burnish_of_iran_album_art"
+		texturefile = "gfx//interface//topbar//musicplayer//burnish_of_iran_album_art.dds"
+		noOfFrames = 2
+	}
+}
