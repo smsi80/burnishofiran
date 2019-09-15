@@ -40,6 +40,18 @@ set_stability = 0.65
 set_war_support = 0.45
 set_convoys = 10
 
+add_equipment_to_stockpile = {
+    type = support_equipment_1
+    amount = 100
+    producer = ENG
+}
+
+add_equipment_to_stockpile = {
+    type = motorized_equipment_1
+    amount = 300
+    producer = GER
+}
+
 
 # Starting tech
 
@@ -63,6 +75,7 @@ if = {
 		CAS1 = 1
 	}
 }
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1925.4.24"

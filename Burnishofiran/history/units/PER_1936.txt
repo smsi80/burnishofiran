@@ -23,8 +23,8 @@ division_template = {
 		infantry = { x = 0 y = 2 }
 	}
 	support = {
-		artillery = { x = 0 y = 0 }
-	}	
+		artillery	= { x = 0 y = 0 }
+	}
 }
 
 division_template = {
@@ -69,6 +69,18 @@ division_template = {
 	}
 }
 
+division_template = {
+	name = "Motori v1"			# Motori
+
+	division_names_group = PER_MOT_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+	}
+}
+
 ###### OOB ######
 units = {
 	######## LAND OOB ########
@@ -78,7 +90,7 @@ units = {
 		location = 1896
 		division_template = "Asbaran v1"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
+		start_equipment_factor = 1
 	}
 	
 	division = {
@@ -272,6 +284,28 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.7
 	}
+
+#	division = {
+#		division_name = {
+#				is_name_ordered = yes
+#				name_order = 1
+#		}
+#		location = 1896
+#		division_template = "Motori v1"
+#		start_experience_factor = 0.2
+#		start_equipment_factor = 0.9
+#	}
+
+#	division = {
+#		division_name = {
+#				is_name_ordered = yes
+#				name_order = 2
+#		}
+#		location = 10837
+#		division_template = "Motori v1"
+#		start_experience_factor = 0.2
+#		start_equipment_factor = 0.9
+#	}
 
 }
 
