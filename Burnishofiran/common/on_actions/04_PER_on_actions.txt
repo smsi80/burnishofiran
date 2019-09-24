@@ -13,18 +13,7 @@ on_actions = {
 					}	
 				}
 			}	
-			
-			#iran lince sub
-			
-			ENG = {
-				create_production_license = {
-					target = PER
-					cost_factor = 0.0
-					equipment = {
-						type = support_equipment_1
-					}	
-				}
-			}
+	
 			
 			#Angolo-Iranian oil concessions
 			
