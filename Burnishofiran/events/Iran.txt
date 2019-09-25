@@ -16,7 +16,12 @@ country_event = {
 		tag = PER
 		AND = {
 			date >1941.1.1
-			has_war_with= ENG or SOV
+			OR ={has_war_with= ENG
+				has_war_with= SOV
+				AND ={SOV ={controls_state =419}
+
+				}
+				}
 		}
 	}
 	option = {
