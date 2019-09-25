@@ -15,12 +15,18 @@ country_event = {
 	trigger = {
 		tag = PER
 		AND = {
+			SOV ={ OR ={controls_state =419  
+						controls_state =266  
+						controls_state =416}
+												}
+			ENG ={ OR ={controls_state =414  
+						controls_state =412  
+						controls_state =413}
+												}
 			date >1941.1.1
 			OR ={has_war_with= ENG
 				has_war_with= SOV
-				AND ={SOV ={controls_state =419}
-
-				}
+			
 				}
 		}
 	}
