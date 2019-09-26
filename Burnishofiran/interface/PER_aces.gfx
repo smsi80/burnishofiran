@@ -40,54 +40,54 @@ spriteTypes = {
 	# MALE
 	
 	spriteType = {
-		name = "GFX_PER_2d_ace_m_0"
+		name = "GFX_PER_ace_m_0"
 		texturefile = "gfx/aces/PER_ace_m_0.dds"
 	}
 
 	spriteType = {
-		name = "GFX_PER_2d_ace_m_1"
+		name = "GFX_PER_ace_m_1"
 		texturefile = "gfx/aces/PER_ace_m_1.dds"
 	}
 
 	spriteType = {
-		name = "GFX_PER_2d_ace_m_2"
+		name = "GFX_PER_ace_m_2"
 		texturefile = "gfx/aces/PER_ace_m_2.dds"
 	}
 
 	spriteType = {
-		name = "GFX_PER_2d_ace_m_3"
+		name = "GFX_PER_ace_m_3"
 		texturefile = "gfx/aces/PER_ace_m_3.dds"
 	}
 
 	spriteType = {
-		name = "GFX_PER_2d_ace_m_4"
+		name = "GFX_PER_ace_m_4"
 		texturefile = "gfx/aces/PER_ace_m_4.dds"
 	}
 
 	spriteType = {
-		name = "GFX_PER_2d_ace_m_5"
+		name = "GFX_PER_ace_m_5"
 		texturefile = "gfx/aces/PER_ace_m_5.dds"
 	}
 
 	spriteType = {
-		name = "GFX_PER_2d_ace_m_6"
+		name = "GFX_PER_ace_m_6"
 		texturefile = "gfx/aces/PER_ace_m_6.dds"
 	}
 	
 	#female
 	
 	spriteType = {
-		name = "GFX_PER_2d_ace_f_0"
+		name = "GFX_PER_ace_f_0"
 		texturefile = "gfx/aces/PER_ace_f_0.dds"
 	}
 
 	spriteType = {
-		name = "GFX_PER_2d_ace_f_1"
+		name = "GFX_PER_ace_f_1"
 		texturefile = "gfx/aces/PER_ace_f_1.dds"
 	}
 
 	spriteType = {
-		name = "GFX_PER_2d_ace_f_2"
+		name = "GFX_PER_ace_f_2"
 		texturefile = "gfx/aces/PER_ace_f_2.dds"
 	}
 
