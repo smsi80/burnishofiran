@@ -3,29 +3,7 @@
 	#### BurnishOfIran ####
 	#######################
 
-music = {
-	name = "morghe-sahar_akram"
-	file = "akram-banaee_morghe-sahar.ogg"
-	volume = 0.50
-}
 
-music = {
-	name = "sabzehroo"
-	file = "akram-banaee_sabzehroo.ogg"
-	volume = 0.50
-}
-
-music = {
-	name = "jaane-jahan"
-	file = "aminollah-rashidi_jaane-jahan.ogg"
-	volume = 0.50
-}
-
-music = {
-	name = "raghse-golha"
-	file = "aminollah-rashidi_raghse-golha.ogg"
-	volume = 0.50
-}
 
 music = {
 	name = "shahansha"
@@ -40,44 +18,8 @@ music = {
 }
 
 music = {
-	name = "an-sarv-ke-gooyand"
-	file = "dariush-rafiei_an-sarv-ke-gooyand_13xx.ogg"
-	volume = 0.50
-}
-
-music = {
-	name = "bade-bahari"
-	file = "dariush-rafiei_bade-bahari_13xx.ogg"
-	volume = 0.50
-}
-
-music = {
-	name = "khab-o-khiyal"
-	file = "dariush-rafiei_khab-o-khiyal_13xx.ogg"
-	volume = 0.50
-}
-
-music = {
-	name = "faregh-az-degaran"
-	file = "delkesh-va-aref_faregh-az-degaran_13xx.ogg"
-	volume = 0.50
-}
-
-music = {
-	name = "goleh-pamchal_1"
-	file = "ezat-rohbakhsh-ashtiani_goleh-pamchal-1_13xx.ogg"
-	volume = 0.50
-}
-
-music = {
 	name = "goleh-pamchal_2"
 	file = "ezat-rohbakhsh-ashtiani_goleh-pamchal-2_13xx.ogg"
-	volume = 0.50
-}
-
-music = {
-	name = "morghe-sahar_ghamar"
-	file = "ghamar_morghe-sahar.ogg"
 	volume = 0.50
 }
 
@@ -88,46 +30,11 @@ music = {
 }
 
 music = {
-	name = "elahe-naz"
-	file = "hosein-banan_elahe-naz_1333.ogg"
-	volume = 0.50
-}
-
-music = {
 	name = "ey-iran"
 	file = "hosein-banan_ey-iran_1323.ogg"
 	volume = 0.50
 }
 
-music = {
-	name = "geryeh-kon"
-	file = "hosein-banan_geryeh-kon_13xx.ogg"
-	volume = 0.50
-}
-
-music = {
-	name = "hasti"
-	file = "hosein-banan_hasti_1320.ogg"
-	volume = 0.50
-}
-
-music = {
-	name = "toushe-omr"
-	file = "hosein-banan_toushe-omr_13xx.ogg"
-	volume = 0.50
-}
-
-music = {
-	name = "sargashteh"
-	file = "hosein-ghavami_sargashteh.ogg"
-	volume = 0.50
-}
-
-music = {
-	name = "tora-mancheshm-dar-raham"
-	file = "hosein-ghavami_tora-mancheshm-dar-raham_13xx.ogg"
-	volume = 0.50
-}
 
 music = {
 	name = "arame-del"
@@ -154,15 +61,9 @@ music = {
 }
 
 music = {
-	name = "ghoghaye-setaregan"
-	file = "parvin_ghoghaye-setaregan_13xx.ogg"
-	volume = 0.50
-}
-
-music = {
 	name = "dowlate-alliye"
 	file = "salamatie-dowlate-alliye.ogg"
-	volume = 0.90
+	volume = 0.99
 }
 
 music = {
@@ -175,6 +76,24 @@ music = {
 	name = "salam-e-shah_1910"
 	file = "salam-e-shah_1910_edited.ogg"
 	volume = 0.60
+}
+
+music = {
+	name = "iran-javan"
+	file = "salar-aghili_iran-javan.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "saz-dohol-balochi"
+	file = "saz-dohol-balochi.ogg"
+	volume = 0.50
+}
+
+music = {
+	name = "saz-dohol-kordi"
+	file = "saz-dohol-kordi.ogg"
+	volume = 0.50
 }
 
 music = {

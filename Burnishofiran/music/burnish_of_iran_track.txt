@@ -4,52 +4,9 @@
 	#######################
 	#### BurnishOfIran ####
 	#######################
+
+
 music_station = "burnish_of_iran"
-
-music = {
-	song = "morghe-sahar_akram"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-		}
-	}
-}
-
-music = {
-	song = "sabzehroo"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-		}
-	}
-}
-
-music = {
-	song = "jaane-jahan"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-		}
-	}
-}
-
-music = {
-	song = "raghse-golha"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-			has_war = no
-		}
-	}
-}
 
 music = {
 	song = "shahansha"
@@ -90,65 +47,7 @@ music = {
 	}
 }
 
-music = {
-	song = "an-sarv-ke-gooyand"
-	
-	chance = {
-		modifier = {
-			factor = 8
-			tag = PER
-			has_war = yes
-		}
-	}
-}
 
-music = {
-	song = "bade-bahari"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-			has_war = no
-		}
-	}
-}
-
-music = {
-	song = "khab-o-khiyal"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-			has_war = no
-		}
-	}
-}
-
-music = {
-	song = "faregh-az-degaran"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-			has_war = yes
-		}
-	}
-}
-
-music = {
-	song = "goleh-pamchal_1"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-			has_war = no
-		}
-	}
-}
 
 music = {
 	song = "goleh-pamchal_2"
@@ -158,18 +57,6 @@ music = {
 			factor = 5
 			tag = PER
 			has_war = yes
-		}
-	}
-}
-
-music = {
-	song = "morghe-sahar_ghamar"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-			has_war = no
 		}
 	}
 }
@@ -202,18 +89,6 @@ music = {
 }
 
 music = {
-	song = "elahe-naz"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-			has_war = yes
-		}
-	}
-}
-
-music = {
 	song = "ey-iran"
 	
 	chance = {
@@ -222,66 +97,6 @@ music = {
 			tag = PER
 			has_war = yes
 			has_government = neutrality
-		}
-	}
-}
-
-music = {
-	song = "geryeh-kon"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-			has_war = no
-		}
-	}
-}
-
-music = {
-	song = "hasti"
-	
-	chance = {
-		modifier = {
-			factor = 6
-			tag = PER
-			has_war = yes
-		}
-	}
-}
-
-music = {
-	song = "toushe-omr"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-			has_war = no
-		}
-	}
-}
-
-music = {
-	song = "sargashteh"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-			has_war = no
-		}
-	}
-}
-
-music = {
-	song = "tora-mancheshm-dar-raham"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-			has_war = no
 		}
 	}
 }
@@ -334,18 +149,6 @@ music = {
 }
 
 music = {
-	song = "ghoghaye-setaregan"
-	
-	chance = {
-		modifier = {
-			factor = 5
-			tag = PER
-			has_war = no
-		}
-	}
-}
-
-music = {
 	song = "dowlate-alliye"
 	
 	chance = {
@@ -380,6 +183,39 @@ music = {
 			tag = PER
 			has_war = yes
 			has_government = neutrality
+		}
+	}
+}
+
+music = {
+	song = "iran-javan"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+		}
+	}
+}
+
+music = {
+	song = "saz-dohol-balochi"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
+		}
+	}
+}
+
+music = {
+	song = "saz-dohol-kordi"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			tag = PER
 		}
 	}
 }
