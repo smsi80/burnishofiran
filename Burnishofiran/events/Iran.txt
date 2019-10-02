@@ -15,23 +15,62 @@ country_event = {
 	trigger = {
 		tag = PER
 		AND = {
-			SOV ={ OR ={controls_state =419  
-						controls_state =266  
-						controls_state =416}
-												}
-			ENG ={ OR ={controls_state =414  
-						controls_state =412  
-						controls_state =413}
+		has_country_leader = { ruling_only = yes	name = "Reza Shah Pahlavi" }
+			SOV = { controls_state = 419}
+			ENG = { controls_state = 413}
+			SOV ={ OR ={controls_state = 266  
+						controls_state = 416}
+				  }
+			ENG ={ OR ={controls_state = 414  
+						controls_state = 412  }
 												}
 			date >1941.1.1
 			OR ={has_war_with= ENG
-				has_war_with= SOV
+				 has_war_with= SOV
 			
 				}
 		}
 	}
+
 	option = {
+	trigger = {
+			has_war_with= ENG
+		}
 		name = iran.1.a
 		retire_country_leader = yes
+		white_peace = ENG
 	}
+	
+	#2
+	option = {
+	trigger = {
+			has_war_with= SOV
+		}
+		name = iran.1.a
+		retire_country_leader = yes
+		white_peace = SOV
+	}
+	#3
+	option = {
+		name = iran.1.b
+		add_manpower = 50000
+		create_corps_commander = {
+	name = "Mohamad Reza Pahlavi"
+	portrait_path = "gfx/leaders/PER/Portrait_Iran_M-Reza_Shah_Pahlavi.dds"
+	traits = { trickster brilliant_strategist }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 3
+						}
+	hidden_effect = {
+	add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 5000
+    producer = PER
+						}
+    
+					}
 }
+	}
