@@ -65,13 +65,13 @@ country_event = {
 	logistics_skill = 3
 						}
 	hidden_effect = {
-	add_equipment_to_stockpile = {
-    type = infantry_equipment
-    amount = 5000
-    producer = PER
-						}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 5000
+			producer = PER
+										}
     
 					}
-}
+			}
 	}
 	
