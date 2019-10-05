@@ -1,10 +1,30 @@
 ﻿l_english:
+#روی کار امدن محمد رضا شاه
 persia.1.t:0 "Hard decision for people of persia"
 persia.1.d:0 " The Allies wants to are great king give the power to his Son.What we want to do?"
 persia.1.a:0 "Give the power"
 persia.1.b:0 "we never surrender"
+#گرفتن بغداد
 persianews.1.t:0 "history repited"
 persianews.1.d:0 "persia take baghdad"
 persianews.1.a:0 "it is important?"
 persianews.1.b:0 "wectory is owers"
 persianews.1.c:0 "we lose are capital"
+#گرفتن کابل
+persianews.2.t:0 "history repited"
+persianews.2.d:0 "persia take Kabul"
+persianews.2.a:0 "it is important?"
+persianews.2.b:0 "wectory is owers"
+persianews.2.c:0 "we lose are capital"
+#گرفتن باکو
+persianews.3.t:0 "history repited"
+persianews.3.d:0 "persia take Bako"
+persianews.3.a:0 "it is important?"
+persianews.3.b:0 "wectory is owers"
+persianews.3.c:0 "thats shame"
+#گرفتن قطر
+persianews.4.t:0 "history repited"
+persianews.4.d:0 "persia take Qatar"
+persianews.4.a:0 "it is important?"
+persianews.4.b:0 "wectory is owers"
+persianews.4.c:0 "thats shame"

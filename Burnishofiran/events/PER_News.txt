@@ -9,19 +9,13 @@ news_event = {
 	title = persianews.1.t
 	desc = persianews.1.d
 	picture = GFX_persianews_event_054
-	
+	fire_only_once = yes
 	major = yes
 	
 	trigger = {
 		291 = { is_controlled_by = PER }
 		291 = { is_owned_by = IRQ }
-		NOT = { has_global_flag = fall_of_BAGHDAD_PER }
 	}
-	
-	immediate = {
-		set_global_flag = fall_of_BAGHDAD_PER
-	}
-	
 	mean_time_to_happen = {
 		days = 2
 	}
@@ -38,10 +32,121 @@ news_event = {
 	option = {
 		name = persianews.1.b
 		trigger = { TAG = PER }
-		add_stability = 0.1
+		add_stability = 0.02
 	}
 	option = {
 		name = persianews.1.c
 		trigger = { TAG = IRQ }
 	}
 }
+#first persianews event take kabul
+news_event = {
+	id = persianews.2
+	title = persianews.2.t
+	desc = persianews.2.d
+	picture = GFX_persianews_event_054
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		267 = { is_controlled_by = PER }
+		267 = { is_owned_by = AFG }
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = persianews.1.a
+		trigger = {
+			NOT = {
+				TAG = PER
+				TAG = AFG
+			}
+		}
+	}
+	option = {
+		name = persianews.1.b
+		trigger = { TAG = PER }
+		add_stability = 0.02
+	}
+	option = {
+		name = persianews.1.c
+		trigger = { TAG = AFG }
+	}
+	}
+	#first persianews event take bako
+news_event = {
+	id = persianews.3
+	title = persianews.3.t
+	desc = persianews.3.d
+	picture = GFX_persianews_event_054
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		229 = { is_controlled_by = PER }
+		229 = { is_owned_by = SOV }
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = persianews.1.a
+		trigger = {
+			NOT = {
+				TAG = PER
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = persianews.1.b
+		trigger = { TAG = PER }
+		add_stability = 0.02
+	}
+	option = {
+		name = persianews.1.c
+		trigger = { TAG = SOV }
+	}
+	}
+	#first persianews event take qatar
+news_event = {
+	id = persianews.4
+	title = persianews.4.t
+	desc = persianews.4.d
+	picture = GFX_persianews_event_054
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		765 = { is_controlled_by = PER }
+		765 = { is_owned_by = ENG }
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = persianews.1.a
+		trigger = {
+			NOT = {
+				TAG = PER
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = persianews.1.b
+		trigger = { TAG = PER }
+		add_stability = 0.02
+	}
+	option = {
+		name = persianews.1.c
+		trigger = { TAG = ENG }
+	}
+	}
