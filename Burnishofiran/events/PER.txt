@@ -1,14 +1,14 @@
 ﻿###########################
-# Iran Events
+# Persia Events
 ###########################
 
-add_namespace = iran
+add_namespace = persia
 
 # President dies
 country_event = {
-	id = iran.1
-	title = iran.1.t
-	desc = iran.1.d
+	id = persia.1
+	title = persia.1.t
+	desc = persia.1.d
 	picture = GFX_report_event_generic_funeral
 
 	fire_only_once = yes
@@ -36,7 +36,7 @@ country_event = {
 	trigger = {
 			has_war_with= ENG
 		}
-		name = iran.1.a
+		name = persia.1.a
 		retire_country_leader = yes
 		white_peace = ENG
 	}
@@ -46,17 +46,17 @@ country_event = {
 	trigger = {
 			has_war_with= SOV
 		}
-		name = iran.1.a
+		name = persia.1.a
 		retire_country_leader = yes
 		white_peace = SOV
 	}
 	#3
 	option = {
-		name = iran.1.b
+		name = persia.1.b
 		add_manpower = 50000
 		create_corps_commander = {
 	name = "Mohamad Reza Pahlavi"
-	portrait_path = "gfx/leaders/PER/Portrait_Iran_M-Reza_Shah_Pahlavi.dds"
+	portrait_path = "gfx/leaders/PER/Portrait_persia_M-Reza_Shah_Pahlavi.dds"
 	traits = { trickster brilliant_strategist }
 	skill = 4
 	attack_skill = 4
@@ -74,3 +74,4 @@ country_event = {
 					}
 }
 	}
+	

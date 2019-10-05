@@ -1,0 +1,47 @@
+﻿###########################
+# Persia persianews events
+###########################
+
+add_namespace = persianews
+#first persianews event take iraq
+news_event = {
+	id = persianews.1
+	title = persianews.1.t
+	desc = persianews.1.d
+	picture = GFX_persianews_event_054
+	
+	major = yes
+	
+	trigger = {
+		291 = { is_controlled_by = PER }
+		291 = { is_owned_by = IRQ }
+		NOT = { has_global_flag = fall_of_BAGHDAD_PER }
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_BAGHDAD_PER
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = persianews.1.a
+		trigger = {
+			NOT = {
+				TAG = PER
+				TAG = IRQ
+			}
+		}
+	}
+	option = {
+		name = persianews.1.b
+		trigger = { TAG = PER }
+		add_stability = 0.1
+	}
+	option = {
+		name = persianews.1.c
+		trigger = { TAG = IRQ }
+	}
+}
