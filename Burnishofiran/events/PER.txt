@@ -31,7 +31,19 @@ country_event = {
 				}
 		}
 	}
-
+	#1
+	option = {
+	trigger = {
+			has_war_with= ENG
+			has_war_with= SOV
+		}
+		name = persia.1.a
+		retire_country_leader = yes
+		white_peace = ENG
+		white_peace = SOV
+		add_country_leader_trait =get_power_by_others
+	}
+	#2
 	option = {
 	trigger = {
 			has_war_with= ENG
@@ -39,9 +51,10 @@ country_event = {
 		name = persia.1.a
 		retire_country_leader = yes
 		white_peace = ENG
+		add_country_leader_trait =get_power_by_others
 	}
 	
-	#2
+	#3
 	option = {
 	trigger = {
 			has_war_with= SOV
@@ -49,8 +62,9 @@ country_event = {
 		name = persia.1.a
 		retire_country_leader = yes
 		white_peace = SOV
+		add_country_leader_trait =get_power_by_others
 	}
-	#3
+	#4
 	option = {
 		name = persia.1.b
 		add_manpower = 50000
@@ -74,4 +88,77 @@ country_event = {
 					}
 			}
 	}
-	
+	#اونت دانشگاه تهران
+	country_event = {
+	id = persia.2
+	title = persia.2.t
+	desc = persia.2.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	trigger = {
+				tag = PER
+				has_start_date < 1939.1.1
+				date >1936.3.13
+								}
+	option ={
+	name = persia.2.a
+	add_timed_idea = {
+    idea = PER_idea_research_bouns
+    days = 180
+						}
+										}
+	}
+	#1 اونت دانشگاه مخابرات
+	country_event = {
+	id = persia.3
+	title = persia.3.t
+	desc = persia.3.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	trigger = {
+				tag = PER
+				has_start_date < 1939.1.1
+				date >1937.1.1
+								}
+	option ={
+	name = persia.3.a
+			set_country_flag = telecommunications_build
+			add_timed_idea = {
+			idea = PER_idea_telecommunications_build
+			days = 60
+						}							}
+	option ={
+	name = persia.3.b
+		add_timed_idea = {
+			idea = PER_idea_telecommunications_cancel
+			days = 60
+						}
+								}
+	}
+									
+	#2 اونت دانشگاه مخابرات
+	country_event = {
+	id = persia.4
+	title = persia.4.t
+	desc = persia.4.d
+	picture = GFX_report_event_generic_funeral
+	fire_only_once = yes
+	trigger = {
+				tag = PER
+				has_start_date < 1939.1.1
+				date >1937.3.1
+				has_country_flag = telecommunications_build
+								}
+	option ={
+	name = persia.4.a
+		add_research_slot = 1
+		add_tech_bonus = {
+							bonus = 1.0
+							uses = 3
+								category = computing_tech
+															}
+		
+										}
+	}

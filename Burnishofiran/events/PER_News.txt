@@ -15,6 +15,7 @@ news_event = {
 	trigger = {
 		291 = { is_controlled_by = PER }
 		291 = { is_owned_by = IRQ }
+		PER = { has_war_with = IRQ }
 	}
 	mean_time_to_happen = {
 		days = 2
@@ -51,6 +52,7 @@ news_event = {
 	trigger = {
 		267 = { is_controlled_by = PER }
 		267 = { is_owned_by = AFG }
+		PER = { has_war_with = AFG }
 	}
 	
 	mean_time_to_happen = {
@@ -88,6 +90,7 @@ news_event = {
 	trigger = {
 		229 = { is_controlled_by = PER }
 		229 = { is_owned_by = SOV }
+		PER = { has_war_with = SOV }
 	}
 	
 	mean_time_to_happen = {
@@ -125,6 +128,7 @@ news_event = {
 	trigger = {
 		765 = { is_controlled_by = PER }
 		765 = { is_owned_by = ENG }
+		PER = { has_war_with = ENG }
 	}
 	
 	mean_time_to_happen = {

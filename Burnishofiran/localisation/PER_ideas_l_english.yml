@@ -128,8 +128,10 @@
 # PER_idea_Burn-Angolo_persian_oil_desc:0 "Unsightly"
  
  PER_america_defense_ideologies:0 "Defending the ideology"
- 
- 
+ #events add by sina 
+ PER_idea_research_bouns:0 "Anniversary of University of Tehran"
+ PER_idea_telecommunications_build:0 "Start building telecommunication university"
+ PER_idea_telecommunications_cancel:0 "Focus on Economics"
 
  
  #######################
